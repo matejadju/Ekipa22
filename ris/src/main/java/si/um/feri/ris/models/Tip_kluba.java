@@ -1,4 +1,4 @@
-package si.um.feri.ris.controllers;
+package si.um.feri.ris.models;
 
 import jakarta.persistence.*;
 

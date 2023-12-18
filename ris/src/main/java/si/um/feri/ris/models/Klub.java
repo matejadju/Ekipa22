@@ -1,4 +1,4 @@
-package si.um.feri.ris.controllers;
+package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -31,6 +31,12 @@ public class Klub {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     Uporabnik uporabnik;
+
+    @OneToMany(mappedBy = "klub_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    Collection<Dogodek> dogodki;
+
+    @OneToMany(mappedBy = "klub_recenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Recenzija> recenzije;
 
     public Long getIdklub() {
         return idklub;

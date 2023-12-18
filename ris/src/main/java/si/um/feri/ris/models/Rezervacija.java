@@ -1,10 +1,11 @@
-package si.um.feri.ris.controllers;
+package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -21,6 +22,9 @@ public class Rezervacija {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     Uporabnik uporabnik_rezervacija;
+
+    @OneToMany(mappedBy = "rezervacija_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Miza> mize;
 
     public Long getId() {
         return id;

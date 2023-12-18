@@ -1,4 +1,4 @@
-package si.um.feri.ris.controllers;
+package si.um.feri.ris.models;
 
 import jakarta.persistence.*;
 
@@ -28,6 +28,12 @@ public class Uporabnik {
 
     @OneToMany(mappedBy = "uporabnik_rezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Rezervacija> rezervacije;
+
+    @OneToMany(mappedBy = "uporabnik_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Dogodek> dogodki;
+
+    @OneToMany(mappedBy = "uporabnik")
+    private Collection<Uporabnik_has_recenzija> uporabnikRecenzije;
 
     public Collection<Klub> getKlubi() {
         return klubi;
