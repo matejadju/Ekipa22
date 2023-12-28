@@ -156,12 +156,12 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `ris`.`uporabnik_has_recenzija` ;
 
 CREATE TABLE IF NOT EXISTS `ris`.`uporabnik_has_recenzija` (
-  `uporabnik_has_recenzija` VARCHAR(45) NOT NULL,
-  `uporabnik_iduporabnik` INT NULL,
-  `recenzija_idrecenzija` INT NULL,
+  `iduporabnik_has_recenzija` int NOT NULL AUTO_INCREMENT,
+  `uporabnik_iduporabnik` INT not NULL,
+  `recenzija_idrecenzija` INT not NULL,
   INDEX `fk_uporabnik_has_recenzija_recenzija1_idx` (`recenzija_idrecenzija` ASC) VISIBLE,
   INDEX `fk_uporabnik_has_recenzija_uporabnik1_idx` (`uporabnik_iduporabnik` ASC) VISIBLE,
-  PRIMARY KEY (`uporabnik_has_recenzija`))
+  PRIMARY KEY (`iduporabnik_has_recenzija`))
 ENGINE = InnoDB;
 
 
