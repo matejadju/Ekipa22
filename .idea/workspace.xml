@@ -4,7 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="" />
+    <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Projekat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/ClassDiagram.vpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/ClassDiagram.vpp.bak_000f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/ClassDiagram.vpp.bak_001d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Dogodek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Klub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Miza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Recenzija.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Rezervacija.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Tip_kluba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Tip_mize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Uporabnik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Vrsta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/Vstopnice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class_diagram/razredi/models.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ekipa22.vpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ekipa22.vpp.bak_000f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ekipa22.vpp.bak_001d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/RisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Miza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Recenzija.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Rezervacija.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Tip_kluba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Tip_mize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Uporabnik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Vrsta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Vstopnice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/RecenzijaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/RezervacijaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ris/src/test/java/si/um/feri/ris/RisApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slika_DPU.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ER-diagram.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/ER-diagram.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skripta.sql" beforeDir="false" afterPath="$PROJECT_DIR$/pb.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +81,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="RisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ris" />
@@ -63,5 +116,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
