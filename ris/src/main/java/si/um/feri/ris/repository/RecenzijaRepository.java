@@ -19,4 +19,5 @@ public interface RecenzijaRepository extends CrudRepository<Recenzija, Long> {
             @Param("klubNaziv") String klubNaziv,
             @Param("imeUporabnika") String imeUporabnika
     );
+    Recenzija getRecenzijaByNaziv(String klubNaziv, String imeUporabnika);
 }
