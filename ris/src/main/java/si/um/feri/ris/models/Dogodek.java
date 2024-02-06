@@ -21,6 +21,8 @@ public class Dogodek {
     private int steviloVstopnica;
     private int steviloMiz;
 
+    private boolean odobren;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -109,5 +111,13 @@ public class Dogodek {
 
     public void setUporabnik_dogodek(Uporabnik uporabnik_dogodek) {
         this.uporabnik_dogodek = uporabnik_dogodek;
+    }
+
+    public boolean isOdobren() {
+        return odobren;
+    }
+
+    public void setOdobren(boolean odobren) {
+        this.odobren = odobren;
     }
 }
