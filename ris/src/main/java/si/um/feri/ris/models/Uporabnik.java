@@ -3,6 +3,8 @@ package si.um.feri.ris.models;
 import jakarta.persistence.*;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Uporabnik {
@@ -37,6 +39,8 @@ public class Uporabnik {
     @OneToMany(mappedBy = "uporabnik_recenzije")
     Collection<Recenzija> rezervacija;
 
+    @ManyToMany(mappedBy = "uporabnikSet")
+    private Set<Vstopnice> vstopniceSet = new HashSet<>();
 
     public Collection<Klub> getKlubi() {
         return klubi;

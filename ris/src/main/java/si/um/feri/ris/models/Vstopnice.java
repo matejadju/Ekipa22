@@ -6,6 +6,8 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Vstopnice {
@@ -21,6 +23,14 @@ public class Vstopnice {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     Dogodek dogodek_vstopnica;
+
+    @ManyToMany
+    @JoinTable(
+            name = "vstopnice_uporabnik",
+            joinColumns = @JoinColumn(name = "idvstopnice"),
+            inverseJoinColumns = @JoinColumn(name = "iduporabnik")
+    )
+    private Set<Uporabnik> uporabnikSet = new HashSet<>();
 
     public Long getIdvstopnice() {
         return idvstopnice;
