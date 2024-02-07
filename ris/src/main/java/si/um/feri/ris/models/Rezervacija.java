@@ -12,7 +12,7 @@ import java.util.Date;
 public class Rezervacija {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long idRezervacija;
     private Date datum;
     private int steviloOseb;
     private String poruka;
@@ -26,12 +26,12 @@ public class Rezervacija {
     @OneToMany(mappedBy = "rezervacija_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Miza> mize;
 
-    public Long getId() {
-        return id;
+    public Long getIdRezervacija() {
+        return idRezervacija;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdRezervacija(Long idRezervacija) {
+        this.idRezervacija = idRezervacija;
     }
 
     public Date getDatum() {
@@ -64,5 +64,14 @@ public class Rezervacija {
 
     public void setUporabnik_rezervacija(Uporabnik uporabnik_rezervacija) {
         this.uporabnik_rezervacija = uporabnik_rezervacija;
+    }
+
+
+    public Collection<Miza> getMize() {
+        return mize;
+    }
+
+    public void setMize(Collection<Miza> mize) {
+        this.mize = mize;
     }
 }
