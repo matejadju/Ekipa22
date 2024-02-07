@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "", allowedHeaders = "*")
 @RestController
-@RequestMapping("/uporabnik")
+@RequestMapping
 public class AuthController {
     private  final  UserService userService;
 

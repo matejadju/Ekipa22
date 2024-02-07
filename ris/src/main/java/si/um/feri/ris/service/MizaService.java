@@ -27,7 +27,11 @@ public class MizaService {
     public Optional<Miza> getById(Long id){
         return mizaRepository.findById(id);
     }
-    @PostMapping
+
+
+    public List<Miza> findByStatusAndTipMizeId(boolean status, Long tip_mize_miza_id) {
+        return mizaRepository.findByStatusAndTipMizeId(status, tip_mize_miza_id);
+    }
     public Miza createMiza(Miza miza){
         return mizaRepository.save(miza);
     }
@@ -41,6 +45,7 @@ public class MizaService {
     public void deleteMiza(Long id) {
         mizaRepository.deleteById(id);
     }
+
 
 
 }
