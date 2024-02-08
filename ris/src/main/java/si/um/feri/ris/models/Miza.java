@@ -17,19 +17,16 @@ public class Miza {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tip_mize_idtip_mize")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Tip_mize tip_mize_miza;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rezervacija_idrezervacija")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Rezervacija rezervacija_miza;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dogodek_iddogodek")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Dogodek dogodek_miza;
 
     public Long getIdmiza() {

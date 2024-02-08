@@ -58,6 +58,10 @@ public class MizaController {
         return mizaService.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
     }
 
+    @GetMapping("/status/{status}")
+    public List<Miza> findByStatus(@PathVariable boolean status){
+        return mizaService.findByStatus(status);
+    }
 
 
 

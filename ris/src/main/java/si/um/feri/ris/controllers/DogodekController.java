@@ -2,11 +2,10 @@ package si.um.feri.ris.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import si.um.feri.ris.models.AddDogodekRequest;
 import si.um.feri.ris.models.Dogodek;
+import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.service.DogodekService;
 import si.um.feri.ris.service.KlubService;
@@ -28,4 +27,13 @@ public class DogodekController {
         return dogodekService.findBydog(odobren, cenaVstopnice);
     }
 
+    @GetMapping("/cena/{cenaVstopnice}")
+    public List<Dogodek> findByCena(@PathVariable Float cenaVstopnice){
+        return dogodekService.findByCenaVstopnice(cenaVstopnice);
+    }
+
+   @PostMapping
+    public Dogodek findByCena(@RequestBody AddDogodekRequest dogodek){
+        return dogodekService.save(dogodek);
+    }
 }
