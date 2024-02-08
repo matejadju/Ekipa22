@@ -36,6 +36,10 @@ public class MizaController {
         return mizaService.createMiza(miza);
 
     }
+    @GetMapping("/dvap/{status}/{tip_mize_miza_id}")
+    public List<Miza> getByStatusAndTipMizeId(@PathVariable boolean status, @PathVariable Long tip_mize_miza_id) {
+        return mizaService.findByStatusAndTipMizeId(status, tip_mize_miza_id);
+    }
 
     @PutMapping("/{id}")
     public void updateMiza(@PathVariable Long id,@RequestBody Miza novaMiza){
