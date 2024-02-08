@@ -50,6 +50,10 @@ public class MizaService {
         return mizaRepository.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
     }
 
+    public List<Miza> findByStatus(boolean status){
+        return mizaRepository.findAllByStatus(status);
+    }
+
 
 
 }

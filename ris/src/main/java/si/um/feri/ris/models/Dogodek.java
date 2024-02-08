@@ -23,7 +23,7 @@ public class Dogodek {
 
     private boolean odobren;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
     Klub klub_dogodek;
