@@ -19,16 +19,21 @@ public class Recenzija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Klub klub_recenzija;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Uporabnik uporabnik_recenzije;
 
 
+    public Uporabnik getUporabnik_recenzije() {
+        return uporabnik_recenzije;
+    }
+
+    public void setUporabnik_recenzije(Uporabnik uporabnik_recenzije) {
+        this.uporabnik_recenzije = uporabnik_recenzije;
+    }
 
     public Long getIdrecenzija() {
         return idrecenzija;
