@@ -11,7 +11,7 @@ import java.util.*;
 @Entity
 public class Dogodek {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long iddogodek;
 
     private LocalDateTime datum;
@@ -26,13 +26,11 @@ public class Dogodek {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Klub klub_dogodek;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     Uporabnik uporabnik_dogodek;
 
     @OneToMany(mappedBy = "dogodek_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
