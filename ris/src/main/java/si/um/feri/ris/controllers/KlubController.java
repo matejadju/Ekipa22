@@ -29,7 +29,7 @@ public class KlubController {
         return klubService.dohvatiKlubPoId(id);
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public Klub spremiKlub(@RequestBody Klub klub) {
         return klubService.spremiKlub(klub);
     }
@@ -42,5 +42,10 @@ public class KlubController {
     @DeleteMapping("/{id}")
     public void obrisiKlub(@PathVariable Long id) {
         klubService.obrisiKlub(id);
+    }
+
+    @GetMapping("/aktivni/{status}")
+    public List<Klub> dohvatiAktivneKluboveZaTipKluba(@PathVariable boolean status) {
+        return klubService.dohvatiAktivneKluboveZaTipKluba(status);
     }
 }
