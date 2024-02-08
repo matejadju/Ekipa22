@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RezervacijaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/RezervacijaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ris/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ris/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/ris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ris/ris.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/RezervacijaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/RezervacijaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/ris.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Uporabnik.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Uporabnik.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vstopnice.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vstopnice.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,36 +26,30 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2aAYvMG7H7cjFvWdPnaaONbxTnh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/HP/Desktop/FERI/2.Godina/RIS/Projekat/ris",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "fc93e9967a2da79dd6a37b332c2d2e17",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Desktop/FERI/2.Godina/RIS/Projekat/ris&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fc93e9967a2da79dd6a37b332c2d2e17&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.RisApplication">
     <configuration name="RisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
