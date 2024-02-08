@@ -53,6 +53,10 @@ public class MizaController {
         mizaService.deleteMiza(id);
     }
 
+    @GetMapping("/MizePoSteviluOseba/{steviloOseb}")
+    public List<Miza> dobaviStolove(@PathVariable int steviloOseb) {
+        return mizaService.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
+    }
 
 
 
