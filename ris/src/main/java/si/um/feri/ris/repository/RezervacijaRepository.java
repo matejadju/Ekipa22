@@ -6,7 +6,6 @@ import org.springframework.data.repository.query.Param;
 import si.um.feri.ris.models.Rezervacija;
 
 import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.util.List;
 
 public interface RezervacijaRepository extends JpaRepository<Rezervacija, Long> {

@@ -7,7 +7,6 @@ import si.um.feri.ris.models.Rezervacija;
 import si.um.feri.ris.repository.RezervacijaRepository;
 
 import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -46,6 +45,7 @@ public class RezervacijaService {
         Timestamp pocetakTimestamp = Timestamp.valueOf(pocetak);
         return rezervacijaRepository.findRezervacijaByDatumAndSteviloOseb(stevOseb, pocetakTimestamp);
     }
+
 
 
 }
