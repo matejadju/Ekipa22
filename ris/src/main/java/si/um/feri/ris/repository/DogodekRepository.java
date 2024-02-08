@@ -2,6 +2,7 @@ package si.um.feri.ris.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import si.um.feri.ris.models.Dogodek;
 import si.um.feri.ris.models.Klub;
 
@@ -12,5 +13,11 @@ public interface DogodekRepository extends JpaRepository<Dogodek, Long> {
 
     @Query("SELECT d FROM Dogodek d WHERE d.steviloMiz > 5 AND d.odobren = true AND d.cenaVstopnice < 20.0 ")
     List<Dogodek> findBydog(boolean odobren, Float cenaVstopnice);
+
+    @Query("SELECT d FROM Dogodek d JOIN fetch d.klub_dogodek k WHERE d.cenaVstopnice > :cenaVstopnice")
+    List<Dogodek> findAllByCenaVstopnice(@Param("cenaVstopnice") Float cenaVstopnice);
+
+
+
 
 }

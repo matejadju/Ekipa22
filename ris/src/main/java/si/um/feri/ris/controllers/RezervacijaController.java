@@ -2,14 +2,10 @@ package si.um.feri.ris.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Rezervacija;
 import si.um.feri.ris.service.RezervacijaService;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,32 +20,32 @@ public class RezervacijaController {
     }
 
     @Autowired
-    public RezervacijaService getRezervacijaService() {
+    public RezervacijaService getRezervacijaService(){
         return rezervacijaService;
     }
 
     @GetMapping
-    public List<Rezervacija> getALL() {
+    public List<Rezervacija> getALL(){
         return rezervacijaService.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Rezervacija> getById(@PathVariable("id") Long id) {
+    public Optional<Rezervacija> getById(@PathVariable("id") Long id){
         return rezervacijaService.getById(id);
     }
 
     @PostMapping("/add")
-    public Rezervacija createRezervacija(@RequestBody Rezervacija rezervacija) {
+    public Rezervacija createRezervacija(@RequestBody Rezervacija rezervacija){
         return rezervacijaService.createRezervacija(rezervacija);
     }
 
     @PutMapping("/{id}")
-    public void updateRezervacija(@PathVariable Long id, @RequestBody Rezervacija novaRezervacija) {
+    public void updateRezervacija(@PathVariable Long id, @RequestBody Rezervacija novaRezervacija){
         rezervacijaService.updateRezervacija(id, novaRezervacija);
     }
 
     @DeleteMapping("/del/{id}")
-    public void deleteRezervacija(@PathVariable Long id) {
+    public void deleteRezervacija(@PathVariable Long id){
         rezervacijaService.deleteRezervacija(id);
     }
 
@@ -59,7 +55,7 @@ public class RezervacijaController {
 
         return rezervacijaService.dohvatiRezervacije(stevOseb);
     }
-    
+
 
 
 

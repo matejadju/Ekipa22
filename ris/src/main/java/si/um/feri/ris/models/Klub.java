@@ -32,7 +32,8 @@ public class Klub {
     @JsonIgnore
     Uporabnik uporabnik;
 
-    @OneToMany(mappedBy = "klub_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+//    , orphanRemoval = true
+    @OneToMany(mappedBy = "klub_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Dogodek> dogodki;
 
     @OneToMany(mappedBy = "klub_recenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

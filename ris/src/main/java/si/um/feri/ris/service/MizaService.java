@@ -46,6 +46,14 @@ public class MizaService {
         mizaRepository.deleteById(id);
     }
 
+    public List<Miza> pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(int steviloOseb) {
+        return mizaRepository.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
+    }
+
+    public List<Miza> findByStatus(boolean status){
+        return mizaRepository.findAllByStatus(status);
+    }
+
 
 
 }
