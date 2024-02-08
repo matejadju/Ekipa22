@@ -2,10 +2,6 @@ package si.um.feri.ris.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.repository.KlubRepository;
 import java.util.List;
@@ -42,5 +38,9 @@ public class KlubService {
 
     public void obrisiKlub(Long id) {
         klubRepository.deleteById(id);
+    }
+
+    public List<Klub> dohvatiAktivneKluboveZaTipKluba(boolean status) {
+        return klubRepository.findByStatusAndTipKlubaId(status);
     }
 }
