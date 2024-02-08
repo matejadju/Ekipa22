@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Projekat.iml" filepath="$PROJECT_DIR$/.idea/Projekat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ris/ris.iml" filepath="$PROJECT_DIR$/ris/ris.iml" />
     </modules>
   </component>
 </project>
