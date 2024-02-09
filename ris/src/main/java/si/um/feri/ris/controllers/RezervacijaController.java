@@ -50,4 +50,13 @@ public class RezervacijaController {
     }
 
 
+    @GetMapping("/steviloOseb/{stevOseb}")
+    public List<Rezervacija> dohvatiRez(@PathVariable int stevOseb) {
+
+        return rezervacijaService.dohvatiRezervacije(stevOseb);
+    }
+
+
+
+
 }
