@@ -1,5 +1,6 @@
 package si.um.feri.ris.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -28,15 +29,19 @@ public class Uporabnik {
     private int davcnaStevilka;
 
     @OneToMany(mappedBy = "uporabnik", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     Collection<Klub> klubi;
 
     @OneToMany(mappedBy = "uporabnik_rezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     Collection<Rezervacija> rezervacije;
 
     @OneToMany(mappedBy = "uporabnik_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     Collection<Dogodek> dogodki;
 
     @OneToMany(mappedBy = "uporabnik_recenzije", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     Collection<Recenzija> recenzije;
 
    @OneToMany(mappedBy = "uporabnik_vstopnice", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
