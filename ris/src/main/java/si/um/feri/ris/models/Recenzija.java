@@ -1,6 +1,7 @@
 package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -19,11 +20,13 @@ public class Recenzija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     Klub klub_recenzija;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     Uporabnik uporabnik_recenzije;
 
 

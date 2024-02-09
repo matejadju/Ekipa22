@@ -36,16 +36,11 @@ public class Uporabnik {
     @OneToMany(mappedBy = "uporabnik_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Dogodek> dogodki;
 
-    @OneToMany(mappedBy = "uporabnik_recenzije")
-    Collection<Recenzija> rezervacija;
+    @OneToMany(mappedBy = "uporabnik_recenzije", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Recenzija> recenzije;
 
-    @ManyToMany(mappedBy = "uporabnikSet")
-    private Set<Vstopnice> vstopniceSet = new HashSet<>();
-
-    public Collection<Klub> getKlubi() {
-        return klubi;
-    }
-
+   @OneToMany(mappedBy = "uporabnik_vstopnice", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Vstopnice> vstopnice;
     public void setKlubi(Collection<Klub> klubi) {
         this.klubi = klubi;
     }
@@ -128,5 +123,33 @@ public class Uporabnik {
 
     public void setRezervacije(Collection<Rezervacija> rezervacije) {
         this.rezervacije = rezervacije;
+    }
+
+    public Collection<Klub> getKlubi() {
+        return klubi;
+    }
+
+    public Collection<Dogodek> getDogodki() {
+        return dogodki;
+    }
+
+    public void setDogodki(Collection<Dogodek> dogodki) {
+        this.dogodki = dogodki;
+    }
+
+    public Collection<Recenzija> getRecenzije() {
+        return recenzije;
+    }
+
+    public void setRecenzije(Collection<Recenzija> recenzije) {
+        this.recenzije = recenzije;
+    }
+
+    public Collection<Vstopnice> getVstopnice() {
+        return vstopnice;
+    }
+
+    public void setVstopnice(Collection<Vstopnice> vstopnice) {
+        this.vstopnice = vstopnice;
     }
 }

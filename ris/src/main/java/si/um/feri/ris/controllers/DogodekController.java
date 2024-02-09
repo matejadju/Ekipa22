@@ -36,4 +36,10 @@ public class DogodekController {
     public Dogodek findByCena(@RequestBody AddDogodekRequest dogodek){
         return dogodekService.save(dogodek);
     }
+
+    @GetMapping("/stmiz/{steviloMiz}")
+    public List<Dogodek> findBySteviloMiz(@PathVariable int steviloMiz){
+        return dogodekService.findBySteviloMiz(steviloMiz);
+    }
+
 }

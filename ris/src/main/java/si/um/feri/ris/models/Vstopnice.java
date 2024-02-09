@@ -1,6 +1,7 @@
 package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -21,17 +22,14 @@ public class Vstopnice {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "dogodek_iddogodek")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @JsonIgnoreProperties("vstopnice")
     Dogodek dogodek_vstopnica;
 
-    @ManyToMany
-    @JoinTable(
-            name = "vstopnice_uporabnik",
-            joinColumns = @JoinColumn(name = "idvstopnice"),
-            inverseJoinColumns = @JoinColumn(name = "iduporabnik")
-    )
-    private Set<Uporabnik> uporabnikSet = new HashSet<>();
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "uporabnik_iduporabnik")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnoreProperties("vstopnice")
+    Uporabnik uporabnik_vstopnice;
     public Long getIdvstopnice() {
         return idvstopnice;
     }
@@ -62,5 +60,13 @@ public class Vstopnice {
 
     public void setDogodek_vstopnica(Dogodek dogodek_vstopnica) {
         this.dogodek_vstopnica = dogodek_vstopnica;
+    }
+
+    public Uporabnik getUporabnik_vstopnice() {
+        return uporabnik_vstopnice;
+    }
+
+    public void setUporabnik_vstopnice(Uporabnik uporabnik_vstopnice) {
+        this.uporabnik_vstopnice = uporabnik_vstopnice;
     }
 }

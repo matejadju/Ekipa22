@@ -19,4 +19,9 @@ public class VstopniceController {
     public List<Vstopnice> dobaviKorisnike(@PathVariable int cena) {
         return vstopniceService.pronadjiKorisnikeSaCenomVstopnice(cena);
     }
+
+    @GetMapping("/cena/{cena}")
+    public List<Vstopnice> findByCena(@PathVariable float cena){
+        return vstopniceService.findByCena(cena);
+    }
 }

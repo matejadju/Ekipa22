@@ -24,4 +24,8 @@ public class VstopniceService {
         return vstopniceRepository.pronadjiKorisnikeSaCenomVstopnice(cena);
     }
 
+    public List<Vstopnice> findByCena(float cena){
+        return vstopniceRepository.findAllByCena(cena);
+    }
+
 }

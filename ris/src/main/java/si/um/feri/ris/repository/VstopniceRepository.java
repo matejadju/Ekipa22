@@ -15,9 +15,12 @@ import java.util.List;
 public interface VstopniceRepository extends JpaRepository<Vstopnice, Long> {
     @Query("SELECT u.ime, u.priimek " +
             "FROM Vstopnice v " +
-            "JOIN v.uporabnikSet u " +
+            "JOIN v.uporabnik_vstopnice u " +
             "WHERE v.cena = :cena")
     List<Vstopnice> pronadjiKorisnikeSaCenomVstopnice( int cena);
+
+    @Query("SELECT v FROM Vstopnice v JOIN fetch v.uporabnik_vstopnice u JOIN fetch v.dogodek_vstopnica d WHERE v.cena > :cena")
+    List<Vstopnice> findAllByCena(@Param("cena") float cena);
 }
 
 
