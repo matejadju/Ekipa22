@@ -47,4 +47,8 @@ public class DogodekService {
         d.setSteviloVstopnica(dogodek.getSteviloVstopnic());
         return dogodekRepository.saveAndFlush(d);
     }
+
+    public List<Dogodek> findBySteviloMiz(int steviloMiz){
+        return dogodekRepository.findAllBySteviloMiz(steviloMiz);
+    }
 }
