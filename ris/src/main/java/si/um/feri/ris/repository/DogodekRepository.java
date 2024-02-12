@@ -17,6 +17,7 @@ public interface DogodekRepository extends JpaRepository<Dogodek, Long> {
     @Query("SELECT d FROM Dogodek d JOIN fetch d.klub_dogodek k WHERE d.cenaVstopnice > :cenaVstopnice")
     List<Dogodek> findAllByCenaVstopnice(@Param("cenaVstopnice") Float cenaVstopnice);
 
-
+    @Query("SELECT d FROM  Dogodek  d JOIN fetch d.klub_dogodek k JOIN fetch k.tip_kluba t WHERE d.steviloMiz > :steviloMiz")
+    List<Dogodek> findAllBySteviloMiz(@Param("steviloMiz") int steviloMiz);
 
 }

@@ -1,5 +1,6 @@
 package si.um.feri.ris.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -10,7 +11,7 @@ import java.util.Set;
 public class Uporabnik {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long iduporabnik;
+    private Long idUporabnik;
 
     private String ime;
     private String priimek;
@@ -27,35 +28,35 @@ public class Uporabnik {
     @Column(nullable = true)
     private int davcnaStevilka;
 
-    @OneToMany(mappedBy = "uporabnik", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "idKlub", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     Collection<Klub> klubi;
 
-    @OneToMany(mappedBy = "uporabnik_rezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     Collection<Rezervacija> rezervacije;
 
-    @OneToMany(mappedBy = "uporabnik_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idDogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
     Collection<Dogodek> dogodki;
 
-    @OneToMany(mappedBy = "uporabnik_recenzije")
-    Collection<Recenzija> rezervacija;
+    @OneToMany(mappedBy = "idRecenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnore
+    Collection<Recenzija> recenzije;
 
-    @ManyToMany(mappedBy = "uporabnikSet")
-    private Set<Vstopnice> vstopniceSet = new HashSet<>();
-
-    public Collection<Klub> getKlubi() {
-        return klubi;
-    }
-
+   @OneToMany(mappedBy = "idVstopnice", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Vstopnice> vstopnice;
     public void setKlubi(Collection<Klub> klubi) {
         this.klubi = klubi;
     }
 
-    public Long getIduporabnik() {
-        return iduporabnik;
+
+    public Long getIdUporabnik() {
+        return idUporabnik;
     }
 
-    public void setIduporabnik(Long iduporabnik) {
-        this.iduporabnik = iduporabnik;
+    public void setIdUporabnik(Long idUporabnik) {
+        this.idUporabnik = idUporabnik;
     }
 
     public String getIme() {
@@ -128,5 +129,33 @@ public class Uporabnik {
 
     public void setRezervacije(Collection<Rezervacija> rezervacije) {
         this.rezervacije = rezervacije;
+    }
+
+    public Collection<Klub> getKlubi() {
+        return klubi;
+    }
+
+    public Collection<Dogodek> getDogodki() {
+        return dogodki;
+    }
+
+    public void setDogodki(Collection<Dogodek> dogodki) {
+        this.dogodki = dogodki;
+    }
+
+    public Collection<Recenzija> getRecenzije() {
+        return recenzije;
+    }
+
+    public void setRecenzije(Collection<Recenzija> recenzije) {
+        this.recenzije = recenzije;
+    }
+
+    public Collection<Vstopnice> getVstopnice() {
+        return vstopnice;
+    }
+
+    public void setVstopnice(Collection<Vstopnice> vstopnice) {
+        this.vstopnice = vstopnice;
     }
 }

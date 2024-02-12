@@ -37,7 +37,7 @@ public class MizaService {
     }
     public void updateMiza(Long id, Miza novaMiza) {
         if (mizaRepository.existsById(id)) {
-            novaMiza.setIdmiza(id);
+            novaMiza.setIdMiza(id);
             mizaRepository.save(novaMiza);
         }
     }

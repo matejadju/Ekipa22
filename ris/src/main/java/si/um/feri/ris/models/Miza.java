@@ -10,32 +10,31 @@ import org.springframework.web.jsf.FacesContextUtils;
 public class Miza {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idmiza;
+    private Long idMiza;
 
     private boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tip_mize_idtip_mize")
     @OnDelete(action = OnDeleteAction.CASCADE)
-            @JsonIgnore
-    Tip_mize tip_mize_miza;
+    Tip_mize tipMize;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rezervacija_idrezervacija")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Rezervacija rezervacija_miza;
+    Rezervacija rezervacija;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dogodek_iddogodek")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Dogodek dogodek_miza;
+    Dogodek dogodek;
 
-    public Long getIdmiza() {
-        return idmiza;
+    public Long getIdMiza() {
+        return idMiza;
     }
 
-    public void setIdmiza(Long idmiza) {
-        this.idmiza = idmiza;
+    public void setIdMiza(Long idMiza) {
+        this.idMiza = idMiza;
     }
 
     public boolean isStatus() {
@@ -46,27 +45,27 @@ public class Miza {
         this.status = status;
     }
 
-    public Tip_mize getTip_mize_miza() {
-        return tip_mize_miza;
+    public Tip_mize getTipMize() {
+        return tipMize;
     }
 
-    public void setTip_mize_miza(Tip_mize tip_mize_miza) {
-        this.tip_mize_miza = tip_mize_miza;
+    public void setTipMize(Tip_mize tipMize) {
+        this.tipMize = tipMize;
     }
 
-    public Rezervacija getRezervacija_miza() {
-        return rezervacija_miza;
+    public Rezervacija getRezervacija() {
+        return rezervacija;
     }
 
-    public void setRezervacija_miza(Rezervacija rezervacija_miza) {
-        this.rezervacija_miza = rezervacija_miza;
+    public void setRezervacija(Rezervacija rezervacija) {
+        this.rezervacija = rezervacija;
     }
 
-    public Dogodek getDogodek_miza() {
-        return dogodek_miza;
+    public Dogodek getDogodek() {
+        return dogodek;
     }
 
-    public void setDogodek_miza(Dogodek dogodek_miza) {
-        this.dogodek_miza = dogodek_miza;
+    public void setDogodek(Dogodek dogodek) {
+        this.dogodek = dogodek;
     }
 }

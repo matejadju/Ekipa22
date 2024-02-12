@@ -23,28 +23,28 @@ public class Klub {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tip_kluba_idtip_kluba")
     @OnDelete(action = OnDeleteAction.CASCADE)
-
+    @JsonIgnoreProperties("klubi")
+//    @JsonIgnore
     Tip_kluba tip_kluba;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-
+    @JsonIgnore
     Uporabnik uporabnik;
 
-//    , orphanRemoval = true
-    @OneToMany(mappedBy = "klub_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idDogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Dogodek> dogodki;
 
-    @OneToMany(mappedBy = "klub_recenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRecenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Recenzija> recenzije;
 
-    public Long getIdklub() {
-        return idklub;
+    public Long getIdKlub() {
+        return idKlub;
     }
 
-    public void setIdklub(Long idklub) {
-        this.idklub = idklub;
+    public void setIdKlub(Long idklub) {
+        this.idKlub = idklub;
     }
 
     public String getNaziv() {

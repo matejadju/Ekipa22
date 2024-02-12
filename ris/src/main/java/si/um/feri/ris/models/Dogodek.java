@@ -12,7 +12,7 @@ import java.util.*;
 public class Dogodek {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long iddogodek;
+    private Long idDogodek;
 
     private LocalDateTime datum;
     private String naziv;
@@ -31,20 +31,37 @@ public class Dogodek {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     Uporabnik uporabnik_dogodek;
 
-    @OneToMany(mappedBy = "dogodek_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idMiza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Miza> mize;
 
-    @OneToMany(mappedBy = "dogodek_vstopnica", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idVstopnice", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Vstopnice> vstopnice;
 
-    public Long getIddogodek() {
-        return iddogodek;
+    public Long getIdDogodek() {
+        return idDogodek;
     }
 
-    public void setIddogodek(Long iddogodek) {
-        this.iddogodek = iddogodek;
+    public void setIdDogodek(Long idDogodek) {
+        this.idDogodek = idDogodek;
+    }
+
+    public Collection<Miza> getMize() {
+        return mize;
+    }
+
+    public void setMize(Collection<Miza> mize) {
+        this.mize = mize;
+    }
+
+    public Collection<Vstopnice> getVstopnice() {
+        return vstopnice;
+    }
+
+    public void setVstopnice(Collection<Vstopnice> vstopnice) {
+        this.vstopnice = vstopnice;
     }
 
     public LocalDateTime getDatum() {
