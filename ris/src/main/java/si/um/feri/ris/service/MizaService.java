@@ -54,6 +54,16 @@ public class MizaService {
         return mizaRepository.findAllByStatus(status);
     }
 
+    public List<Miza> findByTipMize(String naziv){
+        return mizaRepository.findByTipMize(naziv);
+    }
 
+    public List<Miza> findBystevOseb(boolean status){
+        return mizaRepository.findByStevOseb(status);
+    }
+
+    public List<Miza> findBystevMiz(int steviloMiz){
+        return mizaRepository.findByStevMiz(steviloMiz);
+    }
 
 }

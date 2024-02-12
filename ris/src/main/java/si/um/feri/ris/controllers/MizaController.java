@@ -64,6 +64,22 @@ public class MizaController {
     }
 
 
+    @GetMapping("/imemnad/{naziv}")
+    public List<Miza> findByTipMize(@PathVariable String naziv){
+        return mizaService.findByTipMize(naziv);
+    }
+
+    @GetMapping("/stevo/{status}")
+    public List<Miza> findBystevOseb(@PathVariable boolean status){
+        return mizaService.findBystevOseb(status);
+    }
+
+    @GetMapping("/stevm/{steviloMiz}")
+    public List<Miza> findBystevMiz(@PathVariable int steviloMiz){
+        return mizaService.findBystevMiz(steviloMiz);
+    }
+
+
 
 
 

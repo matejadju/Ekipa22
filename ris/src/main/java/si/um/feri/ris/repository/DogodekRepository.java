@@ -19,5 +19,4 @@ public interface DogodekRepository extends JpaRepository<Dogodek, Long> {
 
 
 
-
 }

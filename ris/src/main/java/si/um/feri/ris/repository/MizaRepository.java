@@ -28,7 +28,15 @@ public interface MizaRepository extends JpaRepository<Miza, Long> {
 
     @Query("SELECT m FROM Miza m JOIN FETCH m.dogodek_miza d WHERE m.status = :status")
     List<Miza> findAllByStatus (@Param("status") boolean status);
+
+
+    @Query("SELECT m FROM Miza m JOIN fetch m.dogodek_miza d JOIN fetch m.tip_mize_miza tm WHERE tm.naziv = :naziv")
+    List<Miza> findByTipMize(String naziv);
+
+    @Query("SELECT m FROM Miza m JOIN fetch m.rezervacija_miza r JOIN fetch m.tip_mize_miza tm WHERE m.status > :status")
+    List<Miza> findByStevOseb(boolean status);
+
+    @Query("SELECT m FROM Miza m JOIN fetch m.dogodek_miza d JOIN fetch d.klub_dogodek k WHERE d.steviloMiz > :steviloMiz")
+    List<Miza> findByStevMiz(int steviloMiz);
+
 }
-
-
-

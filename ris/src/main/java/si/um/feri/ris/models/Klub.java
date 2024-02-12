@@ -23,13 +23,13 @@ public class Klub {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tip_kluba_idtip_kluba")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+
     Tip_kluba tip_kluba;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+
     Uporabnik uporabnik;
 
 //    , orphanRemoval = true
