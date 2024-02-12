@@ -14,8 +14,8 @@ public class Tip_mize {
     private String naziv;
     private String opis;
 
-    @OneToMany(mappedBy = "tip_mize_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    Collection<Miza> tip_miza;
+    @OneToMany(mappedBy = "idMiza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Collection<Miza> mize;
 
     public Long getId() {
         return id;
@@ -43,6 +43,14 @@ public class Tip_mize {
 
     public String getOpis() {
         return opis;
+    }
+
+    public Collection<Miza> getMize() {
+        return mize;
+    }
+
+    public void setMize(Collection<Miza> mize) {
+        this.mize = mize;
     }
 
     public void setOpis(String opis) {

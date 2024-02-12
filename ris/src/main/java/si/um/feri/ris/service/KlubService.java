@@ -31,7 +31,7 @@ public class KlubService {
 
     public void azurirajKlub(Long id, Klub noviKlub) {
         if (klubRepository.existsById(id)) {
-            noviKlub.setIdklub(id);
+            noviKlub.setIdKlub(id);
             klubRepository.save(noviKlub);
         }
     }

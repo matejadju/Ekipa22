@@ -1,20 +1,17 @@
 package si.um.feri.ris.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 public class Vstopnice {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idvstopnice;
+    private Long idVstopnice;
 
     private Date datum;
     private int cena;
@@ -23,19 +20,20 @@ public class Vstopnice {
     @JoinColumn(name = "dogodek_iddogodek")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties("vstopnice")
-    Dogodek dogodek_vstopnica;
+    Dogodek dogodek;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties("vstopnice")
-    Uporabnik uporabnik_vstopnice;
-    public Long getIdvstopnice() {
-        return idvstopnice;
+    Uporabnik uporabnik;
+
+    public Long getIdVstopnice() {
+        return idVstopnice;
     }
 
-    public void setIdvstopnice(Long idvstopnice) {
-        this.idvstopnice = idvstopnice;
+    public void setIdVstopnice(Long idVstopnice) {
+        this.idVstopnice = idVstopnice;
     }
 
     public Date getDatum() {
@@ -54,19 +52,19 @@ public class Vstopnice {
         this.cena = cena;
     }
 
-    public Dogodek getDogodek_vstopnica() {
-        return dogodek_vstopnica;
+    public Dogodek getDogodek() {
+        return dogodek;
     }
 
-    public void setDogodek_vstopnica(Dogodek dogodek_vstopnica) {
-        this.dogodek_vstopnica = dogodek_vstopnica;
+    public void setDogodek(Dogodek dogodek) {
+        this.dogodek = dogodek;
     }
 
-    public Uporabnik getUporabnik_vstopnice() {
-        return uporabnik_vstopnice;
+    public Uporabnik getUporabnik() {
+        return uporabnik;
     }
 
-    public void setUporabnik_vstopnice(Uporabnik uporabnik_vstopnice) {
-        this.uporabnik_vstopnice = uporabnik_vstopnice;
+    public void setUporabnik(Uporabnik uporabnik) {
+        this.uporabnik = uporabnik;
     }
 }
