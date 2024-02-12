@@ -1,6 +1,7 @@
 package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -11,7 +12,7 @@ import java.util.Collection;
 public class Klub {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idklub;
+    private Long idKlub;
 
     private String naziv;
     private String adresa;
