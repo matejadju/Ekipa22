@@ -15,12 +15,12 @@ import java.util.List;
 public interface RecenzijaRepository extends JpaRepository<Recenzija, Long> {
 
 
-    @Query("SELECT r FROM Recenzija r JOIN fetch r.klub_recenzija k WHERE r.ocena < :ocena")
+    @Query("SELECT r FROM Recenzija r JOIN fetch r.klub k WHERE r.ocena < :ocena")
     List<Recenzija> findNaziveKlubovaZaRecenzijeSaOcenomManjomOd(int ocena);
 
-    @Query("SELECT r FROM Recenzija r JOIN fetch r.uporabnik_recenzije u JOIN fetch r.klub_recenzija k WHERE r.ocena = :ocena")
+    @Query("SELECT r FROM Recenzija r JOIN fetch r.uporabnik u JOIN fetch r.klub k WHERE r.ocena = :ocena")
     List<Recenzija> findImeIPrezime(int ocena);
 
-    @Query("SELECT r FROM Recenzija r LEFT JOIN fetch r.klub_recenzija k LEFT JOIN fetch k.tip_kluba t WHERE r.ocena > :ocena")
+    @Query("SELECT r FROM Recenzija r LEFT JOIN fetch r.klub k LEFT JOIN fetch k.tip_kluba t WHERE r.ocena > :ocena")
     List<Recenzija> findAllByOcena(@Param("ocena") int ocena);
 }

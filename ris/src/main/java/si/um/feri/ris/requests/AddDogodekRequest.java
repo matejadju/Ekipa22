@@ -1,4 +1,4 @@
-package si.um.feri.ris.models;
+package si.um.feri.ris.requests;
 
 import java.time.LocalDateTime;
 

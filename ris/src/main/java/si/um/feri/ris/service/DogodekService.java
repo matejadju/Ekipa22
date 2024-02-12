@@ -2,13 +2,12 @@ package si.um.feri.ris.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import si.um.feri.ris.models.AddDogodekRequest;
+import si.um.feri.ris.requests.AddDogodekRequest;
 import si.um.feri.ris.models.Dogodek;
 import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.repository.DogodekRepository;
 import si.um.feri.ris.repository.KlubRepository;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 

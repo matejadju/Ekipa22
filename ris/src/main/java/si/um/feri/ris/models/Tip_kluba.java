@@ -8,20 +8,20 @@ import java.util.Collection;
 public class Tip_kluba {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idtip_kluba;
+    private Long idTipKluba;
 
     private String naziv;
     private String opis;
 
-    @OneToMany(mappedBy = "tip_kluba", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idKlub", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Klub> klubi;
 
-    public Long getIdtip_kluba() {
-        return idtip_kluba;
+    public Long getIdTipKluba() {
+        return idTipKluba;
     }
 
-    public void setIdtip_kluba(Long idtip_kluba) {
-        this.idtip_kluba = idtip_kluba;
+    public void setIdTipKluba(Long idTipKluba) {
+        this.idTipKluba = idTipKluba;
     }
 
     public String getNaziv() {

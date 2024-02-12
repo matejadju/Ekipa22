@@ -11,7 +11,7 @@ import java.util.Set;
 public class Uporabnik {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long iduporabnik;
+    private Long idUporabnik;
 
     private String ime;
     private String priimek;
@@ -28,34 +28,35 @@ public class Uporabnik {
     @Column(nullable = true)
     private int davcnaStevilka;
 
-    @OneToMany(mappedBy = "uporabnik", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "idKlub", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     Collection<Klub> klubi;
 
-    @OneToMany(mappedBy = "uporabnik_rezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
     Collection<Rezervacija> rezervacije;
 
-    @OneToMany(mappedBy = "uporabnik_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idDogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
     Collection<Dogodek> dogodki;
 
-    @OneToMany(mappedBy = "uporabnik_recenzije", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRecenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
     Collection<Recenzija> recenzije;
 
-   @OneToMany(mappedBy = "uporabnik_vstopnice", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+   @OneToMany(mappedBy = "idVstopnice", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Vstopnice> vstopnice;
     public void setKlubi(Collection<Klub> klubi) {
         this.klubi = klubi;
     }
 
-    public Long getIduporabnik() {
-        return iduporabnik;
+
+    public Long getIdUporabnik() {
+        return idUporabnik;
     }
 
-    public void setIduporabnik(Long iduporabnik) {
-        this.iduporabnik = iduporabnik;
+    public void setIdUporabnik(Long idUporabnik) {
+        this.idUporabnik = idUporabnik;
     }
 
     public String getIme() {

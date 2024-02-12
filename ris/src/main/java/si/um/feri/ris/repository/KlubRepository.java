@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface KlubRepository extends JpaRepository<Klub, Long> {
 
-    @Query("SELECT k FROM Klub k WHERE k.status = true AND k.tip_kluba.idtip_kluba = 1")
+    @Query("SELECT k FROM Klub k WHERE k.status = true AND k.tip_kluba.idTipKluba = 1")
     List<Klub> findByStatusAndTipKlubaId(boolean status);
 }
