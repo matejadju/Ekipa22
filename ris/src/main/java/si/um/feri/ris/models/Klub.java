@@ -1,6 +1,7 @@
 package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -11,7 +12,7 @@ import java.util.Collection;
 public class Klub {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idklub;
+    private Long idKlub;
 
     private String naziv;
     private String adresa;
@@ -23,7 +24,8 @@ public class Klub {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tip_kluba_idtip_kluba")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @JsonIgnoreProperties("klubi")
+//    @JsonIgnore
     Tip_kluba tip_kluba;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
@@ -32,18 +34,18 @@ public class Klub {
     @JsonIgnore
     Uporabnik uporabnik;
 
-    @OneToMany(mappedBy = "klub_dogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "idDogodek", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Dogodek> dogodki;
 
-    @OneToMany(mappedBy = "klub_recenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRecenzija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Recenzija> recenzije;
 
-    public Long getIdklub() {
-        return idklub;
+    public Long getIdKlub() {
+        return idKlub;
     }
 
-    public void setIdklub(Long idklub) {
-        this.idklub = idklub;
+    public void setIdKlub(Long idklub) {
+        this.idKlub = idklub;
     }
 
     public String getNaziv() {

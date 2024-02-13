@@ -1,6 +1,7 @@
 package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -11,7 +12,7 @@ import java.util.Collection;
 public class Recenzija {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idrecenzija;
+    private Long idRecenzija;
 
     private int ocena;
     private String tekst;
@@ -19,28 +20,30 @@ public class Recenzija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Klub klub_recenzija;
+    @JsonIgnore
+    Klub klub;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Uporabnik uporabnik_recenzije;
+    @JsonIgnore
+    Uporabnik uporabnik;
 
 
-    public Uporabnik getUporabnik_recenzije() {
-        return uporabnik_recenzije;
+    public Uporabnik getUporabnik() {
+        return uporabnik;
     }
 
-    public void setUporabnik_recenzije(Uporabnik uporabnik_recenzije) {
-        this.uporabnik_recenzije = uporabnik_recenzije;
+    public void setUporabnik(Uporabnik uporabnik) {
+        this.uporabnik = uporabnik;
     }
 
-    public Long getIdrecenzija() {
-        return idrecenzija;
+    public Long getIdRecenzija() {
+        return idRecenzija;
     }
 
-    public void setIdrecenzija(Long idrecenzija) {
-        this.idrecenzija = idrecenzija;
+    public void setIdRecenzija(Long idRecenzija) {
+        this.idRecenzija = idRecenzija;
     }
 
     public int getOcena() {
@@ -59,11 +62,11 @@ public class Recenzija {
         this.tekst = tekst;
     }
 
-    public Klub getKlub_recenzija() {
-        return klub_recenzija;
+    public Klub getKlub() {
+        return klub;
     }
 
-    public void setKlub_recenzija(Klub klub_recenzija) {
-        this.klub_recenzija = klub_recenzija;
+    public void setKlub(Klub klub) {
+        this.klub = klub;
     }
 }

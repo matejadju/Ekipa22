@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -20,11 +19,11 @@ public class Rezervacija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+
     Uporabnik uporabnik_rezervacija;
 
-    @OneToMany(mappedBy = "rezervacija_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    Collection<Miza> mize;
+    @ManyToOne( fetch = FetchType.LAZY)
+    Miza miza;
 
     public Long getIdRezervacija() {
         return idRezervacija;
@@ -67,11 +66,11 @@ public class Rezervacija {
     }
 
 
-    public Collection<Miza> getMize() {
-        return mize;
+    public Miza getMize() {
+        return miza;
     }
 
-    public void setMize(Collection<Miza> mize) {
-        this.mize = mize;
+    public void setMize(Miza miza) {
+        this.miza = miza;
     }
 }

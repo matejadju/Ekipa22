@@ -1,12 +1,10 @@
 package si.um.feri.ris.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.models.Recenzija;
+import si.um.feri.ris.models.Rezervacija;
 import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.service.RecenzijaService;
 
@@ -30,4 +28,12 @@ public class RecenzijaController {
     public List<Recenzija> findImeIPrezime(@PathVariable int ocena) {
         return recenzijaService.findImeIPrezime(ocena);
     }
+
+    @GetMapping("/ocena/{ocena}")
+    public List<Recenzija> findByOcena(@PathVariable int ocena){
+        return recenzijaService.findByOcena(ocena);
+    }
+
+
 }
+

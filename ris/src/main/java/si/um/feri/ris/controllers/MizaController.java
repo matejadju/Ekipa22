@@ -53,7 +53,31 @@ public class MizaController {
         mizaService.deleteMiza(id);
     }
 
+    @GetMapping("/MizePoSteviluOseba/{steviloOseb}")
+    public List<Miza> dobaviStolove(@PathVariable int steviloOseb) {
+        return mizaService.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
+    }
 
+    @GetMapping("/status/{status}")
+    public List<Miza> findByStatus(@PathVariable boolean status){
+        return mizaService.findByStatus(status);
+    }
+
+
+    @GetMapping("/imemnad/{naziv}")
+    public List<Miza> findByTipMize(@PathVariable String naziv){
+        return mizaService.findByTipMize(naziv);
+    }
+
+    @GetMapping("/stevo/{status}")
+    public List<Miza> findBystevOseb(@PathVariable boolean status){
+        return mizaService.findBystevOseb(status);
+    }
+
+    @GetMapping("/stevm/{steviloMiz}")
+    public List<Miza> findBystevMiz(@PathVariable int steviloMiz){
+        return mizaService.findBystevMiz(steviloMiz);
+    }
 
 
 

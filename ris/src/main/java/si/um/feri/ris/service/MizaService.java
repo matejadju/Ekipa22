@@ -37,7 +37,7 @@ public class MizaService {
     }
     public void updateMiza(Long id, Miza novaMiza) {
         if (mizaRepository.existsById(id)) {
-            novaMiza.setIdmiza(id);
+            novaMiza.setIdMiza(id);
             mizaRepository.save(novaMiza);
         }
     }
@@ -46,6 +46,24 @@ public class MizaService {
         mizaRepository.deleteById(id);
     }
 
+    public List<Miza> pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(int steviloOseb) {
+        return mizaRepository.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
+    }
 
+    public List<Miza> findByStatus(boolean status){
+        return mizaRepository.findAllByStatus(status);
+    }
+
+    public List<Miza> findByTipMize(String naziv){
+        return mizaRepository.findByTipMize(naziv);
+    }
+
+    public List<Miza> findBystevOseb(boolean status){
+        return mizaRepository.findByStevOseb(status);
+    }
+
+    public List<Miza> findBystevMiz(int steviloMiz){
+        return mizaRepository.findByStevMiz(steviloMiz);
+    }
 
 }
