@@ -30,16 +30,7 @@ public class AuthController {
         return uporabnikService.getById(id);
     }
 
-    @PostMapping("/novUporabnik")
-    public @ResponseBody Uporabnik newUporabnik(@RequestBody Uporabnik uporabnik) {
-        return uporabnikService.novUporabnik(uporabnik);
-    }
 
-    @PostMapping("/registracija")
-    public ResponseEntity<String> registerUser(@RequestBody Uporabnik uporabnik) {
-        uporabnikService.registerUser(uporabnik.getIme(), uporabnik.getPriimek(), uporabnik.getEmail(),
-                uporabnik.getVrsta(), uporabnik.getGeslo(),
-                uporabnik.getDavcnaStevilka(), uporabnik.getEmso());
-        return ResponseEntity.ok("Registration successful");
-    }
+
+
 }

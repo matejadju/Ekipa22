@@ -158,4 +158,6 @@ public class Uporabnik {
     public void setVstopnice(Collection<Vstopnice> vstopnice) {
         this.vstopnice = vstopnice;
     }
+
 }
+

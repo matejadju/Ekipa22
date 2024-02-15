@@ -16,6 +16,8 @@ public class AddUporabnikRequest {
     private int emso;
     private int davcnaStevilka;
 
+
+
     public AddUporabnikRequest() {
 
     }
@@ -29,6 +31,7 @@ public class AddUporabnikRequest {
         this.telefon = telefon;
         this.emso = emso;
         this.davcnaStevilka = davcnaStevilka;
+
     }
 
     public String getIme() {
@@ -94,4 +97,6 @@ public class AddUporabnikRequest {
     public void setDavcnaStevilka(int davcnaStevilka) {
         this.davcnaStevilka = davcnaStevilka;
     }
+
+
 }

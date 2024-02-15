@@ -25,7 +25,7 @@ public class Vstopnice {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnoreProperties("vstopnice")
+    //@JsonIgnoreProperties("vstopnice")
     Uporabnik uporabnik;
 
     public Long getIdVstopnice() {
