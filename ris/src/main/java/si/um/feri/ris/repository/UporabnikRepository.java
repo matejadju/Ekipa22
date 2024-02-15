@@ -10,17 +10,7 @@ import si.um.feri.ris.models.Vrsta;
 
 public interface UporabnikRepository extends JpaRepository<Uporabnik, Integer> {
 
-    @Query("INSERT INTO Uporabnik (ime, priimek, email, vrsta, geslo, davcnaStevilka, emso) " +
-            "VALUES (:ime, :priimek, :email, :vrsta, :geslo, :davcnaStevilka, :emso)")
-    @Modifying
-    @Transactional
-    void insertUporabnik(@Param("ime") String ime,
-                         @Param("priimek") String priimek,
-                         @Param("email") String email,
-                         @Param("vrsta") Vrsta vrsta,
-                         @Param("geslo") String geslo,
-                         @Param("davcnaStevilka") int davcnaStevilka,
-                         @Param("emso") int emso);
+
 
     Uporabnik findByEmail(String email);
 }
