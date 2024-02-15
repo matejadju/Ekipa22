@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Uporabnik;
-import si.um.feri.ris.service.UserService;
+import si.um.feri.ris.service.UporabnikService;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,31 +13,31 @@ import java.util.Optional;
 @RestController
 @RequestMapping
 public class AuthController {
-    private  final  UserService userService;
+    private  final UporabnikService uporabnikService;
 
     @Autowired
-    public AuthController(UserService userService){
-        this.userService = userService;
+    public AuthController(UporabnikService uporabnikService){
+        this.uporabnikService = uporabnikService;
     }
 
     @GetMapping("/all")
     public List<Uporabnik> all(){
-        return userService.getAll();
+        return uporabnikService.getAll();
     }
 
     @GetMapping("/getById/{id}")
     public Optional<Uporabnik> all(@PathVariable("id") Integer id) {
-        return userService.getById(id);
+        return uporabnikService.getById(id);
     }
 
     @PostMapping("/novUporabnik")
     public @ResponseBody Uporabnik newUporabnik(@RequestBody Uporabnik uporabnik) {
-        return userService.novUporabnik(uporabnik);
+        return uporabnikService.novUporabnik(uporabnik);
     }
 
     @PostMapping("/registracija")
     public ResponseEntity<String> registerUser(@RequestBody Uporabnik uporabnik) {
-        userService.registerUser(uporabnik.getIme(), uporabnik.getPriimek(), uporabnik.getEmail(),
+        uporabnikService.registerUser(uporabnik.getIme(), uporabnik.getPriimek(), uporabnik.getEmail(),
                 uporabnik.getVrsta(), uporabnik.getGeslo(),
                 uporabnik.getDavcnaStevilka(), uporabnik.getEmso());
         return ResponseEntity.ok("Registration successful");
