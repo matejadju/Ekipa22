@@ -10,7 +10,7 @@ import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.repository.MizaRepository;
 import si.um.feri.ris.repository.RezervacijaRepository;
 import si.um.feri.ris.requests.AddRezervacijaRequest;
-import si.um.feri.ris.repository.UserRepository;
+import si.um.feri.ris.repository.UporabnikRepository;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -20,7 +20,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 @Service
 public class RezervacijaService {
-    private final  UserRepository userRrepository;
+    private final UporabnikRepository userRrepository;
     private RezervacijaRepository rezervacijaRepository;
 
     private final MizaRepository mizaRepository;
@@ -28,7 +28,7 @@ public class RezervacijaService {
     private JavaMailSender javaMailSender;
 
     public RezervacijaService(
-            UserRepository userRrepository,
+            UporabnikRepository userRrepository,
             RezervacijaRepository rezervacijaRepository,
             MizaRepository mizaRepository, JavaMailSender javaMailSender) {
         this.userRrepository = userRrepository;

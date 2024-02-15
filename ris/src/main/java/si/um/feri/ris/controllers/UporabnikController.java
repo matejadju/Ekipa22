@@ -3,18 +3,18 @@ package si.um.feri.ris.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Uporabnik;
-import si.um.feri.ris.service.UserService;
+import si.um.feri.ris.service.UporabnikService;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
-    private final UserService userService;
+@RequestMapping("/uporabnik")
+public class UporabnikController {
+    private final UporabnikService userService;
 
     @Autowired
-    public UserController(UserService userService) {
+    public UporabnikController(UporabnikService userService) {
         this.userService = userService;
     }
 

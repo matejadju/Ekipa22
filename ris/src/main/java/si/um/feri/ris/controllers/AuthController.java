@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Uporabnik;
-import si.um.feri.ris.service.UserService;
+import si.um.feri.ris.service.UporabnikService;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,10 +13,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping
 public class AuthController {
-    private  final  UserService userService;
+    private  final UporabnikService userService;
 
     @Autowired
-    public AuthController(UserService userService){
+    public AuthController(UporabnikService userService){
         this.userService = userService;
     }
 
