@@ -25,4 +25,7 @@ public class RecenzijaService {
         public List<Recenzija> findImeIPrezime(int ocena){
             return recenzijaRepository.findImeIPrezime(ocena);
         }
+    public List<Recenzija> findRecenzijeSaOcenomVećomOd(int ocena) {
+        return recenzijaRepository.findByOcenaGreaterThan(ocena);
+    }
     }

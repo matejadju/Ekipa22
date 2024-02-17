@@ -1,5 +1,6 @@
 package si.um.feri.ris.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -28,7 +29,9 @@ public class Uporabnik {
     private int davcnaStevilka;
 
     @OneToMany(mappedBy = "uporabnik", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     Collection<Klub> klubi;
+
 
     @OneToMany(mappedBy = "uporabnik_rezervacija", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Rezervacija> rezervacije;

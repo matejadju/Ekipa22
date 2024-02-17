@@ -1,6 +1,7 @@
 package si.um.feri.ris.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -17,6 +18,7 @@ public class Miza {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tip_mize_idtip_mize")
     @OnDelete(action = OnDeleteAction.CASCADE)
+            @JsonIgnore
     Tip_mize tip_mize_miza;
 
     @ManyToOne(fetch = FetchType.LAZY)

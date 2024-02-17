@@ -19,11 +19,13 @@ public class Recenzija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
+
     Klub klub_recenzija;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
+
     Uporabnik uporabnik_recenzije;
 
 

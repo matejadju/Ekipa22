@@ -30,4 +30,9 @@ public class RecenzijaController {
     public List<Recenzija> findImeIPrezime(@PathVariable int ocena) {
         return recenzijaService.findImeIPrezime(ocena);
     }
+
+    @GetMapping("/ocena-veca-od/{ocena}")
+    public List<Recenzija> findRecenzijeSaOcenomVećomOd(@PathVariable int ocena) {
+        return recenzijaService.findRecenzijeSaOcenomVećomOd(ocena);
+    }
 }

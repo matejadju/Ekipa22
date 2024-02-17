@@ -16,18 +16,18 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public void registerUser(String ime, String priimek, String email, Vrsta vrsta,
-                             String geslo, int davcnaStevilka, int emso) {
-
-
-
-        Uporabnik existingUser = userRepository.findByEmail(email);
-        if (existingUser != null) {
-            throw new RuntimeException("Email already exists");
-        }
-
-        userRepository.insertUporabnik(ime, priimek, email, vrsta, geslo, davcnaStevilka, emso);
-    }
+//    public void registerUser(String ime, String priimek, String email, Vrsta vrsta,
+//                             String geslo, int davcnaStevilka, int emso) {
+//
+//
+//
+//        Uporabnik existingUser = userRepository.findByEmail(email);
+//        if (existingUser != null) {
+//            throw new RuntimeException("Email already exists");
+//        }
+//
+//        userRepository.insertUporabnik(ime, priimek, email, vrsta, geslo, davcnaStevilka, emso);
+//    }
 
     @ResponseBody
     public List<Uporabnik> getAll() {
@@ -36,10 +36,13 @@ public class UserService {
 
     @ResponseBody
     public Optional<Uporabnik> getById(int id){
-        return userRepository.findById(id);
+        return userRepository.findById((long) id);
     }
 
     public Uporabnik novUporabnik(Uporabnik uporabnik) {
         return userRepository.saveAndFlush(uporabnik);
+    }
+    public List<Uporabnik> findByPriimekAndImeAndEmail(String priimekPrefix, String imePrefix, String emailPrefix) {
+        return userRepository.findByPriimekAndImeAndEmail(priimekPrefix, imePrefix, emailPrefix);
     }
 }

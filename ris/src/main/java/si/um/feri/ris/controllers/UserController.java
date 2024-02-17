@@ -27,4 +27,10 @@ public class UserController {
     public Optional<Uporabnik> getById(@PathVariable("id") Integer id){
         return userService.getById(id);
     }
+
+    @GetMapping("/uporabnici/{priimekPrefix}/{imePrefix}/{emailPrefix}")
+    public List<Uporabnik> findByPriimekAndImeAndEmail(@PathVariable String priimekPrefix, @PathVariable String imePrefix, @PathVariable String emailPrefix) {
+        return userService.findByPriimekAndImeAndEmail(priimekPrefix, imePrefix, emailPrefix);
+    }
+
 }

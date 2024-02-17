@@ -46,6 +46,8 @@ public class RezervacijaService {
         return rezervacijaRepository.findRezervacijaByDatumAndSteviloOseb(stevOseb, pocetakTimestamp);
     }
 
-
+    public List<Rezervacija> findBySteviloOseba(int steviloOseb) {
+        return rezervacijaRepository.findBySteviloOseba(steviloOseb);
+    }
 
 }

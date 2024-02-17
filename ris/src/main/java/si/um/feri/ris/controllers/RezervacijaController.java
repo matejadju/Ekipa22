@@ -56,7 +56,10 @@ public class RezervacijaController {
         return rezervacijaService.dohvatiRezervacije(stevOseb);
     }
 
-
+    @GetMapping("/stOseba-veca-od/{steviloOseb}")
+    public List<Rezervacija> findBySteviloOseba(@PathVariable int steviloOseb) {
+        return rezervacijaService.findBySteviloOseba(steviloOseb);
+    }
 
 
 }

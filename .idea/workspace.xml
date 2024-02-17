@@ -5,37 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RecenzijaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/VstopniceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/AddDogodekRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/VstopniceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/RecenzijaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/VstopniceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/DogodekController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/DogodekController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/MizaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/MizaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RezervacijaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RezervacijaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Miza.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Miza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Recenzija.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Recenzija.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/DogodekRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/DogodekRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/KlubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/KlubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/MizaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/MizaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/RecenzijaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/RecenzijaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/DogodekService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/DogodekService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/MizaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/MizaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Miza.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Miza.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Recenzija.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Recenzija.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/RisApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Miza.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Recenzija.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Rezervacija.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Tip_kluba.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Tip_mize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Uporabnik.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vrsta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vstopnice.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +40,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2aAYvMG7H7cjFvWdPnaaONbxTnh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging development",
+    "git-widget-placeholder": "Sprint3lazar",
     "last_opened_file_path": "C:/Users/HP/Desktop/FERI/2.Godina/RIS/Projekat/ris",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,20 +67,20 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.RisApplication">
+  <component name="RunManager" selected="Spring Boot.RisApplication2">
     <configuration name="RisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="ris" />
+      <module name="Projekat" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="si.um.feri.ris.RisApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="RisApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files (x86)\Java\jdk-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="ris" />
+      <module name="Projekat" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="si.um.feri.ris.RisApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,6 +110,8 @@
       <updated>1703763086185</updated>
       <workItem from="1703763088252" duration="2311000" />
       <workItem from="1707244197758" duration="3080000" />
+      <workItem from="1707416037110" duration="754000" />
+      <workItem from="1707482658129" duration="410000" />
     </task>
     <servers />
   </component>

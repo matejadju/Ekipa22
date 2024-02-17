@@ -11,9 +11,10 @@ import si.um.feri.ris.models.Vrsta;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
+import java.util.List;
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<Uporabnik, Integer> {
+public interface UserRepository extends JpaRepository<Uporabnik, Long> {
 
     @Query("INSERT INTO Uporabnik (ime, priimek, email, vrsta, geslo, davcnaStevilka, emso) " +
             "VALUES (:ime, :priimek, :email, :vrsta, :geslo, :davcnaStevilka, :emso)")
@@ -28,4 +29,7 @@ public interface UserRepository extends JpaRepository<Uporabnik, Integer> {
                          @Param("emso") int emso);
 
     Uporabnik findByEmail(String email);
+
+    @Query("SELECT u FROM Uporabnik u WHERE u.priimek LIKE CONCAT(:priimekPrefix, '%') AND u.ime LIKE CONCAT(:imePrefix, '%') AND u.email LIKE CONCAT(:emailPrefix, '%')")
+    List<Uporabnik> findByPriimekAndImeAndEmail(@Param("priimekPrefix") String priimekPrefix, @Param("imePrefix") String imePrefix, @Param("emailPrefix") String emailPrefix);
 }

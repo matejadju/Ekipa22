@@ -23,8 +23,8 @@ public class Rezervacija {
     @JsonIgnore
     Uporabnik uporabnik_rezervacija;
 
-    @OneToMany(mappedBy = "rezervacija_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    Collection<Miza> mize;
+    @ManyToOne(mappedBy = "rezervacija_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    Miza mize;
 
     public Long getIdRezervacija() {
         return idRezervacija;

@@ -1,5 +1,6 @@
 package si.um.feri.ris.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -15,6 +16,7 @@ public class Tip_mize {
     private String opis;
 
     @OneToMany(mappedBy = "tip_mize_miza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+            @JsonIgnore
     Collection<Miza> tip_miza;
 
     public Long getId() {
