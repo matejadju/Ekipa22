@@ -29,6 +29,7 @@ public class AddDogodekRequest {
         this.klubDogodek = klubDogodek;
         this.steviloMiz = steviloMiz;
         this.uporabnik = uporabnik;
+
     }
 
     public String getNaziv() {

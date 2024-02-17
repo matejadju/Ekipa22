@@ -56,9 +56,4 @@ public class RezervacijaController {
 
         return rezervacijaService.dohvatiRezervacije(stevOseb);
     }
-
-
-
-
-
 }
