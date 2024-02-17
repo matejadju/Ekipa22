@@ -8,9 +8,10 @@ import org.springframework.data.repository.query.Param;
 import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.models.Vrsta;
 
+import java.util.List;
+
 public interface UporabnikRepository extends JpaRepository<Uporabnik, Integer> {
 
-
-
-    Uporabnik findByEmail(String email);
+    @Query("SELECT u FROM Uporabnik u WHERE u.email = :email AND u.geslo = :geslo")
+    List<Uporabnik> findByEmail(String email,  String geslo);
 }

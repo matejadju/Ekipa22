@@ -1,11 +1,10 @@
 package si.um.feri.ris.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
-import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.models.Uporabnik;
-import si.um.feri.ris.models.Vrsta;
 import si.um.feri.ris.repository.*;
 import si.um.feri.ris.requests.AddUporabnikRequest;
 
@@ -17,6 +16,10 @@ public class UporabnikService {
 
     @Autowired
     private UporabnikRepository uporabnikRepository;
+
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
+
     private final KlubRepository klubRepository;
     private final RezervacijaRepository rezervacijaRepository;
 
@@ -40,21 +43,39 @@ public class UporabnikService {
     }
 
     @ResponseBody
-    public Optional<Uporabnik> getById(int id){
+    public Optional<Uporabnik> getById(int id) {
         return uporabnikRepository.findById(id);
     }
 
-    public Uporabnik save(AddUporabnikRequest uporabnik){
-        Uporabnik u =new Uporabnik();
+    public Uporabnik save(AddUporabnikRequest uporabnik) {
+        Uporabnik u = new Uporabnik();
         u.setIme(uporabnik.getIme());
         u.setPriimek(uporabnik.getPriimek());
         u.setEmail(uporabnik.getEmail());
-        u.setGeslo(uporabnik.getGeslo());
+
+//        String hashedGeslo = passwordEncoder.encode(u.getGeslo());
+
+        u.setGeslo(u.getGeslo());
         u.setVrsta(uporabnik.getVrsta());
         u.setTelefon(uporabnik.getTelefon());
         u.setEmso(uporabnik.getEmso());
         u.setDavcnaStevilka(uporabnik.getDavcnaStevilka());
 
         return uporabnikRepository.saveAndFlush(u);
+    }
+
+    public Uporabnik authenticate(String email, String geslo) throws Exception {
+        List<Uporabnik> u = uporabnikRepository.findByEmail(email,geslo);
+        if (!u.isEmpty()){
+            Uporabnik uporabnik = u.get(0);
+
+            return uporabnik;
+        }
+        throw new Exception("Not authorise");
+    }
+
+    public Uporabnik findByEmail(String email, String geslo) {
+        List<Uporabnik> u = uporabnikRepository.findByEmail(email, geslo);
+        return u.isEmpty() ? null : u.get(0);
     }
 }
