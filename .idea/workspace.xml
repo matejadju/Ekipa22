@@ -5,18 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AboutUs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dogotki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Profil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/RezMize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ris/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RezervacijaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/RezervacijaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UporabnikController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UporabnikController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UporabnikRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UporabnikRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vrsta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vrsta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/NewsGoth_BT_400.font.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/NewsGoth_BT_700.font.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/PIE.htc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/atooltip.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/cufon-replace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/cufon-yui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/jcarousellite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/jquery-1.6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/jquery.easing.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/jquery.mousewheel.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +63,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -59,17 +71,22 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Desktop/FERI/2.Godina/RIS/Projekat/ris&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sprint4stefan&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Ekipa22&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fc93e9967a2da79dd6a37b332c2d2e17&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="npm.start">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/App.js" working-dir="$PROJECT_DIR$/frontend/src">
+      <method v="2" />
+    </configuration>
     <configuration name="RisApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -108,6 +125,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.App.js" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +142,9 @@
       <workItem from="1708004436217" duration="447000" />
       <workItem from="1708004954800" duration="1175000" />
       <workItem from="1708176716116" duration="2221000" />
+      <workItem from="1708189118610" duration="7673000" />
+      <workItem from="1708268950386" duration="3613000" />
+      <workItem from="1708277156549" duration="2732000" />
     </task>
     <servers />
   </component>
