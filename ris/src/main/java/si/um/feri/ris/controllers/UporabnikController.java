@@ -44,7 +44,7 @@ public class UporabnikController {
     public String login(@PathVariable String email, @PathVariable String geslo, HttpServletResponse response) throws Exception {
         Uporabnik u = uporabnikService.authenticate(email, geslo);
             if (u != null) {
-                String userInfoJson = "{\"email\": \"" + u.getEmail() + "\", \"id\": " + u.getIdUporabnik() + "}";
+                String userInfoJson = "{\"email\": \"" + u.getEmail() + "\", \"id\": " + u.getIdUporabnik() + ", \"vrsta\": \"" + u.getVrsta() + "\"}";
                 String encodedUserInfo = URLEncoder.encode(userInfoJson, "UTF-8");
 
                 Cookie cookie = new Cookie("uporabnik", encodedUserInfo);
