@@ -10,12 +10,6 @@ import {
 // import Cookies from 'js-cookie';
 import Homepage from "./pages/Homepage";
 import Uporabnik from "./APIs/Uporabnik";
-import React from "react";
-// import { useState, useEffect } from 'react';
-async function api() {
-  let api = new Uporabnik()
-  return api.getUsers()
-}
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Dogotki from "./pages/Dogotki"
@@ -24,6 +18,13 @@ import Profil from "./pages/Profil";
 import RezMize from "./pages/RezMize";
 import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
+import React from "react";
+// import { useState, useEffect } from 'react';
+async function api() {
+  let api = new Uporabnik()
+  return api.getUsers()
+}
+
 
 
 
