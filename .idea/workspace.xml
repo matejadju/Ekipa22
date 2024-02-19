@@ -5,29 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AboutUs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dogotki.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Profil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/RezMize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/NewsGoth_BT_400.font.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/NewsGoth_BT_700.font.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/PIE.htc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/atooltip.jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/cufon-replace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/cufon-yui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/html5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/jcarousellite.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/jquery-1.6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/jquery.mousewheel.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +126,7 @@
       <workItem from="1708189118610" duration="7673000" />
       <workItem from="1708268950386" duration="3613000" />
       <workItem from="1708277156549" duration="2732000" />
+      <workItem from="1708363654091" duration="1479000" />
     </task>
     <servers />
   </component>
