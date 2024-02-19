@@ -1,8 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 import Homepage from "./pages/Homepage";
-
+import Uporabnik from "./APIs/Uporabnik";
+import React from "react";
+// import { useState, useEffect } from 'react';
+async function api() {
+  let api = new Uporabnik()
+  return api.getUsers()
+}
 function App() {
+  const [data, setData] = React.useState([{ime: 'test'}])
+  React.useEffect( () => {
+    api().then((data) => {
+      console.log(data)
+      setData(data.data)
+    })
+
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,10 +33,20 @@ function App() {
         >
           Learn React
         </a>
-        <Homepage/>
+
+        <div>
+          {data.map((item) => {
+            return (<li key={item.ime}>{item.ime}</li>)
+          })}
+        </div>
+
+        {/*<Homepage dataPrikaz={data}/>*/}
       </header>
     </div>
   );
 }
+// <div>
+//   {data.map((item) => (<span>{item.ime}</span>))}
+// </div>
 
 export default App;
