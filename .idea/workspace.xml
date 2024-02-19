@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/APIs/ApiV1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/APIs/Uporabnik.js" afterDir="false" />
+    <list default="true" id="bf341234-b542-4297-a06a-5adaaaa57c19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AboutUs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dogotki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Profil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/RezMize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,12 +66,16 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fc93e9967a2da79dd6a37b332c2d2e17&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="npm.start">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/App.js" working-dir="$PROJECT_DIR$/frontend/src">
+      <method v="2" />
+    </configuration>
     <configuration name="RisApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -121,6 +129,10 @@
       <workItem from="1707244197758" duration="3080000" />
       <workItem from="1708004436217" duration="447000" />
       <workItem from="1708004954800" duration="1175000" />
+      <workItem from="1708176716116" duration="2221000" />
+      <workItem from="1708189118610" duration="7673000" />
+      <workItem from="1708268950386" duration="3613000" />
+      <workItem from="1708277156549" duration="2732000" />
       <workItem from="1708176716116" duration="13017000" />
       <workItem from="1708363588699" duration="375000" />
     </task>
