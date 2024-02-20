@@ -1,6 +1,5 @@
-
 import './App.css';
-import { Routes, Route, Link, BrowserRouter as Router} from "react-router-dom";
+import {Routes, Route, Link, BrowserRouter as Router, useLocation, Navigate, Outlet} from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
@@ -10,18 +9,64 @@ import Profil from "./pages/Profil";
 import RezMize from "./pages/RezMize";
 import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
-import * as PropTypes from "prop-types";
 
 function isLogged() {
-    const loggedInCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('uporabnik='));
-    return !!loggedInCookie;
+    return localStorage.getItem("u") !== null
+    // const loggedInCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('uporabnik='));
+    // return !!loggedInCookie;
 }
 
-function Redirect(props) {
-    return null;
+function isVlasnik() {
+    return localStorage.getItem("u") !== "lastnik"
+
 }
 
-Redirect.propTypes = {to: PropTypes.string};
+function isOrganizator() {
+    return localStorage.getItem("u") !== "organizator"
+
+}
+
+function isAdministrator() {
+    return localStorage.getItem("u") !== "administrator"
+}
+
+const LastnikRoutes = () => {
+    const location = useLocation();
+
+    return isVlasnik() ? (
+        <Outlet/>
+    ) : (
+        <Navigate to="/home" state={{from: location}} replace/>
+    );
+}
+const OrganizatorRoutes = () => {
+    const location = useLocation();
+
+    return isOrganizator() ? (
+        <Outlet/>
+    ) : (
+        <Navigate to="/home" state={{from: location}} replace/>
+    );
+}
+const ProtectedRoutes = () => {
+    const location = useLocation();
+
+    return isLogged() ? (
+        <Outlet/>
+    ) : (
+        <Navigate to="/login" state={{from: location}} replace/>
+    );
+};
+const AdministratorRoutes = () => {
+    const location = useLocation()
+    return isAdministrator() ? (
+        <Outlet/>
+    ) : (
+        <Navigate to="/home" state={{from: location}} replace/>
+    );
+
+}
+
 
 function App() {
     return (
@@ -45,32 +90,30 @@ function App() {
                     </li>
                 </ul>
                 <Routes>
-                    <Route path="/home" element={isLogged() ? <Homepage /> : <Redirect to="/login" />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/dogotki" element={<Dogotki />} />
-                    <Route path="/aboutus" element={<AboutUs />} />
-                    {isLogged() && (
-                        <>
-                            <Route path="/profil" element={<Profil />} />
-                            <Route path="/rmiza" element={<RezMize />} />
-                        </>
-                    )}
-                    {/* TODO: Organizator */}
-                    {isLogged() && (
-                        <Route path="/adogodek" element={<AddDogodek />} />
-                    )}
-                    {/* TODO: VlasnikK */}
-                    {isLogged() && (
-                        <>
-                            <Route path="/rklub" element={<RegKluba />} />
-                            <Route path="/adogodek" element={<AddDogodek />} />
-                        </>
-                    )}
+                    <Route element={<AdministratorRoutes/>}>
+                        <Route path="/home" element={<Homepage/>}/>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/register" element={<Register/>}/>
+                        <Route path="/dogotki" element={<Dogotki/>}/>
+                        <Route path="/aboutus" element={<AboutUs/>}/>
+                        <Route element={<ProtectedRoutes/>}>
+                            <Route path="/profil" element={<Profil/>}/>
+                            <Route path="/rmiza" element={<RezMize/>}/>
+                            <Route element={<OrganizatorRoutes/>}>
+                                <Route path="/adogodek" element={<AddDogodek/>}/>
+                            </Route>
+                            <Route element={<LastnikRoutes/>}>
+                                <Route path="/rklub" element={<RegKluba/>}/>
+                                <Route path="/adogodek" element={<AddDogodek/>}/>
+                            </Route>
+                        </Route>
+                    </Route>
                 </Routes>
-            </div>
-        </Router>
-    );
+
+        </div>
+</Router>
+)
+    ;
 }
 
 export default App;
