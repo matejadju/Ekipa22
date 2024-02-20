@@ -5,7 +5,8 @@ import {
     Route,
     Location,
     Navigator,
-    Link, BrowserRouter as Router
+    Link,
+     BrowserRouter as Router
 } from "react-router-dom";
 // import Cookies from 'js-cookie';
 import Homepage from "./pages/Homepage";
@@ -18,6 +19,7 @@ import Profil from "./pages/Profil";
 import RezMize from "./pages/RezMize";
 import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
+import BasicBreadcrumbs from "./components/BasicBreadcrumbs";
 import React from "react";
 // import { useState, useEffect } from 'react';
 async function api() {
@@ -46,19 +48,21 @@ async function api() {
 
 
 function App() {
-  const [data, setData] = React.useState([{ime: 'test'}])
-  React.useEffect( () => {
-    api().then((data) => {
-      console.log(data)
-      setData(data.data)
-    })
-
-  }, [])
+  // const [data, setData] = React.useState([{ime: 'test'}])
+  // React.useEffect( () => {
+  //   api().then((data) => {
+  //     console.log(data)
+  //     setData(data.data)
+  //   })
+  //
+  // }, [])
 
   return (
          <Router >
-          <div className="App">
 
+          <div className="App">
+              <div role="presentation">
+              <BasicBreadcrumbs/>
               <ul>
                   <li>
                       <Link to="/home">Home</Link>
@@ -77,27 +81,24 @@ function App() {
                   </li>
               </ul>
 
-              // TODO: Bez Auntentifikacije
+              </div>
               <Routes>
-                  <Route path="/login" component={Login}/>
-                  <Route path="/aboutus" component={AboutUs} />
-                  <Route path="/register" component={Register} />
-                  <Route path="/home" component={Homepage} />
-                  <Route path="/dogotki" component={Dogotki} />
+                  <Route path="/login" element={<Login/>}/>
+                  <Route path="/aboutus" element={<AboutUs/>} />
+                  <Route path="/register" element={Register} />
+                  <Route path="/home" element={Homepage} />
+                  <Route path="/dogotki" element={Dogotki} />
               </Routes>
-              // TODO: Sa Auntetifikacijom
               <Routes>
-                  <Route path="/profil" component={Profil}/>
-                  <Route path="/rmiza" component={RezMize}/>
+                  <Route path="/profil" element={Profil}/>
+                  <Route path="/rmiza" element={RezMize}/>
               </Routes>
-              // TODO: Organizator
               <Routes>
-                  <Route path="/adogodek" component={AddDogodek}/>
+                  <Route path="/adogodek" element={AddDogodek}/>
               </Routes>
-              // TODO: VlasnikK
               <Routes>
-                  <Route path="/rklub" component={RegKluba} />
-                  <Route path="/adogodek" component={AddDogodek}/>
+                  <Route path="/rklub" element={RegKluba} />
+                  <Route path="/adogodek" element={AddDogodek}/>
               </Routes>
 
 
