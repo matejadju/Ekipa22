@@ -6,77 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf341234-b542-4297-a06a-5adaaaa57c19" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/.idea/nightclub_Free_Website_Template_-_Free-CSS.com.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/contacts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/css/ie.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/css/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/gallery.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/banner1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/bg_content.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/bg_dropcap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/bg_menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_big_img9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/gallery_img9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/icon1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/icon2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/icon3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/icon4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/icon5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/line_vert1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/marker_1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/markers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/menu_active.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/menu_line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page2_img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page2_img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page2_img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page2_img4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page2_img5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page2_img6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page4_img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page4_img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page4_img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page4_img4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page4_img5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page4_img6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page5_img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page5_img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/images/page5_img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/parties.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/nightclub_Free_Website_Template_-_Free-CSS.com/nightclub/residents.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ActiveLastBreadcrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BasicBreadcrumbs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,28 +39,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/HP/Desktop/FERI/2.Godina/RIS/Projekat/ris",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "fc93e9967a2da79dd6a37b332c2d2e17",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Desktop/FERI/2.Godina/RIS/Projekat/ris&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fc93e9967a2da79dd6a37b332c2d2e17&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.start">
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/App.js" working-dir="$PROJECT_DIR$/frontend/src">
       <method v="2" />
