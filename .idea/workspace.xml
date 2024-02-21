@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodekVKlub.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/KlubReq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MyClubs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MyEvents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Vrsta.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Vrsta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +75,7 @@
   }
 }</component>
   <component name="RunManager" selected="npm.start">
-    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/App.js" working-dir="$PROJECT_DIR$/frontend/src">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="App.js" working-dir="$PROJECT_DIR$/frontend/src">
       <method v="2" />
     </configuration>
     <configuration name="RisApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -103,6 +113,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.App.js" />
+      <item itemvalue="npm.start" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
@@ -122,7 +136,9 @@
       <workItem from="1708004436217" duration="447000" />
       <workItem from="1708004954800" duration="1175000" />
       <workItem from="1708176716116" duration="2221000" />
-      <workItem from="1708436233334" duration="642000" />
+      <workItem from="1708436233334" duration="11293000" />
+      <workItem from="1708502384619" duration="57000" />
+      <workItem from="1708502936033" duration="604000" />
     </task>
     <servers />
   </component>

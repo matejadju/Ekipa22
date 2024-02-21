@@ -1,6 +1,6 @@
 import './App.css';
 import {Routes, Route, Link, BrowserRouter as Router, useLocation, Navigate, Outlet} from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import KlubReq from "./pages/KlubReq";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Dogotki from "./pages/Dogotki"
@@ -9,6 +9,9 @@ import Profil from "./pages/Profil";
 import RezMize from "./pages/RezMize";
 import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
+import AddDogodekVKlub from "./pages/AddDogodekVKlub"
+import MyClubs from "./pages/MyClubs";
+import MyEvents from "./pages/MyEvents"
 
 function isLogged() {
     return localStorage.getItem("u") !== null
@@ -17,26 +20,34 @@ function isLogged() {
 }
 
 function isVlasnik() {
-    return localStorage.getItem("u") !== "lastnik"
+    return localStorage.getItem("u") === "lasnik"
 
 }
 
 function isOrganizator() {
-    return localStorage.getItem("u") !== "organizator"
+    return localStorage.getItem("u") === "organizator"
 
 }
 
 function isAdministrator() {
-    return localStorage.getItem("u") !== "administrator"
+    return localStorage.getItem("u") === "administrator"
 }
+const ProtectedRoutes = () => {
+    const location = useLocation();
 
+    return isLogged() ? (
+        <Outlet/>
+    ) : (
+        <Navigate to="/login" state={{from: location}} replace/>
+    );
+};
 const LastnikRoutes = () => {
     const location = useLocation();
 
     return isVlasnik() ? (
         <Outlet/>
     ) : (
-        <Navigate to="/home" state={{from: location}} replace/>
+        <Navigate to="/" state={{from: location}} replace/>
     );
 }
 const OrganizatorRoutes = () => {
@@ -48,15 +59,7 @@ const OrganizatorRoutes = () => {
         <Navigate to="/home" state={{from: location}} replace/>
     );
 }
-const ProtectedRoutes = () => {
-    const location = useLocation();
 
-    return isLogged() ? (
-        <Outlet/>
-    ) : (
-        <Navigate to="/login" state={{from: location}} replace/>
-    );
-};
 const AdministratorRoutes = () => {
     const location = useLocation()
     return isAdministrator() ? (
@@ -90,8 +93,8 @@ function App() {
                     </li>
                 </ul>
                 <Routes>
-                    <Route element={<AdministratorRoutes/>}>
-                        <Route path="/home" element={<Homepage/>}/>
+
+                        <Route path="/"/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/dogotki" element={<Dogotki/>}/>
@@ -99,15 +102,21 @@ function App() {
                         <Route element={<ProtectedRoutes/>}>
                             <Route path="/profil" element={<Profil/>}/>
                             <Route path="/rmiza" element={<RezMize/>}/>
-                            <Route element={<OrganizatorRoutes/>}>
-                                <Route path="/adogodek" element={<AddDogodek/>}/>
-                            </Route>
                             <Route element={<LastnikRoutes/>}>
                                 <Route path="/rklub" element={<RegKluba/>}/>
+                                <Route path="/adogodekvklub" element={<AddDogodekVKlub/>}/>
+                                <Route path="/myclubs" element={<MyClubs/>}/>
+                            </Route>
+                            <Route element={<OrganizatorRoutes/>}>
                                 <Route path="/adogodek" element={<AddDogodek/>}/>
+                                <Route path="/myevents" element={<MyEvents/>}/>
+                            </Route>
+                            <Route element={<AdministratorRoutes/>}>
+                                <Route path="klubreq" element={<KlubReq/>}/>
                             </Route>
                         </Route>
-                    </Route>
+
+
                 </Routes>
 
         </div>
