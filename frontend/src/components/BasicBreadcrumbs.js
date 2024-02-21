@@ -12,7 +12,7 @@ export default function BasicBreadcrumbs() {
     return (
         <div role="presentation" onClick={handleClick}>
             <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" color="inherit" to="/home">
+                <Link underline="hover" color="inherit" to="/">
                     Home
                 </Link>
                 <Link
@@ -43,7 +43,41 @@ export default function BasicBreadcrumbs() {
                 >
                     Profile
                 </Link>
-                <Typography color="text.primary">Breadcrumbs</Typography>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/dogodki"
+                >
+                    Events
+                </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/rmiza"
+                >
+                    Table reservation
+                </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/adogodek"
+                >
+                    Add events
+                </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/rklub"
+                >
+                    Club Registration
+                </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/klubreq"
+                >
+                    Club Requests
+                </Link>
             </Breadcrumbs>
         </div>
     );
