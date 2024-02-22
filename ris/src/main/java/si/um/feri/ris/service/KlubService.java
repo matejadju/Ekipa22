@@ -6,6 +6,7 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.repository.KlubRepository;
@@ -81,5 +82,13 @@ public class KlubService {
 
         document.close();
         return outputStream;
+    }
+
+    public List<Klub> findByStatus(){
+        return klubRepository.findByStatus();
+    }
+
+    public ResponseEntity<Klub> updateStatus(Long id){
+        return klubRepository.updateKlubStatus(id);
     }
 }

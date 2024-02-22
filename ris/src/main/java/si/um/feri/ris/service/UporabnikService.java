@@ -2,6 +2,7 @@ package si.um.feri.ris.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -81,8 +82,11 @@ public class UporabnikService {
         return u.isEmpty() ? null : u.get(0);
     }
 
-    public Uporabnik findByEmail(String email){
-        Uporabnik u = uporabnikRepository.findByEmail(email);
-        return u;
+    public List<Uporabnik> findByEmail(String email){
+        return uporabnikRepository.findByEmail(email);
+    }
+
+    public void updateProfil(int telefon, Long id){
+        uporabnikRepository.updateProfil(telefon, id);
     }
 }

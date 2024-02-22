@@ -20,16 +20,17 @@ export default class Uporabnik extends ApiV1{
    async getUsers() {
         return await this.get(this.url)
     }
-    async getUserById(id, token) {
-        const response = await axios.get(`${this.url}/${id}`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
+    async getUserByEmail(email) {
+        const response = await axios.get(this.url + '/' + 'email' + '/' + email);
         return response.data;
     }
 
     async getUserByLogin(email, geslo) {
         return await this.post(this.url + '/login/' + email + '/' + geslo)
     }
+
+    async updateProfil(telefon, id){
+        return await this.put(this.url + '/' + telefon + '/' + id)
+    }
+
 }

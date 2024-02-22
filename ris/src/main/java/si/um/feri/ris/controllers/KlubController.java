@@ -57,4 +57,14 @@ public class KlubController {
         klubService.createKlubAndGeneratePdf(klub);
         return ResponseEntity.ok(klub);
     }
+
+    @GetMapping("/status")
+    public List<Klub> getAllByStatus(){
+        return klubService.findByStatus();
+    }
+
+    @PutMapping()
+    public ResponseEntity<Klub> updateStatus(Long id){
+        return klubService.updateStatus(id);
+    }
 }
