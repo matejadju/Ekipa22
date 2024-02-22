@@ -9,7 +9,7 @@ export default class Uporabnik extends ApiV1{
     }
 
     addUser(userData) {
-        return this.post(this.url, userData)
+        return this.post(this.url  + '/add', userData)
     }
 
     editUser(userData, id) {

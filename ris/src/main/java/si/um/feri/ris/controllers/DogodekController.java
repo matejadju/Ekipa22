@@ -30,7 +30,7 @@ public class DogodekController {
         return dogodekService.findByCenaVstopnice(cenaVstopnice);
     }
 
-   @PostMapping
+   @PostMapping("/add")
     public Dogodek findByCena(@RequestBody AddDogodekRequest dogodek){
         return dogodekService.save(dogodek);
     }

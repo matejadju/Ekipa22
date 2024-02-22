@@ -111,7 +111,7 @@ function App() {
                         </Route>
                         <Route element={<LastnikRoutes/>}>
                             <Route path="/rklub" element={<RegKluba/>}/>
-                            <Route path="/adogodekvklub" element={<AddDogodekVKlub/>}/>
+                            <Route path="/addogodekvklub" element={<AddDogodekVKlub/>}/>
                             <Route path="/myclubs" element={<MyClubs/>}/>
                         </Route>
                         <Route element={<OrganizatorRoutes/>}>

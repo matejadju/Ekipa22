@@ -40,7 +40,7 @@ public class UporabnikController {
     }
 
     @CrossOrigin
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
+    @PostMapping("/add")
     public Uporabnik addUporabnik(@RequestBody AddUporabnikRequest uporabnik) {
         return uporabnikService.save(uporabnik);
     }
@@ -53,7 +53,7 @@ public class UporabnikController {
             HttpHeaders headers = new HttpHeaders();
             Map<String, String> responseBody = new HashMap<>();
             responseBody.put("message", "Uspesna prijava");
-            responseBody.put("token", "Bearer " + token);
+            responseBody.put("token",  token);
             responseBody.put("id", String.valueOf(u.getIdUporabnik()));
             responseBody.put("email", u.getEmail());
             responseBody.put("vrsta", u.getVrsta().toString());

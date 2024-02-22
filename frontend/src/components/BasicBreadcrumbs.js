@@ -78,6 +78,13 @@ export default function BasicBreadcrumbs() {
                 >
                     Club Requests
                 </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/addogodekvklub"
+                >
+                    Add party
+                </Link>
             </Breadcrumbs>
         </div>
     );
