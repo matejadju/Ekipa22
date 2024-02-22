@@ -1,8 +1,46 @@
+import {Button, TextField} from "@mui/material";
+import {Link} from "react-router-dom";
+import {useState} from "react";
+import Uporabnik from "../APIs/Uporabnik";
+import axios from "axios";
 export default function Login () {
+    const [email, setEmail] = useState("");
+    const [geslo, setGeslo] = useState("");
+    const uporabnikApi = new Uporabnik();
+
+    const handleLogin = async () => {
+      try {
+          const response = await uporabnikApi.getUserByLogin(email, geslo);
+          localStorage.setItem('u', JSON.stringify({
+              idUporabnik: response.data.id,
+              email: response.data.email,
+              vrsta: response.data.vrsta
+          }));
+          const token = response.data.token;
+          localStorage.setItem('token', token);
+          axios.defaults.headers.common['Authorization'] = token;
+          console.log(response);
+          console.log(axios.defaults.headers.common['Authorization']);
+      }catch (error) {
+          console.log(error);
+      }
+    };
+
     return (
         <div>
-sdfsdfsdfsdfsdfs
-            homepage rasjiefjaslkeij
+            <h1>Login</h1>
+
+            <TextField id="outlined-basic" label="E-mail" variant="outlined" value={email} onChange={(e) =>
+            setEmail(e.target.value)}/>
+            <br/>
+            <br/>
+            <TextField id="outlined-basic" label="Password" variant="outlined" value={geslo} onChange={(e) =>
+            setGeslo(e.target.value)}/>
+            <br/>
+            <br/>
+
+            <Button variant="outlined" onClick={handleLogin}>Login</Button>
+            <p>You dont have account?Register <Link to="/register">here</Link>!</p>
         </div>
     )
 }

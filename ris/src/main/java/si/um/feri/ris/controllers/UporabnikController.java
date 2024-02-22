@@ -54,6 +54,9 @@ public class UporabnikController {
             Map<String, String> responseBody = new HashMap<>();
             responseBody.put("message", "Uspesna prijava");
             responseBody.put("token", "Bearer " + token);
+            responseBody.put("id", String.valueOf(u.getIdUporabnik()));
+            responseBody.put("email", u.getEmail());
+            responseBody.put("vrsta", u.getVrsta().toString());
             headers.add("Authorization", "Bearer " + token);
             return new ResponseEntity<>(responseBody, headers,HttpStatus.OK);
         } else {

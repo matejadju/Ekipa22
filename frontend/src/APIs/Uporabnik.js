@@ -22,4 +22,8 @@ export default class Uporabnik extends ApiV1{
     getUserById(id) {
         return this.get(this.url + '/' + id)
     }
+
+    async getUserByLogin(email, geslo) {
+        return await this.post(this.url + '/login/' + email + '/' + geslo)
+    }
 }

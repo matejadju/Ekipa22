@@ -9,7 +9,7 @@ export default function AddDogodek() {
             <TextField id="outlined-basic" label="Date" variant="outlined"/>
             <br/>
             <br/>
-            <TextField id="outlined-basic" label="Even Name" variant="outlined"/>
+            <TextField id="outlined-basic" label="Party Name" variant="outlined"/>
             <br/>
             <br/>
             <TextField id="outlined-basic" label="Description" variant="outlined"/>
