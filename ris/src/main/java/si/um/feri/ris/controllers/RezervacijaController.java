@@ -12,6 +12,7 @@ import java.util.Optional;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/rezervacija")
 public class RezervacijaController {
     private final RezervacijaService rezervacijaService;
