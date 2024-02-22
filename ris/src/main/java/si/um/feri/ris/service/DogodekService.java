@@ -50,4 +50,8 @@ public class DogodekService {
     public List<Dogodek> findBySteviloMiz(int steviloMiz){
         return dogodekRepository.findAllBySteviloMiz(steviloMiz);
     }
+
+    public List<Dogodek> findAllByOdobren(){
+        return dogodekRepository.findAllByOdobren();
+    }
 }

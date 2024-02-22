@@ -1,15 +1,19 @@
 package si.um.feri.ris.controllers;
 
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.Map;
+import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.requests.AddUporabnikRequest;
 import si.um.feri.ris.service.UporabnikService;
+import si.um.feri.ris.config.JwtHelper;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
 import java.util.Optional;
@@ -18,9 +22,10 @@ import java.util.Optional;
 @RequestMapping("/uporabnik")
 public class UporabnikController {
     private final UporabnikService uporabnikService;
+    private JwtHelper jwtHelper;
 
     @Autowired
-    public UporabnikController(UporabnikService uporabnikService) {
+    public UporabnikController(UporabnikService uporabnikService ) {
         this.uporabnikService = uporabnikService;
     }
 
@@ -41,20 +46,24 @@ public class UporabnikController {
     }
 
     @PostMapping("/login/{email}/{geslo}")
-    public String login(@PathVariable String email, @PathVariable String geslo, HttpServletResponse response) throws Exception {
+    public ResponseEntity<Map<String, String>> login(@PathVariable String email, @PathVariable String geslo, HttpServletResponse response) throws Exception {
         Uporabnik u = uporabnikService.authenticate(email, geslo);
-            if (u != null) {
-                String userInfoJson = "{\"email\": \"" + u.getEmail() + "\", \"id\": " + u.getIdUporabnik() + ", \"vrsta\": \"" + u.getVrsta() + "\"}";
-                String encodedUserInfo = URLEncoder.encode(userInfoJson, "UTF-8");
-
-                Cookie cookie = new Cookie("uporabnik", encodedUserInfo);
-                cookie.setMaxAge(3600);
-                cookie.setPath("/");
-                response.addCookie(cookie);
-
-                return "Uspesna prijava";
-            } else {
-                return "Prijava ni uspela! Uporabnik ni najden";
-            }
+        if (u != null) {
+            String token = JwtHelper.generateToken(email);
+            HttpHeaders headers = new HttpHeaders();
+            Map<String, String> responseBody = new HashMap<>();
+            responseBody.put("message", "Uspesna prijava");
+            responseBody.put("token", "Bearer " + token);
+            responseBody.put("id", String.valueOf(u.getIdUporabnik()));
+            responseBody.put("email", u.getEmail());
+            responseBody.put("vrsta", u.getVrsta().toString());
+            headers.add("Authorization", "Bearer " + token);
+            return new ResponseEntity<>(responseBody, headers,HttpStatus.OK);
+        } else {
+            Map<String, String> responseBody = new HashMap<>();
+            responseBody.put("message", "Prijava ni uspela! Uporabnik ni najden");
+            return new ResponseEntity<>(responseBody, HttpStatus.UNAUTHORIZED);
+        }
     }
+
 }
