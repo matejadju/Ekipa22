@@ -2,6 +2,7 @@ package si.um.feri.ris.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.requests.AddDogodekRequest;
 import si.um.feri.ris.models.Dogodek;
@@ -37,6 +38,10 @@ public class DogodekController {
     @GetMapping("/stmiz/{steviloMiz}")
     public List<Dogodek> findBySteviloMiz(@PathVariable int steviloMiz){
         return dogodekService.findBySteviloMiz(steviloMiz);
+    }
+    @GetMapping("/odobren")
+    public List<Dogodek> findAllByOdobren(){
+        return dogodekService.findAllByOdobren();
     }
 
 }
