@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodekVKlub.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/KlubReq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MyClubs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MyEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Vrsta.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Vrsta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vrsta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Vrsta.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +131,7 @@
       <workItem from="1708436233334" duration="11293000" />
       <workItem from="1708502384619" duration="57000" />
       <workItem from="1708502936033" duration="604000" />
+      <workItem from="1708602642719" duration="467000" />
     </task>
     <servers />
   </component>

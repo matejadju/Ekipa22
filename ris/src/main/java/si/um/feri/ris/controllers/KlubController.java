@@ -52,7 +52,7 @@ public class KlubController {
         return klubService.dohvatiAktivneKluboveZaTipKluba(status);
     }
     @PostMapping("/pdf")
-    public ResponseEntity<Klub> createKlub(@RequestBody Klub klub) throws DocumentException {
+    public ResponseEntity<Klub> createKlub(@RequestBody Klub klub) throws DocumentException, IOException {
         klubService.createKlubAndGeneratePdf(klub);
         return ResponseEntity.ok(klub);
     }
