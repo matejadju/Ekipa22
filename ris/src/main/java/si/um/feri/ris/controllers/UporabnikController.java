@@ -2,30 +2,31 @@ package si.um.feri.ris.controllers;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.Map;
+
 import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.requests.AddUporabnikRequest;
 import si.um.feri.ris.service.UporabnikService;
-import si.um.feri.ris.config.JwtHelper;
 
-import java.net.URLEncoder;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/uporabnik")
 public class UporabnikController {
     private final UporabnikService uporabnikService;
-    private JwtHelper jwtHelper;
+
 
     @Autowired
-    public UporabnikController(UporabnikService uporabnikService ) {
+    public UporabnikController(UporabnikService uporabnikService) {
         this.uporabnikService = uporabnikService;
     }
 
@@ -35,9 +36,14 @@ public class UporabnikController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Uporabnik> getById(@PathVariable("id") Integer id) {
+    @PreAuthorize("isAuthenticated()")
+    public Optional<Uporabnik> getById(@PathVariable("id") Integer id, @RequestHeader(value = "Authorization") String token)
+            throws Exception {
+//        token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXRlamFkanVyaWM4OEBnbWFpbC5jb20iLCJpYXQiOjE3MDg2MDQwMjAsImV4cCI6MTcwODYwNzYyMH0.j1p1OMTPqHCIvjWv-xvBZ_cu9ubbAOGAAJkNRHJrBFU";
+
         return uporabnikService.getById(id);
     }
+
 
     @CrossOrigin
     @RequestMapping(method = RequestMethod.POST, path = "/add")
@@ -49,19 +55,15 @@ public class UporabnikController {
     public ResponseEntity<Map<String, String>> login(@PathVariable String email, @PathVariable String geslo, HttpServletResponse response) throws Exception {
         Uporabnik u = uporabnikService.authenticate(email, geslo);
         if (u != null) {
-            String token = JwtHelper.generateToken(email);
-            HttpHeaders headers = new HttpHeaders();
             Map<String, String> responseBody = new HashMap<>();
-            responseBody.put("message", "Uspesna prijava");
-            responseBody.put("token", "Bearer " + token);
             responseBody.put("id", String.valueOf(u.getIdUporabnik()));
             responseBody.put("email", u.getEmail());
             responseBody.put("vrsta", u.getVrsta().toString());
-            headers.add("Authorization", "Bearer " + token);
-            return new ResponseEntity<>(responseBody, headers,HttpStatus.OK);
+            responseBody.put("message", "Uspješna prijava");
+            return new ResponseEntity<>(responseBody, HttpStatus.OK);
         } else {
             Map<String, String> responseBody = new HashMap<>();
-            responseBody.put("message", "Prijava ni uspela! Uporabnik ni najden");
+            responseBody.put("message", "Neuspješna prijava");
             return new ResponseEntity<>(responseBody, HttpStatus.UNAUTHORIZED);
         }
     }

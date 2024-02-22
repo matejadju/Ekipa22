@@ -1,4 +1,5 @@
 import ApiV1 from "./ApiV1";
+import axios from "axios";
 
 export default class Uporabnik extends ApiV1{
 
@@ -19,8 +20,13 @@ export default class Uporabnik extends ApiV1{
    async getUsers() {
         return await this.get(this.url)
     }
-    getUserById(id) {
-        return this.get(this.url + '/' + id)
+    async getUserById(id, token) {
+        const response = await axios.get(`${this.url}/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        return response.data;
     }
 
     async getUserByLogin(email, geslo) {

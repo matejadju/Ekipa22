@@ -67,7 +67,7 @@ public class UporabnikService {
     }
 
     public Uporabnik authenticate(String email, String geslo) throws Exception {
-        List<Uporabnik> u = uporabnikRepository.findByEmail(email,geslo);
+        List<Uporabnik> u = uporabnikRepository.findByEmailAndGeslo(email,geslo);
         if (!u.isEmpty()){
             Uporabnik uporabnik = u.get(0);
 
@@ -76,8 +76,13 @@ public class UporabnikService {
         throw new Exception("Not authorise");
     }
 
-    public Uporabnik findByEmail(String email, String geslo) {
-        List<Uporabnik> u = uporabnikRepository.findByEmail(email, geslo);
+    public Uporabnik findByEmailAndGeslo(String email, String geslo) {
+        List<Uporabnik> u = uporabnikRepository.findByEmailAndGeslo(email, geslo);
         return u.isEmpty() ? null : u.get(0);
+    }
+
+    public Uporabnik findByEmail(String email){
+        Uporabnik u = uporabnikRepository.findByEmail(email);
+        return u;
     }
 }

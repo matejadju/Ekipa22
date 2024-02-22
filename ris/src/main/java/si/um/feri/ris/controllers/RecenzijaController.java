@@ -11,6 +11,7 @@ import si.um.feri.ris.service.RecenzijaService;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/recenzije")
 public class RecenzijaController {
     @Autowired

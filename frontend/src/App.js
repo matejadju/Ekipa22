@@ -14,6 +14,21 @@ import AddDogodekVKlub from "./pages/AddDogodekVKlub";
 import MyClubs from "./pages/MyClubs";
 import MyEvents from "./pages/MyEvents";
 import KlubReq from "./pages/KlubReq";
+import axios from "axios";
+
+
+
+// axios.interceptors.request.use(
+//     (config) => {
+//         const token = localStorage.getItem('token') ;
+//         console.log(token)
+//         console.log(axios.defaults.headers.common['Authorization']);
+//         return config;
+//     },
+//     (error) => {
+//         return Promise.reject(error);
+//     }
+// );
 
 function isLogged() {
     return localStorage.getItem("u") !== null
