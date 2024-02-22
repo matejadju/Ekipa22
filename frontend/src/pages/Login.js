@@ -11,16 +11,16 @@ export default function Login () {
     const handleLogin = async () => {
       try {
           const response = await uporabnikApi.getUserByLogin(email, geslo);
+          console.log(response)
           localStorage.setItem('u', JSON.stringify({
               idUporabnik: response.data.id,
               email: response.data.email,
               vrsta: response.data.vrsta
           }));
-          const token = response.data.token;
-          localStorage.setItem('token', token);
-          axios.defaults.headers.common['Authorization'] = token;
-          console.log(response);
-          console.log(axios.defaults.headers.common['Authorization']);
+
+          // if (response.status === 200){
+          //     window.location.href = "/profil"
+          // }
       }catch (error) {
           console.log(error);
       }

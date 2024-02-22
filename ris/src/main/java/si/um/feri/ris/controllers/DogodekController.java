@@ -11,6 +11,7 @@ import si.um.feri.ris.service.DogodekService;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/dogodek")
 public class DogodekController {
 
@@ -39,6 +40,7 @@ public class DogodekController {
     public List<Dogodek> findBySteviloMiz(@PathVariable int steviloMiz){
         return dogodekService.findBySteviloMiz(steviloMiz);
     }
+    @CrossOrigin
     @GetMapping("/odobren")
     public List<Dogodek> findAllByOdobren(){
         return dogodekService.findAllByOdobren();
