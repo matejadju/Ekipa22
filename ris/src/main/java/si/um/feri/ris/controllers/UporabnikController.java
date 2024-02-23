@@ -36,11 +36,7 @@ public class UporabnikController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("isAuthenticated()")
-    public Optional<Uporabnik> getById(@PathVariable("id") Integer id, @RequestHeader(value = "Authorization") String token)
-            throws Exception {
-//        token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXRlamFkanVyaWM4OEBnbWFpbC5jb20iLCJpYXQiOjE3MDg2MDQwMjAsImV4cCI6MTcwODYwNzYyMH0.j1p1OMTPqHCIvjWv-xvBZ_cu9ubbAOGAAJkNRHJrBFU";
-
+    public Optional<Uporabnik> getById(@PathVariable("id") Integer id){
         return uporabnikService.getById(id);
     }
 
@@ -68,4 +64,13 @@ public class UporabnikController {
         }
     }
 
+    @GetMapping("/email/{email}")
+    public List<Uporabnik> findByEmail(@PathVariable String email){
+        return uporabnikService.findByEmail(email);
+    }
+
+    @PutMapping("/{telefon}/{id}")
+    public void updateProfil(@PathVariable int telefon, @PathVariable Long id){
+        uporabnikService.updateProfil(telefon, id);
+    }
 }

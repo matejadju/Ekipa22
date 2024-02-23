@@ -19,17 +19,21 @@ const bull = (
 
 export default function Profil() {
     const [data, setData] = useState([]);
+    const uData = localStorage.getItem('u');
+    const uporabnik = JSON.parse(uData);
+    const email = uporabnik.email;
+    const id = uporabnik.idUporabnik;
+    console.log(id);
+    const [telefon, setTelefon] = useState(uporabnik.telefon);
+
+
+
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const u = localStorage.getItem('u');
-                const uData = JSON.parse(u);
-                const id = uData.idUporabnik;
-                console.log(id);
-                const token = localStorage.getItem('token');
-                const uporabnikResponse = await new Uporabnik().getUserById(id, token);
-                console.log(uporabnikResponse);
+                const uporabnikResponse = await new Uporabnik().getUserByEmail(email);
+                console.log('uporabnikRespnose:', uporabnikResponse);
                 setData(uporabnikResponse.data);
             } catch (e) {
                 console.error("Napaka pri prevzemanju podatkov:", e);
@@ -37,39 +41,51 @@ export default function Profil() {
         };
         fetchData();
     }, []);
+    //
+    // const bull  =  (
+    //     <Box
+    //         component="span"
+    //         sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    //     >
+    //         •
+    //     </Box>
+    // );
+    //
+    //
+    // const ProfilCard =({ uporabnik }) => (
+    //     <Card>
+    //         <CardContent>
+    //             <Typography variant="h5" component="div" >
+    //                 {uporabnik.ime}, {uporabnik.priimek}
+    //             </Typography>
+    //             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+    //                 {uporabnik.telefon}
+    //             </Typography>
+    //         </CardContent>
+    //     </Card>
+    // )
 
-    const ProfilCard = ({uporabnik}) => (
-        <Box sx={{minWidth: 275}}>
-            <Card variant="outlined">
-                <CardContent>
-                    <Typography variant="h5" component="div">
-                        {uporabnik.ime}, {uporabnik.priimek}
-                    </Typography>
-                    <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
-                        {uporabnik.email}
-                    </Typography>
-                    <Typography sx={{mb: 1.5}} color="text.secondary">
-                        {uporabnik.telefon}
-                    </Typography>
-
-                </CardContent>
-
-            </Card>
-        </Box>
-)
     const cleareStorage = () =>{
         localStorage.removeItem('u');
-        localStorage.removeItem('token');
         window.location.href = "/"
     }
 
-    return (
-       <div>
-           {data.map((uporabnik)=>(
-               <ProfilCard key={uporabnik.idUporabnik} uporabnik={uporabnik} />
+    const updateProfil =  async () => {
+      const response = await new Uporabnik().updateProfil(telefon, id)
+    }
 
-           ))}
-           <Button variant="outlined" onClick={cleareStorage}>Log out</Button>
-       </div>
+    const handleTelefonChange = (event) => {
+        setTelefon(event.target.value);
+    }
+
+    return (
+        <div>
+            {/*{data.map((uporabnik) => (*/}
+            {/*    <ProfilCard key={uporabnik.id} uporabnik={uporabnik} />*/}
+            {/*))}*/}
+            <Button variant="outlined" onClick={cleareStorage}>Log out</Button>
+            <TextField id="outlined-basic" label="telefon" variant="outlined" value={telefon} onChange={handleTelefonChange}/>
+            <Button variant="outlined" onClick={updateProfil}>Update</Button>
+        </div>
     );
 }

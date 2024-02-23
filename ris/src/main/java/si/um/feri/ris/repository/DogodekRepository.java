@@ -25,6 +25,6 @@ public interface DogodekRepository extends JpaRepository<Dogodek, Long> {
     @Query("SELECT d FROM Dogodek d WHERE d.uporabnik_dogodek.idUporabnik = :uporabnik_iduporabnik ")
     List<Dogodek> findByidu(int uporabnik_iduporabnik);
 
-   
+
 
 }

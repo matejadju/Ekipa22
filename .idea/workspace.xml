@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MyParty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/APIs/Klub.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/APIs/Dogodek.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/APIs/Dogodek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AddDogodekVKlub.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodekVKlub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/APIs/Uporabnik.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/APIs/Uporabnik.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/KlubReq.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/KlubReq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MyClubs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MyEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MyEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profil.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Profil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/DogodekController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/DogodekController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/DogodekRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/DogodekRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/requests/AddDogodekRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/requests/AddDogodekRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/DogodekService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/DogodekService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UporabnikController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UporabnikController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/KlubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/KlubRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UporabnikRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UporabnikRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,29 +53,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.App.js.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "sprint4stefan",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/Ekipa22",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "spring.configuration.checksum": "fc93e9967a2da79dd6a37b332c2d2e17",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sprint4stefan&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Ekipa22&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fc93e9967a2da79dd6a37b332c2d2e17&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.start">
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="App.js" working-dir="$PROJECT_DIR$/frontend/src">
       <method v="2" />
@@ -141,7 +141,7 @@
       <workItem from="1708436233334" duration="11293000" />
       <workItem from="1708502384619" duration="57000" />
       <workItem from="1708502936033" duration="604000" />
-      <workItem from="1708602791681" duration="15503000" />
+      <workItem from="1708602791681" duration="30297000" />
     </task>
     <servers />
   </component>
@@ -158,8 +158,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

@@ -18,8 +18,9 @@ export default function Login () {
               vrsta: response.data.vrsta
           }));
 
+              window.location.href = "/"
 
-               window.location.href = "/"
+
 
       }catch (error) {
           console.log(error);
