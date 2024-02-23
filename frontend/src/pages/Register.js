@@ -33,10 +33,11 @@ export default function Register() {
         try {
             const response = await uporabnikApi.addUser(userData);
             console.log('Response from server:', response);
-            // Dodatna logika nakon uspešne registracije
+
+            window.location.href = "/";
         } catch (error) {
             console.error('Error registering user:', error);
-            // Logika za obradu greške
+
         }
     };
 

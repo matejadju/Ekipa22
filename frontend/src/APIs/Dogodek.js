@@ -1,5 +1,6 @@
 import ApiV1 from "./ApiV1";
 
+
 export default class Dogodki extends ApiV1 {
 
     url
@@ -8,7 +9,9 @@ export default class Dogodki extends ApiV1 {
         super(props);
         this.url = this.mainUrl + 'dogodek'
     }
-
+    async getDogodekByOdobrenbyid(uporabnik_iduporabnik) {
+        return await this.get(this.url + '/' + uporabnik_iduporabnik)
+    }
     async getDogodekByOdobren() {
         return await this.get(this.url + '/' + 'odobren')
     }
@@ -34,6 +37,9 @@ export default class Dogodki extends ApiV1 {
             console.error('Error adding dogodek:', error);
             throw error;
         }
+    }
+    async delDogodek(idUporabnika) {
+        return await this.delete(this.url + '/del' + '/' + idUporabnika)
     }
 }
 

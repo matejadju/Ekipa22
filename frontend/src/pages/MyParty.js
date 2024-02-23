@@ -6,9 +6,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Button from "@mui/material/Button";
 
-export default function MyEvents () {
+export default function MyParty () {
 
     const [dogodekPodatkibyid, setDogodekPodatkibyid] = useState([]);
     const odata = localStorage.getItem("u");
@@ -16,19 +15,11 @@ export default function MyEvents () {
     const uporabnik_iduporabnik = uporabnik.idUporabnik;
     console.log(uporabnik_iduporabnik)
 
-    const handleDelete = async () => {
-        try {
-            await new Dogodek().delDogodek(uporabnik_iduporabnik);
-            console.log('Dogodek deleted successfully');
-        } catch (error) {
-            console.error('Error deleting Dogodek:', error);
-        }
-    };
 
     useEffect( () => {
         const fetchDogodekPodatkibyid = async () => {
             try {
-                console.log(uporabnik_iduporabnik)
+
                 const dogodekResponsebyid = await new Dogodek().getDogodekByOdobrenbyid(uporabnik_iduporabnik);
                 console.log(dogodekResponsebyid);
                 setDogodekPodatkibyid(dogodekResponsebyid.data);
@@ -40,22 +31,13 @@ export default function MyEvents () {
         fetchDogodekPodatkibyid();
     }, []);
 
-    const bull  =  (
-        <Box
-            component="span"
-            sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-        >
-            •
-        </Box>
-    );
+
 
     const formatDate = (dateArray) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const dateObject = new Date(...dateArray);
         return dateObject.toLocaleDateString(undefined, options);
     };
-
-
 
     const DogodekbyidCard =({ dogodek }) => (
         <Card>
@@ -72,12 +54,9 @@ export default function MyEvents () {
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     {formatDate(dogodek.datum)}
                 </Typography>
-
             </CardContent>
         </Card>
     )
-
-
 
     return (
         <div>
@@ -85,9 +64,6 @@ export default function MyEvents () {
             {dogodekPodatkibyid.map((dogodek) =>(
                 <DogodekbyidCard key={dogodek.id} dogodek={dogodek} />
             ))}
-            <CardActions>
-                <Button size="small" onClick={handleDelete}>Delete event</Button>
-            </CardActions>
         </div>
 
     );

@@ -7,50 +7,33 @@ import  Dogodek  from "../APIs/Dogodek"
 export default function AddDogodekVKlub() {
 
     const dogodekApi = new Dogodek();
-    const [selectedDate, setSelectedDate] = useState('');
-    const [partyName, setPartyName] = useState('');
-    const [description, setDescription] = useState('');
-    const [ticketPrice, setTicketPrice] = useState('');
-    const [numberOfTickets, setNumberOfTickets] = useState('');
-    const [numberOfTables, setNumberOfTables] = useState('');
+    const [selectedDate, setDatum] = useState('');
+    const [partyName, setNaziv] = useState('');
+    const [description, setOpis] = useState('');
+    const [ticketPrice, setCenaVstopnice] = useState('');
+    const [numberOfTickets, setSteviloVstopnica] = useState('');
+    const [numberOfTables, setSteviloMiz] = useState('');
+    const uporabnikData = localStorage.getItem("u");
+    const uporabnik = JSON.parse(uporabnikData);
+    const id = uporabnik.idUporabnik;
 
-    const handleDateChange = (event) => {
-        setSelectedDate(event.target.value);
-    };
 
-    const handlePartyNameChange = (event) => {
-        setPartyName(event.target.value);
-    };
-
-    const handleDescriptionChange = (event) => {
-        setDescription(event.target.value);
-    };
-
-    const handleTicketPriceChange = (event) => {
-        setTicketPrice(event.target.value);
-    };
-
-    const handleNumberOfTicketsChange = (event) => {
-        setNumberOfTickets(event.target.value);
-    };
-
-    const handleNumberOfTablesChange = (event) => {
-        setNumberOfTables(event.target.value);
-    };
 
     const handleSubmit = async () => {
         const data = {
-            date: selectedDate,
-            partyName: partyName,
-            description: description,
-            ticketPrice: ticketPrice,
-            numberOfTickets: numberOfTickets,
-            numberOfTables: numberOfTables
+            datum: selectedDate,
+            naziv: partyName,
+            opis: description,
+            cenaVstopnice: ticketPrice,
+            steviloVstopnic: numberOfTickets,
+            steviloMiz: numberOfTables,
+            uporabnik: id
         };
 
         try {
             const response = await dogodekApi.postDogodek(data);
             console.log('Response from server:', response);
+            window.location.href = "/"
 
         } catch (error) {
             console.error('Error sending data:', error);
@@ -65,23 +48,23 @@ export default function AddDogodekVKlub() {
             <input
                 type="datetime-local"
                 value={selectedDate}
-                onChange={handleDateChange}
+                onChange={(e) => setDatum(e.target.value)}
             />
             <br/>
             <br/>
-            <TextField id="outlined-basic" label="Party Name" variant="outlined" value={partyName} onChange={handlePartyNameChange}/>
+            <TextField id="outlined-basic" label="Party Name" variant="outlined" value={partyName} onChange={(e) => setNaziv(e.target.value)}/>
             <br/>
             <br/>
-            <TextField id="outlined-basic" label="Description" variant="outlined" value={description} onChange={handleDescriptionChange}/>
+            <TextField id="outlined-basic" label="Description" variant="outlined" value={description} onChange={(e) => setOpis(e.target.value)}/>
             <br/>
             <br/>
-            <TextField id="outlined-basic" label="Ticket price" variant="outlined" value={ticketPrice} onChange={handleTicketPriceChange}/>
+            <TextField id="outlined-basic" label="Ticket price" variant="outlined" value={ticketPrice} onChange={(e) => setCenaVstopnice(e.target.value)}/>
             <br/>
             <br/>
-            <TextField id="outlined-basic" label="Number of tickets" variant="outlined" value={numberOfTickets} onChange={handleNumberOfTicketsChange}/>
+            <TextField id="outlined-basic" label="Number of tickets" variant="outlined" value={numberOfTickets} onChange={(e) => setSteviloVstopnica(e.target.value)}/>
             <br/>
             <br/>
-            <TextField id="outlined-basic" label="Number of tables" variant="outlined" value={numberOfTables} onChange={handleNumberOfTablesChange}/>
+            <TextField id="outlined-basic" label="Number of tables" variant="outlined" value={numberOfTables} onChange={(e) => setSteviloMiz(e.target.value)}/>
             <br/>
             <br/>
             <Button variant="outlined" onClick={handleSubmit}>Add Party</Button>

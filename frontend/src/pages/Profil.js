@@ -51,10 +51,9 @@ export default function Profil() {
                     <Typography sx={{mb: 1.5}} color="text.secondary">
                         {uporabnik.telefon}
                     </Typography>
+
                 </CardContent>
-                <CardActions>
-                    <Button size="small">Learn More</Button>
-                </CardActions>
+
             </Card>
         </Box>
 )
