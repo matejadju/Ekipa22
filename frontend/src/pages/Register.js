@@ -34,7 +34,7 @@ export default function Register() {
             const response = await uporabnikApi.addUser(userData);
             console.log('Response from server:', response);
 
-            window.location.href = "/";
+            window.location.href = "/login";
         } catch (error) {
             console.error('Error registering user:', error);
 

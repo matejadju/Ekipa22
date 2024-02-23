@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/APIs/Klub.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/APIs/Uporabnik.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/APIs/Uporabnik.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/KlubReq.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/KlubReq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BasicBreadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BasicBreadcrumbs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profil.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Profil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/KlubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UporabnikController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/UporabnikController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/KlubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/KlubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UporabnikRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/UporabnikRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/UporabnikService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +131,7 @@
       <workItem from="1708436233334" duration="11293000" />
       <workItem from="1708502384619" duration="57000" />
       <workItem from="1708502936033" duration="604000" />
-      <workItem from="1708602791681" duration="30297000" />
+      <workItem from="1708602791681" duration="31941000" />
     </task>
     <servers />
   </component>
