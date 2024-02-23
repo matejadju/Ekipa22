@@ -11,8 +11,7 @@ import org.springframework.stereotype.Service;
 import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.repository.KlubRepository;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,33 +51,43 @@ public class KlubService {
     public List<Klub> dohvatiAktivneKluboveZaTipKluba(boolean status) {
         return klubRepository.findByStatusAndTipKlubaId(status);
     }
-    public void createKlubAndGeneratePdf(Klub klub) throws DocumentException {
-        // Save the klub to the database
+
+
+    public void createKlubAndGeneratePdf(Klub klub) throws DocumentException, IOException {
+
         Klub savedKlub = klubRepository.save(klub);
 
-        // Generate PDF with klub data
         ByteArrayOutputStream pdfStream = generatePdfForKlub(savedKlub);
 
-        // Save or send the PDF as needed
-        // For example, you can save it to a file or send it via email
-        // For demonstration purposes, let's just print the PDF content
-        System.out.println("Generated PDF content: " + pdfStream.toString());
+         String desktopPath = System.getProperty("user.home") + "\\Desktop";
+        String folderPath = desktopPath + "\\pdf";
+
+        File folder = new File(folderPath);
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
+        String filePath = folderPath + "\\query_results.pdf";
+        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+        pdfStream.writeTo(fileOutputStream);
+        fileOutputStream.close();
+
+        System.out.println("PDF sačuvan na: " + filePath);
     }
 
     private ByteArrayOutputStream generatePdfForKlub(Klub klub) throws DocumentException {
-        // Create PDF content based on klub data
         Document document = new Document();
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PdfWriter.getInstance(document, outputStream);
         document.open();
 
-        // Write klub data to the PDF
         Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
         Paragraph paragraph = new Paragraph("Klub Details", boldFont);
         document.add(paragraph);
         document.add(new Paragraph("Name: " + klub.getNaziv()));
         document.add(new Paragraph("Location: " + klub.getAdresa()));
-        // Add more klub data as needed
+        document.add(new Paragraph("Phone Number: " + klub.getTelefon()));
+        document.add(new Paragraph("PIB: " + klub.getPIB()));
 
         document.close();
         return outputStream;

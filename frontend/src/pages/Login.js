@@ -18,9 +18,10 @@ export default function Login () {
               vrsta: response.data.vrsta
           }));
 
-          if (response.status === 200){
-              window.location.href = "/profil"
-          }
+              window.location.href = "/"
+
+
+
       }catch (error) {
           console.log(error);
       }

@@ -58,7 +58,7 @@ public class UporabnikService {
 
 //        String hashedGeslo = passwordEncoder.encode(u.getGeslo());
 
-        u.setGeslo(u.getGeslo());
+        u.setGeslo(uporabnik.getGeslo());;
         u.setVrsta(uporabnik.getVrsta());
         u.setTelefon(uporabnik.getTelefon());
         u.setEmso(uporabnik.getEmso());

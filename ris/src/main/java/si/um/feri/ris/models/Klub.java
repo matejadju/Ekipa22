@@ -25,7 +25,7 @@ public class Klub {
     @JoinColumn(name = "tip_kluba_idtip_kluba")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties("klubi")
-//    @JsonIgnore
+   @JsonIgnore
     Tip_kluba tip_kluba;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = true)

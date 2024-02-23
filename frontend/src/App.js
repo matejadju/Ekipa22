@@ -11,10 +11,12 @@ import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
 import BasicBreadcrumbs from "./components/BasicBreadcrumbs";
 import AddDogodekVKlub from "./pages/AddDogodekVKlub";
-import MyClubs from "./pages/MyClubs";
-import MyEvents from "./pages/MyEvents";
+import MyClubs from "./pages/MyParty";
+import MyParty from "./pages/MyParty";
 import KlubReq from "./pages/KlubReq";
 import axios from "axios";
+import MyEvents from "./pages/MyEvents";
+
 
 
 
@@ -126,12 +128,12 @@ function App() {
                         </Route>
                         <Route element={<LastnikRoutes/>}>
                             <Route path="/rklub" element={<RegKluba/>}/>
-                            <Route path="/adogodekvklub" element={<AddDogodekVKlub/>}/>
-                            <Route path="/myclubs" element={<MyClubs/>}/>
+                            <Route path="/addogodekvklub" element={<AddDogodekVKlub/>}/>
+                            <Route path="/myparty" element={<MyParty/>}/>
                         </Route>
                         <Route element={<OrganizatorRoutes/>}>
                             <Route path="/adogodek" element={<AddDogodek/>}/>
-                            <Route path="/myevents" element={<MyEvents/>}/>
+                            <Route path="/myevent" element={<MyEvents/>}/>
                         </Route>
                         <Route element={<AdministratorRoutes/>}>
                             <Route path="klubreq" element={<KlubReq/>}/>

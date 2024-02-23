@@ -42,7 +42,7 @@ public class UporabnikController {
 
 
     @CrossOrigin
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
+    @PostMapping("/add")
     public Uporabnik addUporabnik(@RequestBody AddUporabnikRequest uporabnik) {
         return uporabnikService.save(uporabnik);
     }

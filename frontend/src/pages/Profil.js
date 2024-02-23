@@ -8,7 +8,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import axios, {formToJSON} from 'axios';
-import {TextField} from "@mui/material";
 
 
 const bull = (
@@ -27,7 +26,7 @@ export default function Profil() {
     console.log(id);
     const [telefon, setTelefon] = useState(uporabnik.telefon);
 
-      
+
 
 
     useEffect(() => {
@@ -70,7 +69,7 @@ export default function Profil() {
         localStorage.removeItem('u');
         window.location.href = "/"
     }
-    
+
     const updateProfil =  async () => {
       const response = await new Uporabnik().updateProfil(telefon, id)
     }
