@@ -11,6 +11,7 @@ import si.um.feri.ris.service.VstopniceService;
 import java.util.List;
 import java.util.Optional;
 @RestController
+@CrossOrigin
 @RequestMapping("/vstopnica")
 public class VstopniceController {
     @Autowired

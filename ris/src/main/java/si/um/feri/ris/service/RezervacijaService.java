@@ -1,7 +1,8 @@
 package si.um.feri.ris.service;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.springframework.stereotype.Service;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.models.Rezervacija;
@@ -9,24 +10,31 @@ import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.repository.MizaRepository;
 import si.um.feri.ris.repository.RezervacijaRepository;
 import si.um.feri.ris.requests.AddRezervacijaRequest;
-import si.um.feri.ris.repository.UserRepository;
+import si.um.feri.ris.repository.UporabnikRepository;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 @Service
 public class RezervacijaService {
-    private final  UserRepository userRrepository;
+    private final UporabnikRepository userRrepository;
     private RezervacijaRepository rezervacijaRepository;
 
     private final MizaRepository mizaRepository;
 
-    public RezervacijaService(UserRepository userRrepository, RezervacijaRepository rezervacijaRepository, MizaRepository mizaRepository) {
+    private JavaMailSender javaMailSender;
+
+    public RezervacijaService(
+            UporabnikRepository userRrepository,
+            RezervacijaRepository rezervacijaRepository,
+            MizaRepository mizaRepository, JavaMailSender javaMailSender) {
         this.userRrepository = userRrepository;
         this.rezervacijaRepository = rezervacijaRepository;
         this.mizaRepository = mizaRepository;
+        this.javaMailSender = javaMailSender;
     }
 
     public List<Rezervacija> getAll() {
@@ -38,8 +46,25 @@ public class RezervacijaService {
     }
 
 
-    public Rezervacija createRezervacija(Rezervacija rezervacija) {
-        return rezervacijaRepository.save(rezervacija);
+    public Rezervacija createRezervacija() throws MessagingException {
+        Rezervacija r = new Rezervacija();
+        r.setDatum(new Date());
+        r.setSteviloOseb(5);
+        r.setPoruka("TEST");
+        Optional<Uporabnik> u = userRrepository.findById(3);
+        if (u.isPresent()) {
+            Uporabnik user = u.get();
+            r.setUporabnik_rezervacija(user);
+        }
+        Optional<Miza> m = mizaRepository.findById(Long.valueOf(1));
+        if (m.isPresent()) {
+            Miza miza = m.get();
+            r.setMize(miza);
+        }
+        Rezervacija rezervacija = rezervacijaRepository.save(r);
+
+        this.posaljiEmail(rezervacija);
+        return rezervacija;
     }
 
     public void updateRezervacija(Long id, Rezervacija novaRezervacija) {
@@ -75,13 +100,14 @@ public class RezervacijaService {
         return rezervacijaRepository.saveAndFlush(r);
     }
 
-    private void posaljiEmail(Rezervacija rezervacija) {
+    private void posaljiEmail(Rezervacija rezervacija) throws MessagingException {
         MimeMessage msg = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(msg, true);
         try {
-            helper.setTo(rezervacija.getEmail());
+            helper.setTo(rezervacija.getUporabnik_rezervacija().getEmail());
             helper.setSubject("Potvrda rezervacije");
-            helper.setText("Poštovani " + rezervacija.getIme() + ",\n\nVaša rezervacija je potvrđena.\n\nHvala Vam što ste nas izabrali.");
+            helper.setText("Spoštovani " + rezervacija.getUporabnik_rezervacija().getIme()
+                    +",\n\nVaša rezervacija je potrjena.\n\nHvala vam, ker ste nas izbrali.");
         } catch (MessagingException e) {
             e.printStackTrace();
         }

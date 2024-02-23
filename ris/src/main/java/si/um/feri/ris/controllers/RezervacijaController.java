@@ -1,6 +1,7 @@
 package si.um.feri.ris.controllers;
 
 
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import si.um.feri.ris.models.Rezervacija;
@@ -11,6 +12,7 @@ import java.util.Optional;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/rezervacija")
 public class RezervacijaController {
     private final RezervacijaService rezervacijaService;
@@ -35,8 +37,8 @@ public class RezervacijaController {
     }
 
     @PostMapping("/add")
-    public Rezervacija createRezervacija(@RequestBody Rezervacija rezervacija){
-        return rezervacijaService.createRezervacija(rezervacija);
+    public Rezervacija createRezervacija() throws MessagingException {
+        return rezervacijaService.createRezervacija();
     }
 
     @PutMapping("/{id}")
@@ -55,9 +57,4 @@ public class RezervacijaController {
 
         return rezervacijaService.dohvatiRezervacije(stevOseb);
     }
-
-
-
-
-
 }

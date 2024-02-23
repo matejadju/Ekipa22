@@ -29,6 +29,7 @@ public class AddDogodekRequest {
         this.klubDogodek = klubDogodek;
         this.steviloMiz = steviloMiz;
         this.uporabnik = uporabnik;
+
     }
 
     public String getNaziv() {
@@ -85,5 +86,21 @@ public class AddDogodekRequest {
 
     public void setKlubDogodek(int klubDogodek) {
         this.klubDogodek = klubDogodek;
+    }
+
+    public int getSteviloMiz() {
+        return steviloMiz;
+    }
+
+    public void setSteviloMiz(int steviloMiz) {
+        this.steviloMiz = steviloMiz;
+    }
+
+    public int getUporabnik() {
+        return uporabnik;
+    }
+
+    public void setUporabnik(int uporabnik) {
+        this.uporabnik = uporabnik;
     }
 }

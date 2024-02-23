@@ -21,14 +21,14 @@ public class Klub {
     private boolean status;
 
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "tip_kluba_idtip_kluba")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties("klubi")
-//    @JsonIgnore
+   @JsonIgnore
     Tip_kluba tip_kluba;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
