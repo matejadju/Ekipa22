@@ -85,6 +85,20 @@ export default function BasicBreadcrumbs() {
                 >
                     Add party
                 </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/myevent"
+                >
+                    My events
+                </Link>
+                <Link
+                    underline="hover"
+                    color="inherit"
+                    to="/myparty"
+                >
+                    My party
+                </Link>
             </Breadcrumbs>
         </div>
     );

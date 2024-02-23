@@ -85,9 +85,6 @@ export default function MyEvents () {
             {dogodekPodatkibyid.map((dogodek) =>(
                 <DogodekbyidCard key={dogodek.id} dogodek={dogodek} />
             ))}
-            <CardActions>
-                <Button size="small" onClick={handleDelete}>Delete event</Button>
-            </CardActions>
         </div>
 
     );
