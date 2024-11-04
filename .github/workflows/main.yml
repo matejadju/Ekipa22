@@ -30,11 +30,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Verify Project Structure
+        run: |
+          echo "Current Directory: $(pwd)"
+          echo "Listing Directory:"
+          ls -al ris  # List contents of the ris directory
+          ls -al ris/mvnw  # Check if mvnw is present
+
       - name: Build project
         run: |
           cd ris
           chmod +x mvnw  # Grant execute permission to the mvnw file
-          ./mvnw clean install  # Clean and install dependencies
+          ./mvnw clean install || { echo 'Build failed!'; exit 1; }  # Exit if build fails
 
       - name: Run tests
         run: |
