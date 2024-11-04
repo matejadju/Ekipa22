@@ -10,7 +10,6 @@ import si.um.feri.ris.controllers.MizaController;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.repository.MizaRepository;
 import si.um.feri.ris.service.MizaService;
-
 import java.util.List;
 import java.util.Optional;
 
