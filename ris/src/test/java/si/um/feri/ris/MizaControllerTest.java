@@ -13,7 +13,7 @@ import si.um.feri.ris.service.MizaService;
 import java.util.List;
 import java.util.Optional;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @Transactional
 public class MizaControllerTest {
 
@@ -29,6 +29,14 @@ public class MizaControllerTest {
 	@BeforeEach
 	void setup() {
 		mizaRepository.deleteAll();
+	}
+
+	@Test
+	void contextLoads() {
+		// Ovaj test samo proverava da li se kontekst učitava bez grešaka.
+		Assertions.assertNotNull(mizaController);
+		Assertions.assertNotNull(mizaService);
+		Assertions.assertNotNull(mizaRepository);
 	}
 
 	@Test
