@@ -19,13 +19,12 @@ jobs:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: ris
         ports:
-          - 3307:3307
+          - 3307:3306  
         options: >-
           --health-cmd="mysqladmin ping -h localhost"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-    
 
     steps:
       - name: Checkout code
@@ -52,11 +51,18 @@ jobs:
           ls -al ris  # List contents of the ris directory
           ls -al ris/mvnw  # Check if mvnw is present
 
+      - name: Wait for MySQL to be ready
+        run: |
+          while ! mysqladmin ping -h"localhost" -P3307 --silent; do
+            echo "Waiting for MySQL..."
+            sleep 2
+          done
+
       - name: Build project
         run: |
           cd ris
-          chmod +x mvnw  # Grant execute permission to the mvnw file
-          ./mvnw clean install || { echo 'Build failed!'; exit 1; }  # Exit if build fails
+          chmod +x mvnw  
+          ./mvnw clean install || { echo 'Build failed!'; exit 1; }  
 
       - name: Run tests
         run: |
