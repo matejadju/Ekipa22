@@ -9,7 +9,7 @@ import Profil from "./pages/Profil";
 import RezMize from "./pages/RezMize";
 import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
-import BasicBreadcrumbs from "./components/BasicBreadcrumbs";
+import Navbar from "./components/Navbar";
 import AddDogodekVKlub from "./pages/AddDogodekVKlub";
 import MyClubs from "./pages/MyParty";
 import MyParty from "./pages/MyParty";
@@ -112,10 +112,10 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <BasicBreadcrumbs/>
+                <Navbar/>
 
                 <Routes>
-                    <Route path="/"/>
+                    <Route path="/" />
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/dogodki" element={<Dogodki/>}/>

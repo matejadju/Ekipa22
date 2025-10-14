@@ -1,105 +1,85 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import { Link } from 'react-router-dom';
-
-function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-}
+import { Link, useNavigate } from 'react-router-dom';
+import { Breadcrumbs, Typography, Button, Box } from '@mui/material';
 
 export default function BasicBreadcrumbs() {
-    return (
-        <div role="presentation" onClick={handleClick}>
-            <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" color="inherit" to="/">
-                    Home
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/aboutus"
-                >
-                    About us
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/login"
-                >
-                    Login
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/register"
-                >
-                    Register
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/profil"
-                >
-                    Profile
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/dogodki"
-                >
-                    Events
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/rmiza"
-                >
-                    Table reservation
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/adogodek"
-                >
-                    Add events
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/rklub"
-                >
-                    Club Registration
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/klubreq"
-                >
-                    Club Requests
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/addogodekvklub"
-                >
-                    Add party
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/myevent"
-                >
-                    My events
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    to="/myparty"
-                >
-                    My party
-                </Link>
-            </Breadcrumbs>
-        </div>
-    );
+  const navigate = useNavigate();
+  const userData = localStorage.getItem('u');
+  const user = userData ? JSON.parse(userData) : null;
+  const userType = user?.vrsta;
+
+  const handleLogout = () => {
+    localStorage.removeItem('u');
+    navigate('/login');
+  };
+
+  return (
+    <Box
+      sx={{
+        p: 2,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: '#f5f5f5',
+        boxShadow: 1,
+      }}
+    >
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link to="/">Home</Link>
+        <Link to="/aboutus">About Us</Link>
+        <Link to="/dogodki">Events</Link>
+
+        {/* 👇 Ako korisnik NIJE prijavljen */}
+        {!user && (
+          <>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </>
+        )}
+
+        {/* 👇 Ako JE prijavljen */}
+        {user && (
+          <>
+            <Link to="/profil">Profile</Link>
+            <Link to="/rmiza">Table reservation</Link>
+
+            {/* 🔸 Samo za LASTNIK */}
+            {userType === 'lastnik' && (
+              <>
+                <Link to="/rklub">Club Registration</Link>
+                <Link to="/addogodekvklub">Add Party</Link>
+                <Link to="/myparty">My Party</Link>
+              </>
+            )}
+
+            {/* 🔸 Samo za ORGANIZATOR */}
+            {userType === 'organizator' && (
+              <>
+                <Link to="/adogodek">Add Event</Link>
+                <Link to="/myevent">My Events</Link>
+              </>
+            )}
+
+            {/* 🔸 Samo za ADMIN */}
+            {userType === 'admin' && (
+              <>
+                <Link to="/klubreq">Club Requests</Link>
+              </>
+            )}
+
+            <Button color="error" size="small" onClick={handleLogout}>
+              Logout
+            </Button>
+          </>
+        )}
+      </Breadcrumbs>
+
+      {/* 👇 Opcionalno — tekst sa info o korisniku */}
+      {user && (
+        <Typography variant="body2" color="text.secondary">
+          {user.ime} {user.priimek} ({user.vrsta})
+        </Typography>
+      )}
+    </Box>
+  );
 }
