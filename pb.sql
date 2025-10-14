@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `ris`.`uporabnik` (
   `priimek` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `geslo` VARCHAR(255) NOT NULL,
-  `vrsta` ENUM('lastnik', 'organizator', 'uporabnik') NOT NULL,
+  `vrsta`  VARCHAR(50) NULL,
   `telefon` INT NOT NULL,
   `emso` INT NULL,
   `davcnaStevilka` INT NULL,
