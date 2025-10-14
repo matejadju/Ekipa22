@@ -29,7 +29,8 @@ Aplikacija omogoča pregled, iskanje, rezervacijo in ocenjevanje nočnih dogodko
   git clone "https://github.com/matejadju/Ekipa22.git"
 ```
 2. Prepričajte se, da imate nameščen Java 11+ in MySQL.
-3. Zaženite aplikacijo frontend
+3. Ustvarite MySQL bazo podatkov z imenom ris
+4. Zaženite aplikacijo frontend
 ```bash
   mvn spring-boot:run
 ```
