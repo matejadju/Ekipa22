@@ -15,7 +15,7 @@ import si.um.feri.ris.service.MizaService;
 import java.util.List;
 import java.util.Optional;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, properties = "spring.profiles.active=ci")
 @Transactional
 public class MizaControllerTest {
 
