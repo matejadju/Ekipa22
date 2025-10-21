@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="" />
+    <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ris/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/MizaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/MizaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Klub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Miza.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Miza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Rezervacija.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Rezervacija.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Tip_kluba.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Tip_kluba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Tip_mize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Tip_mize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Uporabnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Uporabnik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/MizaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/MizaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/src/test/java/si/um/feri/ris/MizaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/test/java/si/um/feri/ris/MizaControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Dogodek.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Klub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Miza.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Miza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Rezervacija.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Rezervacija.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Tip_kluba.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Tip_kluba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Tip_mize.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Tip_mize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Uporabnik.class" beforeDir="false" afterPath="$PROJECT_DIR$/ris/target/classes/si/um/feri/ris/models/Uporabnik.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +68,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.MizaControllerTest.executor": "Run",
+    "JUnit.MizaControllerTest.testCreateMiza.executor": "Run",
+    "JUnit.MizaControllerTest.testDeleteMiza.executor": "Run",
+    "JUnit.MizaControllerTest.testGetAll.executor": "Run",
+    "JUnit.MizaControllerTest.testGetById.executor": "Run",
+    "JUnit.MizaControllerTest.testUpdateMiza.executor": "Run",
     "Node.js.App.js.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -50,6 +83,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -60,14 +94,91 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "fc93e9967a2da79dd6a37b332c2d2e17",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="App.js" working-dir="$PROJECT_DIR$/frontend/src">
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.MizaControllerTest">
+    <configuration name="MizaControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ris" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="si.um.feri.ris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="si.um.feri.ris" />
+      <option name="MAIN_CLASS_NAME" value="si.um.feri.ris.MizaControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MizaControllerTest.testCreateMiza" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ris" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="si.um.feri.ris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="si.um.feri.ris" />
+      <option name="MAIN_CLASS_NAME" value="si.um.feri.ris.MizaControllerTest" />
+      <option name="METHOD_NAME" value="testCreateMiza" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MizaControllerTest.testDeleteMiza" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ris" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="si.um.feri.ris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="si.um.feri.ris" />
+      <option name="MAIN_CLASS_NAME" value="si.um.feri.ris.MizaControllerTest" />
+      <option name="METHOD_NAME" value="testDeleteMiza" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MizaControllerTest.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ris" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="si.um.feri.ris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="si.um.feri.ris" />
+      <option name="MAIN_CLASS_NAME" value="si.um.feri.ris.MizaControllerTest" />
+      <option name="METHOD_NAME" value="testGetAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MizaControllerTest.testUpdateMiza" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ris" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="si.um.feri.ris.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="si.um.feri.ris" />
+      <option name="MAIN_CLASS_NAME" value="si.um.feri.ris.MizaControllerTest" />
+      <option name="METHOD_NAME" value="testUpdateMiza" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="RisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ris" />
@@ -94,25 +205,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Node.js.App.js" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="Spring Boot.RisApplication" />
+      <item itemvalue="JUnit.MizaControllerTest.testDeleteMiza" />
+      <item itemvalue="JUnit.MizaControllerTest.testGetAll" />
+      <item itemvalue="JUnit.MizaControllerTest.testUpdateMiza" />
+      <item itemvalue="JUnit.MizaControllerTest" />
+      <item itemvalue="JUnit.MizaControllerTest.testCreateMiza" />
       <item itemvalue="Spring Boot.RisApplication2" />
+      <item itemvalue="Spring Boot.RisApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
+        <item itemvalue="JUnit.MizaControllerTest" />
+        <item itemvalue="JUnit.MizaControllerTest.testCreateMiza" />
+        <item itemvalue="JUnit.MizaControllerTest.testDeleteMiza" />
+        <item itemvalue="JUnit.MizaControllerTest.testUpdateMiza" />
+        <item itemvalue="JUnit.MizaControllerTest.testGetAll" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +252,11 @@
       <workItem from="1730722424319" duration="2218000" />
       <workItem from="1730724877181" duration="1918000" />
       <workItem from="1730766877516" duration="2202000" />
-      <workItem from="1760443722074" duration="1710000" />
+      <workItem from="1760443722074" duration="2307000" />
+      <workItem from="1760798716493" duration="13000" />
+      <workItem from="1760957704702" duration="4576000" />
+      <workItem from="1760964860179" duration="1738000" />
+      <workItem from="1761043924468" duration="2926000" />
     </task>
     <servers />
   </component>

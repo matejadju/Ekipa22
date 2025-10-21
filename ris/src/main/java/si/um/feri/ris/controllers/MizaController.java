@@ -1,7 +1,9 @@
 package si.um.feri.ris.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.service.MizaService;
 
@@ -33,7 +35,9 @@ public class MizaController {
 
     @PostMapping("/add")
     public Miza createMiza(@RequestBody  Miza miza){
-
+        if (miza == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Miza is null!");
+        }
         return mizaService.createMiza(miza);
 
     }

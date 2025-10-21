@@ -47,4 +47,13 @@ public class Tip_kluba {
     public void setKlubi(Collection<Klub> klubi) {
         this.klubi = klubi;
     }
+
+    @Override
+    public String toString() {
+        return "Tip_kluba{" +
+                "idTipKluba=" + idTipKluba +
+                ", naziv='" + naziv + '\'' +
+                ", opis='" + opis + '\'' +
+                '}';
+    }
 }

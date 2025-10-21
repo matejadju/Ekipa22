@@ -159,5 +159,20 @@ public class Uporabnik {
         this.vstopnice = vstopnice;
     }
 
+    @Override
+    public String toString() {
+        return "Uporabnik{" +
+                "idUporabnik=" + idUporabnik +
+                ", ime='" + ime + '\'' +
+                ", priimek='" + priimek + '\'' +
+                ", email='" + email + '\'' +
+                ", geslo='" + geslo + '\'' +
+                ", vrsta=" + vrsta + '\'' +
+                ", telefon=" + telefon + '\'' +
+                ", emso=" + emso + '\'' +
+                ", davcnaStevilka=" + davcnaStevilka + '\'' +
+                '}';
+    }
+
 }
 

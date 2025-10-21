@@ -19,7 +19,6 @@ public class Rezervacija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-
     Uporabnik uporabnik_rezervacija;
 
     @ManyToOne( fetch = FetchType.LAZY)
@@ -73,4 +72,15 @@ public class Rezervacija {
     public void setMize(Miza miza) {
         this.miza = miza;
     }
+
+    @Override
+    public String toString() {
+        return "Rezervacija{" +
+                "idRezervacija=" + idRezervacija +
+                ", datum=" + datum +
+                ", stevilo oseb='" + steviloOseb + '\'' +
+                ", poruka='" + poruka + '\'' +
+                '}';
+    }
+
 }

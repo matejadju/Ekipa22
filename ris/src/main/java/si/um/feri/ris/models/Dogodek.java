@@ -135,4 +135,18 @@ public class Dogodek {
     public void setOdobren(boolean odobren) {
         this.odobren = odobren;
     }
+
+    @Override
+    public String toString() {
+        return "Dogodek{" +
+                "idDogodek=" + idDogodek +
+                ", naziv='" + naziv + '\'' +
+                ", opis='" + opis + '\'' +
+                ", cena vstopnice=" + cenaVstopnice + '\'' +
+                ", stevilo vstopnic=" + steviloVstopnica + '\'' +
+                ", stevilo miz=" + steviloMiz +
+                ", odobren=" + odobren +
+                '}';
+    }
+
 }

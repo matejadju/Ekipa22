@@ -6,10 +6,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 import si.um.feri.ris.controllers.MizaController;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.repository.MizaRepository;
 import si.um.feri.ris.service.MizaService;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -17,84 +19,148 @@ import java.util.Optional;
 @Transactional
 public class MizaControllerTest {
 
-	@Autowired
-	private MizaController mizaController;
+    @Autowired
+    private MizaController mizaController;
 
-	@Autowired
-	private MizaService mizaService;
+    @Autowired
+    private MizaService mizaService;
 
-	@Autowired
-	private MizaRepository mizaRepository;
+    @Autowired
+    private MizaRepository mizaRepository;
 
-	@BeforeEach
-	void setup() {
-		mizaRepository.deleteAll();
-	}
+    @BeforeEach
+    void setup() {
+        mizaRepository.deleteAll();
+    }
 
-	@Test
-	void contextLoads() {
-		// Ovaj test samo proverava da li se kontekst učitava bez grešaka.
-		Assertions.assertNotNull(mizaController);
-		Assertions.assertNotNull(mizaService);
-		Assertions.assertNotNull(mizaRepository);
-	}
+    @Test void contextLoads() {
+        Assertions.assertNotNull(mizaController);
+        Assertions.assertNotNull(mizaService);
+        Assertions.assertNotNull(mizaRepository);
+    }
 
-	@Test
-	void testGetAll() {
-		Miza miza1 = new Miza();
-		miza1.setStatus(true);
-		mizaService.createMiza(miza1);
+    // ✅ 1. GET ALL
+    @Test
+    void testGetAll() {
+        System.out.println("=== TEST: getAll ===");
 
-		Miza miza2 = new Miza();
-		miza2.setStatus(false);
-		mizaService.createMiza(miza2);
+        // ✅ Pozitivan scenario
+        Miza m1 = new Miza();
+        m1.setStatus(true);
+        Miza saved1 = mizaService.createMiza(m1);
 
-		List<Miza> allMizas = mizaController.getALL();
-		Assertions.assertEquals(2, allMizas.size());
-	}
+        Miza m2 = new Miza();
+        m2.setStatus(false);
+        Miza saved2 = mizaService.createMiza(m2);
 
-	@Test
-	void testGetById() {
-		Miza miza = new Miza();
-		miza.setStatus(true);
-		Miza savedMiza = mizaService.createMiza(miza);
+        System.out.println("Vhod: ");
+        System.out.println(saved1);
+        System.out.println(saved2);
 
-		Optional<Miza> retrievedMiza = mizaController.getById(savedMiza.getIdMiza());
-		Assertions.assertTrue(retrievedMiza.isPresent());
-	}
+        List<Miza> all = mizaController.getALL();
+        System.out.println("Izhod: " + all);
+        Assertions.assertEquals(2, all.size());
 
-	@Test
-	void testCreateMiza() {
-		Miza miza = new Miza();
-		miza.setStatus(true);
-		Miza createdMiza = mizaController.createMiza(miza);
+        // ❌ Negativan scenario — prazna tabela
+        mizaRepository.deleteAll();
+        List<Miza> emptyList = mizaController.getALL();
+        System.out.println("Izhod: " + emptyList);
+        Assertions.assertTrue(emptyList.isEmpty());
+    }
 
-		Assertions.assertNotNull(createdMiza);
-	}
+    // ✅ 2. GET BY ID
+    @Test
+    void testGetById() {
+        System.out.println("=== TEST: getById ===");
 
-	@Test
-	void testUpdateMiza() {
-		Miza originalMiza = new Miza();
-		originalMiza.setStatus(true);
-		Miza savedMiza = mizaService.createMiza(originalMiza);
+        // ✅ Pozitivan scenario
+        Miza miza = new Miza();
+        miza.setStatus(true);
+        Miza saved = mizaService.createMiza(miza);
+        System.out.println("Vhod: " + saved);
 
-		Miza updatedMiza = new Miza();
-		updatedMiza.setStatus(false);
-		mizaController.updateMiza(savedMiza.getIdMiza(), updatedMiza);
+        Optional<Miza> found = mizaController.getById(saved.getIdMiza());
+        System.out.println("Izhod: " + found);
+        Assertions.assertTrue(found.isPresent());
+        Assertions.assertEquals(saved.getIdMiza(), found.get().getIdMiza());
 
-		Optional<Miza> retrievedMiza = mizaService.getById(savedMiza.getIdMiza());
-		Assertions.assertTrue(retrievedMiza.isPresent());
-		Assertions.assertFalse(retrievedMiza.get().isStatus());
-	}
+        // ❌ Negativan scenario — ID koji ne postoji
+        Optional<Miza> notFound = mizaController.getById(9999L);
+        System.out.println("Izhod: " + notFound);
+        Assertions.assertFalse(notFound.isPresent());
+    }
 
-	@Test
-	void testDeleteMiza() {
-		Miza miza = new Miza();
-		miza.setStatus(true);
-		Miza savedMiza = mizaService.createMiza(miza);
+    // ✅ 3. CREATE
+    @Test
+    void testCreateMiza() {
+        System.out.println("=== TEST: createMiza ===");
 
-		mizaController.deleteMiza(savedMiza.getIdMiza());
-		Optional<Miza> retrievedMiza = mizaService.getById(savedMiza.getIdMiza());
-		Assertions.assertFalse(retrievedMiza.isPresent());
-	}
+        // ✅ Pozitivan scenario
+        Miza miza = new Miza();
+        miza.setStatus(true);
+        Miza created = mizaController.createMiza(miza);
+        System.out.println("Vhod: " + created);
+        Assertions.assertNotNull(created.getIdMiza());
+
+        // ❌ Negativan scenario — kreiranje null objekta
+        Assertions.assertThrows(ResponseStatusException.class, () -> {
+            mizaController.createMiza(null);
+        });
+    }
+
+    // ✅ 4. UPDATE
+    @Test
+    void testUpdateMiza() {
+        System.out.println("=== TEST: updateMiza ===");
+
+        // ✅ Pozitivan scenario
+        Miza miza = new Miza();
+        miza.setStatus(true);
+        Miza saved = mizaService.createMiza(miza);
+        System.out.println("Vhod: " + saved);
+
+        Miza update = new Miza();
+        update.setStatus(false);
+        mizaController.updateMiza(saved.getIdMiza(), update);
+
+        Optional<Miza> updated = mizaService.getById(saved.getIdMiza());
+        System.out.println("Izhod: " + updated);
+        Assertions.assertTrue(updated.isPresent());
+        Assertions.assertFalse(updated.get().isStatus());
+
+        // ❌ Negativan scenario — update nepostojeće mize
+        Miza dummy = new Miza();
+        dummy.setStatus(true);
+        try {
+            mizaController.updateMiza(9999L, dummy);
+            Assertions.fail("Pri posodobitvi neobstoječe mize se pričakuje napaka!");
+        } catch (Exception e) {
+            Assertions.assertTrue(true);
+        }
+    }
+
+    // ✅ 5. DELETE
+    @Test
+    void testDeleteMiza() {
+        System.out.println("=== TEST: deleteMiza ===");
+
+        // ✅ Pozitivan scenario
+        Miza miza = new Miza();
+        miza.setStatus(true);
+        Miza saved = mizaService.createMiza(miza);
+        System.out.println("Vhod: " + saved);
+
+        mizaController.deleteMiza(saved.getIdMiza());
+        Optional<Miza> deleted = mizaService.getById(saved.getIdMiza());
+        System.out.println("Izhod: " + deleted);
+        Assertions.assertFalse(deleted.isPresent());
+
+        // ❌ Negativan scenario — brisanje nepostojeće mize
+        try {
+            mizaController.deleteMiza(9999L);
+            Assertions.fail("Pri brisanju neobstoječe mize se pričakuje napaka!");
+        } catch (Exception e) {
+            Assertions.assertTrue(true);
+        }
+    }
 }

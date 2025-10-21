@@ -14,17 +14,17 @@ public class Miza {
 
     private boolean status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tip_mize_idtip_mize")
     @OnDelete(action = OnDeleteAction.CASCADE)
     Tip_mize tipMize;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "rezervacija_idrezervacija")
     @OnDelete(action = OnDeleteAction.CASCADE)
     Rezervacija rezervacija;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "dogodek_iddogodek")
     @OnDelete(action = OnDeleteAction.CASCADE)
     Dogodek dogodek;
@@ -68,4 +68,16 @@ public class Miza {
     public void setDogodek(Dogodek dogodek) {
         this.dogodek = dogodek;
     }
+
+    @Override
+    public String toString() {
+        return "Miza{" +
+                "idMiza=" + idMiza +
+                ", status=" + status +
+                (tipMize != null ? ", tipMize=" + tipMize : "") +
+                (rezervacija != null ? ", rezervacija=" + rezervacija : "") +
+                (dogodek != null ? ", dogodek=" + dogodek : "") +
+                '}';
+    }
+
 }

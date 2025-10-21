@@ -103,4 +103,16 @@ public class Klub {
     public void setUporabnik(Uporabnik uporabnik) {
         this.uporabnik = uporabnik;
     }
+
+    @Override
+    public String toString() {
+        return "Klub{" +
+                "idKlub=" + idKlub +
+                ", naziv='" + naziv + '\'' +
+                ", adresa='" + adresa + '\'' +
+                ", telefon=" + telefon +
+                ", PIB=" + PIB +
+                ", status=" + status +
+                '}';
+    }
 }

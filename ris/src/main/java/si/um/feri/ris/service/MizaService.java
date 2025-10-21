@@ -28,6 +28,9 @@ public class MizaService {
         return mizaRepository.findByStatusAndTipMizeId(status, tip_mize_miza_id);
     }
     public Miza createMiza(Miza miza){
+        if (miza == null){
+            throw new IllegalArgumentException("Miza is null!");
+        }
         return mizaRepository.save(miza);
     }
     public void updateMiza(Long id, Miza novaMiza) {
