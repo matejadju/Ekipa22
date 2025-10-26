@@ -12,4 +12,9 @@ export default class Klub extends ApiV1{
     async getKlubByStatus(){
         return await this.get(this.url + '/' + 'status')
     }
+
+    async addKlub(data) {
+    return await this.post(this.url + '/add', data);
+    }
+
 }

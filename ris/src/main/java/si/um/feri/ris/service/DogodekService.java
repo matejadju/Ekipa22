@@ -28,11 +28,11 @@ public class DogodekService {
         this.uporabnikRepository = uporabnikRepository;
     }
 
-    public List<Dogodek> findBydog(boolean odobren, Float cenaVstopnice) {
+    public List<Dogodek> findBydog(boolean odobren, int cenaVstopnice) {
         return dogodekRepository.findBydog(odobren, cenaVstopnice);
     }
 
-    public List<Dogodek> findByCenaVstopnice(Float cenaVstopnice){
+    public List<Dogodek> findByCenaVstopnice(int cenaVstopnice){
         return dogodekRepository.findAllByCenaVstopnice(cenaVstopnice);
     }
 
@@ -53,7 +53,7 @@ public class DogodekService {
         d.setOdobren(false);
         d.setOpis(dogodek.getOpis());
         d.setCenaVstopnice(dogodek.getCenaVstopnice());
-        d.setSteviloVstopnica(dogodek.getSteviloVstopnic());
+        d.setSteviloVstopnica(dogodek.getSteviloVstopnica());
         d.setSteviloMiz(dogodek.getSteviloMiz());
         return dogodekRepository.saveAndFlush(d);
     }

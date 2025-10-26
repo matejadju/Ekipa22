@@ -17,7 +17,8 @@ public class Dogodek {
     private LocalDateTime datum;
     private String naziv;
     private String opis;
-    private Float cenaVstopnice;
+    @Column(name = "cena_vstopnice", nullable = false)
+    private int cenaVstopnice;
     private int steviloVstopnica;
     private int steviloMiz;
 
@@ -88,11 +89,11 @@ public class Dogodek {
         this.opis = opis;
     }
 
-    public Float getCenaVstopnice() {
+    public int getCenaVstopnice() {
         return cenaVstopnice;
     }
 
-    public void setCenaVstopnice(Float cenaVstopnice) {
+    public void setCenaVstopnice(int cenaVstopnice) {
         this.cenaVstopnice = cenaVstopnice;
     }
 

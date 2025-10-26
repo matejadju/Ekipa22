@@ -7,8 +7,8 @@ public class AddDogodekRequest {
     private String naziv;
     private LocalDateTime datum;
     private String opis;
-    private float cenaVstopnice;
-    private int steviloVstopnic;
+    private int cenaVstopnice;
+    private int steviloVstopnica;
     private int steviloMiz;
     private boolean odobren;
 
@@ -19,12 +19,12 @@ public class AddDogodekRequest {
     public AddDogodekRequest() {
     }
 
-    public AddDogodekRequest(String naziv, LocalDateTime datum, String opis, float cenaVstopnice, int steviloVstopnic, boolean odobren, int klubDogodek, int steviloMiz, int uporabnik) {
+    public AddDogodekRequest(String naziv, LocalDateTime datum, String opis, int cenaVstopnice, int steviloVstopnica, boolean odobren, int klubDogodek, int steviloMiz, int uporabnik) {
         this.naziv = naziv;
         this.datum = datum;
         this.opis = opis;
         this.cenaVstopnice = cenaVstopnice;
-        this.steviloVstopnic = steviloVstopnic;
+        this.steviloVstopnica = steviloVstopnica;
         this.odobren = odobren;
         this.klubDogodek = klubDogodek;
         this.steviloMiz = steviloMiz;
@@ -56,20 +56,20 @@ public class AddDogodekRequest {
         this.opis = opis;
     }
 
-    public float getCenaVstopnice() {
+    public int getCenaVstopnice() {
         return cenaVstopnice;
     }
 
-    public void setCenaVstopnice(float cenaVstopnice) {
+    public void setCenaVstopnice(int cenaVstopnice) {
         this.cenaVstopnice = cenaVstopnice;
     }
 
-    public int getSteviloVstopnic() {
-        return steviloVstopnic;
+    public int getSteviloVstopnica() {
+        return steviloVstopnica;
     }
 
-    public void setSteviloVstopnic(int steviloVstopnic) {
-        this.steviloVstopnic = steviloVstopnic;
+    public void setSteviloVstopnic(int steviloVstopnica) {
+        this.steviloVstopnica = steviloVstopnica;
     }
 
     public boolean isOdobren() {

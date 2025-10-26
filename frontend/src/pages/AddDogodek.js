@@ -27,9 +27,9 @@ export default function AddDogodek() {
                         datum: selectedDate,
                         naziv: partyName,
                         opis: description,
-                        cenaVstopnice: ticketPrice,
-                        steviloVstopnic: numberOfTickets,
-                        steviloMiz: numberOfTables,
+                        cenaVstopnice: parseInt(ticketPrice),
+                        steviloVstopnic: parseInt(numberOfTickets),
+                        steviloMiz: parseInt(numberOfTables),
                     uporabnik: id
 
 

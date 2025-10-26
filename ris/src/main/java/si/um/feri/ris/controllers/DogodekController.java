@@ -27,12 +27,12 @@ public class DogodekController {
     }
 
     @GetMapping("/joj/{odobren}/{cenaVstopnice}")
-    public List<Dogodek> findBydog(@PathVariable boolean odobren, @PathVariable Float cenaVstopnice) {
+    public List<Dogodek> findBydog(@PathVariable boolean odobren, @PathVariable int cenaVstopnice) {
         return dogodekService.findBydog(odobren, cenaVstopnice);
     }
 
     @GetMapping("/cena/{cenaVstopnice}")
-    public List<Dogodek> findByCena(@PathVariable Float cenaVstopnice) {
+    public List<Dogodek> findByCena(@PathVariable int cenaVstopnice) {
         return dogodekService.findByCenaVstopnice(cenaVstopnice);
     }
 

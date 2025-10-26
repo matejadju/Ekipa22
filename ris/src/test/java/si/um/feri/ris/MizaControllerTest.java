@@ -15,7 +15,7 @@ import si.um.feri.ris.service.MizaService;
 import java.util.List;
 import java.util.Optional;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, properties = "spring.profiles.active=ci")
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @Transactional
 public class MizaControllerTest {
 
@@ -39,12 +39,12 @@ public class MizaControllerTest {
         Assertions.assertNotNull(mizaRepository);
     }
 
-    // ✅ 1. GET ALL
+    // 1. GET ALL
     @Test
     void testGetAll() {
         System.out.println("=== TEST: getAll ===");
 
-        // ✅ Pozitivan scenario
+        // Pozitivan scenario
         Miza m1 = new Miza();
         m1.setStatus(true);
         Miza saved1 = mizaService.createMiza(m1);
@@ -67,12 +67,12 @@ public class MizaControllerTest {
 //        Assertions.assertTrue(emptyList.isEmpty());
     }
 
-    // ✅ 2. GET BY ID
+    // 2. GET BY ID
     @Test
     void testGetById() {
         System.out.println("=== TEST: getById ===");
 
-        // ✅ Pozitivan scenario
+        // Pozitivan scenario
         Miza miza = new Miza();
         miza.setStatus(true);
         Miza saved = mizaService.createMiza(miza);
@@ -88,12 +88,12 @@ public class MizaControllerTest {
 //        Assertions.assertFalse(notFound.isPresent());
     }
 
-    // ✅ 3. CREATE
+    // 3. CREATE
     @Test
     void testCreateMiza() {
         System.out.println("=== TEST: createMiza ===");
 
-        // ✅ Pozitivan scenario
+        // Pozitivan scenario
         Miza miza = new Miza();
         miza.setStatus(true);
         Miza created = mizaController.createMiza(miza);
@@ -105,12 +105,12 @@ public class MizaControllerTest {
 //        });
     }
 
-    // ✅ 4. UPDATE
+    // 4. UPDATE
     @Test
     void testUpdateMiza() {
         System.out.println("=== TEST: updateMiza ===");
 
-        // ✅ Pozitivan scenario
+        // Pozitivan scenario
         Miza miza = new Miza();
         miza.setStatus(true);
         Miza saved = mizaService.createMiza(miza);
@@ -140,7 +140,7 @@ public class MizaControllerTest {
     void testDeleteMiza() {
         System.out.println("=== TEST: deleteMiza ===");
 
-        // ✅ Pozitivan scenario
+        // Pozitivan scenario
         Miza miza = new Miza();
         miza.setStatus(true);
         Miza saved = mizaService.createMiza(miza);

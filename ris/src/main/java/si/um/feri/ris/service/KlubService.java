@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import si.um.feri.ris.models.Klub;
+import si.um.feri.ris.models.Tip_kluba;
 import si.um.feri.ris.repository.KlubRepository;
 
 import java.io.*;
@@ -34,6 +35,9 @@ public class KlubService {
     }
 
     public Klub spremiKlub(Klub klub) {
+        Tip_kluba tip = new Tip_kluba();
+        tip.setIdTipKluba(1L);
+        klub.setTip_kluba(tip);
         return klubRepository.save(klub);
     }
 
