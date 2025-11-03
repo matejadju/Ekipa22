@@ -46,11 +46,14 @@ public class DogodekController {
         return dogodekService.findBySteviloMiz(steviloMiz);
     }
 
-    @CrossOrigin
     @GetMapping("/odobren")
     public List<Dogodek> findAllByOdobren() {
+        if (true) {
+            throw new RuntimeException("Simulirana greška u serveru");
+        }
         return dogodekService.findAllByOdobren();
     }
+
 
     @GetMapping("/{uporabnik_iduporabnik}")
     public List<Dogodek> findByidu(@PathVariable int uporabnik_iduporabnik) {

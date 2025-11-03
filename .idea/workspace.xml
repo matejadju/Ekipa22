@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14e6c7a5-e0c4-439b-ba96-1916f91a6013" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/APIs/Klub.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/APIs/Klub.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AddDogodek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/RegKluba.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/DogodekController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/controllers/DogodekController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/models/Dogodek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/DogodekRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/repository/DogodekRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/requests/AddDogodekRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/requests/AddDogodekRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/DogodekService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/DogodekService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/main/java/si/um/feri/ris/service/KlubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ris/src/test/java/si/um/feri/ris/MizaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ris/src/test/java/si/um/feri/ris/MizaControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,6 +239,7 @@
       <workItem from="1761063393708" duration="26000" />
       <workItem from="1761285942184" duration="1556000" />
       <workItem from="1761474978550" duration="5698000" />
+      <workItem from="1762165977604" duration="1137000" />
     </task>
     <servers />
   </component>
