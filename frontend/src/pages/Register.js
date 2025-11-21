@@ -36,7 +36,7 @@ export default function Register() {
 
             window.location.href = "/login";
         } catch (error) {
-            console.error('Error registering user:', error);
+            alert("User already exists");
 
         }
     };

@@ -20,6 +20,10 @@ export default function AddDogodekVKlub() {
 
 
     const handleSubmit = async () => {
+        if (!selectedDate || !partyName || !description || !ticketPrice || !numberOfTickets || !numberOfTables) {
+                window.alert("All fields are required!");
+                return;
+            }
         const data = {
             datum: selectedDate,
             naziv: partyName,
@@ -45,28 +49,59 @@ export default function AddDogodekVKlub() {
         <div>
             <h1>Add Party</h1>
 
-            <input
+           <input
+                id="eventDate"
                 type="datetime-local"
                 value={selectedDate}
                 onChange={(e) => setDatum(e.target.value)}
-            />
-            <br/>
-            <br/>
-            <TextField id="outlined-basic" label="Party Name" variant="outlined" value={partyName} onChange={(e) => setNaziv(e.target.value)}/>
-            <br/>
-            <br/>
-            <TextField id="outlined-basic" label="Description" variant="outlined" value={description} onChange={(e) => setOpis(e.target.value)}/>
-            <br/>
-            <br/>
-            <TextField id="outlined-basic" label="Ticket price" variant="outlined" value={ticketPrice} onChange={(e) => setCenaVstopnice(e.target.value)}/>
-            <br/>
-            <br/>
-            <TextField id="outlined-basic" label="Number of tickets" variant="outlined" value={numberOfTickets} onChange={(e) => setSteviloVstopnica(e.target.value)}/>
-            <br/>
-            <br/>
-            <TextField id="outlined-basic" label="Number of tables" variant="outlined" value={numberOfTables} onChange={(e) => setSteviloMiz(e.target.value)}/>
-            <br/>
-            <br/>
+                />
+                <br/><br/>
+
+                <TextField
+                id="partyName"
+                label="Party Name"
+                variant="outlined"
+                value={partyName}
+                onChange={(e) => setNaziv(e.target.value)}
+                />
+                <br/><br/>
+
+                <TextField
+                id="partyDescription"
+                label="Description"
+                variant="outlined"
+                value={description}
+                onChange={(e) => setOpis(e.target.value)}
+                />
+                <br/><br/>
+
+                <TextField
+                id="ticketPrice"
+                label="Ticket price"
+                variant="outlined"
+                value={ticketPrice}
+                onChange={(e) => setCenaVstopnice(e.target.value)}
+                />
+                <br/><br/>
+
+                <TextField
+                id="ticketCount"
+                label="Number of tickets"
+                variant="outlined"
+                value={numberOfTickets}
+                onChange={(e) => setSteviloVstopnica(e.target.value)}
+                />
+                <br/><br/>
+
+                <TextField
+                id="tableCount"
+                label="Number of tables"
+                variant="outlined"
+                value={numberOfTables}
+                onChange={(e) => setSteviloMiz(e.target.value)}
+                />
+                <br/><br/>
+
             <Button variant="outlined" onClick={handleSubmit}>Add Party</Button>
         </div>
     )

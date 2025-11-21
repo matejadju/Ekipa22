@@ -1,6 +1,5 @@
 package si.um.feri.ris.controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.http.ResponseEntity;
@@ -48,9 +47,6 @@ public class DogodekController {
 
     @GetMapping("/odobren")
     public List<Dogodek> findAllByOdobren() {
-        if (true) {
-            throw new RuntimeException("Simulirana greška u serveru");
-        }
         return dogodekService.findAllByOdobren();
     }
 

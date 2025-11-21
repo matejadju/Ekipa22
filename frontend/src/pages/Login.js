@@ -8,24 +8,28 @@ export default function Login () {
     const [geslo, setGeslo] = useState("");
     const uporabnikApi = new Uporabnik();
 
-    const handleLogin = async () => {
-      try {
-          const response = await uporabnikApi.getUserByLogin(email, geslo);
-          console.log(response)
-          localStorage.setItem('u', JSON.stringify({
-              idUporabnik: response.data.id,
-              email: response.data.email,
-              vrsta: response.data.vrsta
-          }));
+   const handleLogin = async () => {
+    try {
+        const response = await uporabnikApi.getUserByLogin(email, geslo);
+        console.log(response);
 
-              window.location.href = "/"
+        if (!response.data || !response.data.id) {
+            alert("Invalid credentials");
+            return;
+        }
 
+        localStorage.setItem('u', JSON.stringify({
+            idUporabnik: response.data.id,
+            email: response.data.email,
+            vrsta: response.data.vrsta
+        }));
 
+        window.location.href = "/";
 
-      }catch (error) {
-          console.log(error);
-      }
-    };
+    } catch (error) {
+        alert("Invalid credentials");
+    }
+};
 
     return (
         <div>

@@ -39,24 +39,25 @@ export default function Dogodki () {
         return dateObject.toLocaleDateString(undefined, options);
     };
 
-    const DogodekCard =({ dogodek }) => (
-        <Card>
-            <CardContent>
-                <Typography variant="h5" component="div" >
-                    {dogodek.naziv}
-                </Typography>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    {dogodek.opis}
-                </Typography>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    {dogodek.cenaVstopnice}
-                </Typography>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    {formatDate(dogodek.datum)}
-                </Typography>
-            </CardContent>
-        </Card>
-    )
+   const DogodekCard = ({ dogodek }) => (
+
+    <Card className="event-card">
+        <CardContent>
+            <Typography variant="h5" component="div">
+                {dogodek.naziv}
+            </Typography>
+            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                {dogodek.opis}
+            </Typography>
+            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                {dogodek.cenaVstopnice}
+            </Typography>
+            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                {formatDate(dogodek.datum)}
+            </Typography>
+        </CardContent>
+    </Card>
+)
 
     return (
         <div>
