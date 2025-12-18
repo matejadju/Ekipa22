@@ -1,38 +1,41 @@
 package si.um.feri.ris.controllers;
 
-
 import jakarta.mail.MessagingException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import si.um.feri.ris.models.Rezervacija;
 import si.um.feri.ris.service.RezervacijaService;
 
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
 @CrossOrigin
 @RequestMapping("/rezervacija")
 public class RezervacijaController {
+
     private final RezervacijaService rezervacijaService;
 
     public RezervacijaController(RezervacijaService rezervacijaService) {
         this.rezervacijaService = rezervacijaService;
     }
 
-    @Autowired
-    public RezervacijaService getRezervacijaService(){
-        return rezervacijaService;
-    }
-
     @GetMapping
-    public List<Rezervacija> getALL(){
+    public List<Rezervacija> getAll() {
         return rezervacijaService.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Rezervacija> getById(@PathVariable("id") Long id){
+    public Optional<Rezervacija> getById(@PathVariable Long id) {
         return rezervacijaService.getById(id);
     }
 
@@ -42,19 +45,20 @@ public class RezervacijaController {
     }
 
     @PutMapping("/{id}")
-    public void updateRezervacija(@PathVariable Long id, @RequestBody Rezervacija novaRezervacija){
+    public void updateRezervacija(
+            @PathVariable Long id,
+            @RequestBody Rezervacija novaRezervacija
+    ) {
         rezervacijaService.updateRezervacija(id, novaRezervacija);
     }
 
     @DeleteMapping("/del/{id}")
-    public void deleteRezervacija(@PathVariable Long id){
+    public void deleteRezervacija(@PathVariable Long id) {
         rezervacijaService.deleteRezervacija(id);
     }
 
-
     @GetMapping("/steviloOseb/{stevOseb}")
     public List<Rezervacija> dohvatiRez(@PathVariable int stevOseb) {
-
         return rezervacijaService.dohvatiRezervacije(stevOseb);
     }
 }

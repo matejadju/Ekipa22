@@ -6,7 +6,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.Collection;
 
 @Entity
 public class Dogodek {
@@ -113,19 +113,19 @@ public class Dogodek {
         this.steviloMiz = steviloMiz;
     }
 
-    public Klub getKlub_dogodek() {
+    public Klub getKlubDogodek() {
         return klub_dogodek;
     }
 
-    public void setKlub_dogodek(Klub klub_dogodek) {
+    public void setClubDoggone(Klub klub_dogodek) {
         this.klub_dogodek = klub_dogodek;
     }
 
-    public Uporabnik getUporabnik_dogodek() {
+    public Uporabnik getUporabnikDogodek() {
         return uporabnik_dogodek;
     }
 
-    public void setUporabnik_dogodek(Uporabnik uporabnik_dogodek) {
+    public void setUporabnikDogodek(Uporabnik uporabnik_dogodek) {
         this.uporabnik_dogodek = uporabnik_dogodek;
     }
 

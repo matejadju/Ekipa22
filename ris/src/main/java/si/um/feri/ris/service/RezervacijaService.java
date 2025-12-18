@@ -3,21 +3,22 @@ package si.um.feri.ris.service;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.models.Rezervacija;
 import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.repository.MizaRepository;
 import si.um.feri.ris.repository.RezervacijaRepository;
-import si.um.feri.ris.requests.AddRezervacijaRequest;
 import si.um.feri.ris.repository.UporabnikRepository;
+import si.um.feri.ris.requests.AddRezervacijaRequest;
+
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 @Service
 public class RezervacijaService {
     private final UporabnikRepository userRrepository;
@@ -54,7 +55,7 @@ public class RezervacijaService {
         Optional<Uporabnik> u = userRrepository.findById(3);
         if (u.isPresent()) {
             Uporabnik user = u.get();
-            r.setUporabnik_rezervacija(user);
+            r.setUporabnikRezervacija(user);
         }
         Optional<Miza> m = mizaRepository.findById(Long.valueOf(1));
         if (m.isPresent()) {
@@ -89,7 +90,7 @@ public class RezervacijaService {
         r.setDatum(rezervacija.getDatum());
         Optional<Uporabnik> u = userRrepository.findById((int) rezervacija.getUporabnik());
         if (u.isPresent()) {
-            r.setUporabnik_rezervacija(u.get());
+            r.setUporabnikRezervacija(u.get());
         }
         Optional<Miza> m = mizaRepository.findById((long) rezervacija.getMiza());
         if (m.isPresent()) {
@@ -104,9 +105,9 @@ public class RezervacijaService {
         MimeMessage msg = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(msg, true);
         try {
-            helper.setTo(rezervacija.getUporabnik_rezervacija().getEmail());
+            helper.setTo(rezervacija.getUporabnikRezervacija().getEmail());
             helper.setSubject("Potvrda rezervacije");
-            helper.setText("Spoštovani " + rezervacija.getUporabnik_rezervacija().getIme()
+            helper.setText("Spoštovani " + rezervacija.getUporabnikRezervacija().getIme()
                     +",\n\nVaša rezervacija je potrjena.\n\nHvala vam, ker ste nas izbrali.");
         } catch (MessagingException e) {
             e.printStackTrace();

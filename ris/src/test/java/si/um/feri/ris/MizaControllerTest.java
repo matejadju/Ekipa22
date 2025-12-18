@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.server.ResponseStatusException;
 import si.um.feri.ris.controllers.MizaController;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.repository.MizaRepository;
@@ -57,7 +56,7 @@ public class MizaControllerTest {
         System.out.println(saved1);
         System.out.println(saved2);
 
-        List<Miza> all = mizaController.getALL();
+        List<Miza> all = mizaController.getAll();
         System.out.println("Izhod: " + all);
         Assertions.assertEquals(2, all.size());
 

@@ -2,7 +2,7 @@ import {Button, TextField} from "@mui/material";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import Uporabnik from "../APIs/Uporabnik";
-import axios from "axios";
+
 export default function Login () {
     const [email, setEmail] = useState("");
     const [geslo, setGeslo] = useState("");

@@ -1,8 +1,6 @@
 package si.um.feri.ris.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ResponseBody;
 import si.um.feri.ris.models.Miza;
 import si.um.feri.ris.repository.MizaRepository;
 
@@ -11,28 +9,33 @@ import java.util.Optional;
 
 @Service
 public class MizaService {
-    @Autowired
-    private MizaRepository mizaRepository;
-    @ResponseBody
+
+    private final MizaRepository mizaRepository;
+
+    public MizaService(MizaRepository mizaRepository) {
+        this.mizaRepository = mizaRepository;
+    }
+
     public List<Miza> getAll() {
         return (List<Miza>) mizaRepository.findAll();
     }
 
-    @ResponseBody
-    public Optional<Miza> getById(Long id){
+    public Optional<Miza> getById(Long id) {
         return mizaRepository.findById(id);
     }
 
-
-    public List<Miza> findByStatusAndTipMizeId(boolean status, Long tip_mize_miza_id) {
-        return mizaRepository.findByStatusAndTipMizeId(status, tip_mize_miza_id);
+    // 🔧 NAMING FIX (PMD)
+    public List<Miza> findByStatusAndTipMizeId(boolean status, Long tipMizeMizaId) {
+        return mizaRepository.findByStatusAndTipMizeId(status, tipMizeMizaId);
     }
-    public Miza createMiza(Miza miza){
-        if (miza == null){
+
+    public Miza createMiza(Miza miza) {
+        if (miza == null) {
             throw new IllegalArgumentException("Miza is null!");
         }
         return mizaRepository.save(miza);
     }
+
     public void updateMiza(Long id, Miza novaMiza) {
         if (mizaRepository.existsById(id)) {
             novaMiza.setIdMiza(id);
@@ -48,20 +51,19 @@ public class MizaService {
         return mizaRepository.pronadjiStoloveSaViseOdOdredjenogBrojaOsoba(steviloOseb);
     }
 
-    public List<Miza> findByStatus(boolean status){
+    public List<Miza> findByStatus(boolean status) {
         return mizaRepository.findAllByStatus(status);
     }
 
-    public List<Miza> findByTipMize(String naziv){
+    public List<Miza> findByTipMize(String naziv) {
         return mizaRepository.findByTipMize(naziv);
     }
 
-    public List<Miza> findBystevOseb(boolean status){
+    public List<Miza> findByStevOseb(boolean status) {
         return mizaRepository.findByStevOseb(status);
     }
 
-    public List<Miza> findBystevMiz(int steviloMiz){
+    public List<Miza> findByStevMiz(int steviloMiz) {
         return mizaRepository.findByStevMiz(steviloMiz);
     }
-
 }

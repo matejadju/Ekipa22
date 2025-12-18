@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Breadcrumbs, Typography, Button, Box } from '@mui/material';
+import {Link, useNavigate} from 'react-router-dom';
+import {Box, Breadcrumbs, Button, Typography} from '@mui/material';
 
 export default function BasicBreadcrumbs() {
   const navigate = useNavigate();

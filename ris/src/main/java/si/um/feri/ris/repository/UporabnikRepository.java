@@ -3,7 +3,6 @@ package si.um.feri.ris.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.http.ResponseEntity;
 import si.um.feri.ris.models.Uporabnik;
 
 import java.util.List;

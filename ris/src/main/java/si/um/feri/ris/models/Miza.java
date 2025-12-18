@@ -1,10 +1,8 @@
 package si.um.feri.ris.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-import org.springframework.web.jsf.FacesContextUtils;
 
 @Entity
 public class Miza {

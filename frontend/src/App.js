@@ -1,6 +1,5 @@
 import './App.css';
-import {Routes, Route, Link, BrowserRouter as Router, useLocation, Navigate, Outlet} from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import {BrowserRouter as Router, Navigate, Outlet, Route, Routes, useLocation} from "react-router-dom";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Dogodki from "./pages/Dogodki"
@@ -11,13 +10,9 @@ import RegKluba from "./pages/RegKluba";
 import AddDogodek from "./pages/AddDogodek";
 import Navbar from "./components/Navbar";
 import AddDogodekVKlub from "./pages/AddDogodekVKlub";
-import MyClubs from "./pages/MyParty";
 import MyParty from "./pages/MyParty";
 import KlubReq from "./pages/KlubReq";
-import axios from "axios";
 import MyEvents from "./pages/MyEvents";
-
-
 
 
 // axios.interceptors.request.use(

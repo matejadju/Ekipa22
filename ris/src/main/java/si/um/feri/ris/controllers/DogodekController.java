@@ -1,17 +1,18 @@
 package si.um.feri.ris.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
-import si.um.feri.ris.models.Uporabnik;
-import si.um.feri.ris.requests.AddDogodekRequest;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import si.um.feri.ris.models.Dogodek;
+import si.um.feri.ris.requests.AddDogodekRequest;
 import si.um.feri.ris.service.DogodekService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -20,14 +21,8 @@ public class DogodekController {
 
     private final DogodekService dogodekService;
 
-    @Autowired
     public DogodekController(DogodekService dogodekService) {
         this.dogodekService = dogodekService;
-    }
-
-    @GetMapping("/joj/{odobren}/{cenaVstopnice}")
-    public List<Dogodek> findBydog(@PathVariable boolean odobren, @PathVariable int cenaVstopnice) {
-        return dogodekService.findBydog(odobren, cenaVstopnice);
     }
 
     @GetMapping("/cena/{cenaVstopnice}")
@@ -36,7 +31,7 @@ public class DogodekController {
     }
 
     @PostMapping("/add")
-    public Dogodek findByCena(@RequestBody AddDogodekRequest dogodek) {
+    public Dogodek createDogodek(@RequestBody AddDogodekRequest dogodek) {
         return dogodekService.save(dogodek);
     }
 
@@ -50,11 +45,8 @@ public class DogodekController {
         return dogodekService.findAllByOdobren();
     }
 
-
-    @GetMapping("/{uporabnik_iduporabnik}")
-    public List<Dogodek> findByidu(@PathVariable int uporabnik_iduporabnik) {
-        return dogodekService.findByidu(uporabnik_iduporabnik);
+    @GetMapping("/{uporabnikId}")
+    public List<Dogodek> findByUporabnikId(@PathVariable int uporabnikId) {
+        return dogodekService.findByUporabnikId(uporabnikId);
     }
-
-
 }

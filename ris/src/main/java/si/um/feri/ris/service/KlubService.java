@@ -12,7 +12,10 @@ import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.models.Tip_kluba;
 import si.um.feri.ris.repository.KlubRepository;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 

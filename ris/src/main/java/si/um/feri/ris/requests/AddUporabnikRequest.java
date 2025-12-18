@@ -1,6 +1,5 @@
 package si.um.feri.ris.requests;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import si.um.feri.ris.models.Vrsta;

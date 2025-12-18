@@ -1,9 +1,8 @@
-
-
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import {Button, FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
+import {useState} from "react";
+import {Link} from "react-router-dom";
 import Uporabnik from "../APIs/Uporabnik";
+
 export default function Register() {
     const uporabnikApi = new Uporabnik();
 

@@ -1,6 +1,5 @@
 package si.um.feri.ris.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -56,11 +55,11 @@ public class Rezervacija {
         this.poruka = poruka;
     }
 
-    public Uporabnik getUporabnik_rezervacija() {
+    public Uporabnik getUporabnikRezervacija() {
         return uporabnik_rezervacija;
     }
 
-    public void setUporabnik_rezervacija(Uporabnik uporabnik_rezervacija) {
+    public void setUporabnikRezervacija(Uporabnik uporabnik_rezervacija) {
         this.uporabnik_rezervacija = uporabnik_rezervacija;
     }
 
