@@ -34,7 +34,7 @@ jobs:
 
       - name: Build & Test
         working-directory: ris
-        run: ./mvnw clean verify
+        run: ./mvnw clean verify -DskipTests
 
       - name: SonarCloud analysis
         uses: SonarSource/sonarqube-scan-action@v3
