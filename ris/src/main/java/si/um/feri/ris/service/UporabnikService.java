@@ -49,13 +49,16 @@ public class UporabnikService {
         return uporabnikRepository.saveAndFlush(u);
     }
 
-    public Uporabnik authenticate(String email, String geslo) throws Exception {
+    public Uporabnik authenticate(String email, String geslo) {
         List<Uporabnik> u = uporabnikRepository.findByEmailAndGeslo(email, geslo);
+
         if (!u.isEmpty()) {
             return u.get(0);
         }
-        throw new Exception("Not authorised");
+
+        throw new IllegalArgumentException("Not authorised");
     }
+
 
     public Uporabnik findByEmailAndGeslo(String email, String geslo) {
         List<Uporabnik> u = uporabnikRepository.findByEmailAndGeslo(email, geslo);
