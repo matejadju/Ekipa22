@@ -67,7 +67,7 @@ export default function RegKluba () {
 
             <TextField
                 id="pib"
-                label="PIB"
+                label="pib"
                 variant="outlined"
                 value={pib}
                 onChange={(e) => setPib(e.target.value)}

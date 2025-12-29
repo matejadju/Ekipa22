@@ -1,12 +1,12 @@
 package si.um.feri.ris.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.ResponseBody;
 import si.um.feri.ris.models.Uporabnik;
-import si.um.feri.ris.repository.*;
+import si.um.feri.ris.repository.UporabnikRepository;
 import si.um.feri.ris.requests.AddUporabnikRequest;
+import si.um.feri.ris.requests.UporabnikDetails;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,27 +15,10 @@ import java.util.Optional;
 @Transactional
 public class UporabnikService {
 
-    @Autowired
-    private UporabnikRepository uporabnikRepository;
+    private final UporabnikRepository uporabnikRepository;
 
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
-
-    private final KlubRepository klubRepository;
-    private final RezervacijaRepository rezervacijaRepository;
-
-    private final DogodekRepository dogodekRepository;
-    private final RecenzijaRepository recenzijaRepository;
-
-    private final VstopniceRepository vstopniceRepository;
-
-    public UporabnikService(UporabnikRepository uporabnikRepository, KlubRepository klubRepository, RezervacijaRepository rezervacijaRepository, DogodekRepository dogodekRepository, RecenzijaRepository recenzijaRepository, VstopniceRepository vstopniceRepository) {
+    public UporabnikService(UporabnikRepository uporabnikRepository) {
         this.uporabnikRepository = uporabnikRepository;
-        this.klubRepository = klubRepository;
-        this.rezervacijaRepository = rezervacijaRepository;
-        this.dogodekRepository = dogodekRepository;
-        this.recenzijaRepository = recenzijaRepository;
-        this.vstopniceRepository = vstopniceRepository;
     }
 
     @ResponseBody
@@ -48,31 +31,30 @@ public class UporabnikService {
         return uporabnikRepository.findById(id);
     }
 
-    public Uporabnik save(AddUporabnikRequest uporabnik) {
+    public Uporabnik save(AddUporabnikRequest request) {
+
         Uporabnik u = new Uporabnik();
-        u.setIme(uporabnik.getIme());
-        u.setPriimek(uporabnik.getPriimek());
-        u.setEmail(uporabnik.getEmail());
+        UporabnikDetails details = request.getDetails();
 
-//        String hashedGeslo = passwordEncoder.encode(u.getGeslo());
+        u.setIme(details.getIme());
+        u.setPriimek(details.getPriimek());
+        u.setEmail(details.getEmail());
+        u.setGeslo(details.getGeslo());
+        u.setVrsta(details.getVrsta());
 
-        u.setGeslo(uporabnik.getGeslo());;
-        u.setVrsta(uporabnik.getVrsta());
-        u.setTelefon(uporabnik.getTelefon());
-        u.setEmso(uporabnik.getEmso());
-        u.setDavcnaStevilka(uporabnik.getDavcnaStevilka());
+        u.setTelefon(request.getTelefon());
+        u.setEmso(request.getEmso());
+        u.setDavcnaStevilka(request.getDavcnaStevilka());
 
         return uporabnikRepository.saveAndFlush(u);
     }
 
     public Uporabnik authenticate(String email, String geslo) throws Exception {
-        List<Uporabnik> u = uporabnikRepository.findByEmailAndGeslo(email,geslo);
-        if (!u.isEmpty()){
-            Uporabnik uporabnik = u.get(0);
-
-            return uporabnik;
+        List<Uporabnik> u = uporabnikRepository.findByEmailAndGeslo(email, geslo);
+        if (!u.isEmpty()) {
+            return u.get(0);
         }
-        throw new Exception("Not authorise");
+        throw new Exception("Not authorised");
     }
 
     public Uporabnik findByEmailAndGeslo(String email, String geslo) {
@@ -80,11 +62,11 @@ public class UporabnikService {
         return u.isEmpty() ? null : u.get(0);
     }
 
-    public List<Uporabnik> findByEmail(String email){
+    public List<Uporabnik> findByEmail(String email) {
         return uporabnikRepository.findByEmail(email);
     }
 
-    public void updateProfil(int telefon, Long id){
+    public void updateProfil(int telefon, Long id) {
         uporabnikRepository.updateProfil(telefon, id);
     }
 }

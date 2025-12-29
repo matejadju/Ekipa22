@@ -15,7 +15,7 @@ public class Miza {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tip_mize_idtip_mize")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Tip_mize tipMize;
+    TipMize tipMize;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "rezervacija_idrezervacija")
@@ -43,11 +43,11 @@ public class Miza {
         this.status = status;
     }
 
-    public Tip_mize getTipMize() {
+    public TipMize getTipMize() {
         return tipMize;
     }
 
-    public void setTipMize(Tip_mize tipMize) {
+    public void setTipMize(TipMize tipMize) {
         this.tipMize = tipMize;
     }
 

@@ -18,7 +18,7 @@ public class Rezervacija {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Uporabnik uporabnik_rezervacija;
+    Uporabnik uporabnikRezervacija;
 
     @ManyToOne( fetch = FetchType.LAZY)
     Miza miza;
@@ -56,11 +56,11 @@ public class Rezervacija {
     }
 
     public Uporabnik getUporabnikRezervacija() {
-        return uporabnik_rezervacija;
+        return uporabnikRezervacija;
     }
 
-    public void setUporabnikRezervacija(Uporabnik uporabnik_rezervacija) {
-        this.uporabnik_rezervacija = uporabnik_rezervacija;
+    public void setUporabnikRezervacija(Uporabnik uporabnikRezervacija) {
+        this.uporabnikRezervacija = uporabnikRezervacija;
     }
 
 

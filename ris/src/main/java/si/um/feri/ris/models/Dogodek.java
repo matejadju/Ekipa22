@@ -27,13 +27,13 @@ public class Dogodek {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "klub_idklub")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    Klub klub_dogodek;
+    Klub klubDogodek;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uporabnik_iduporabnik")
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
-    Uporabnik uporabnik_dogodek;
+    Uporabnik uporabnikDogodek;
 
     @OneToMany(mappedBy = "idMiza", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     Collection<Miza> mize;
@@ -114,19 +114,19 @@ public class Dogodek {
     }
 
     public Klub getKlubDogodek() {
-        return klub_dogodek;
+        return klubDogodek;
     }
 
-    public void setClubDoggone(Klub klub_dogodek) {
-        this.klub_dogodek = klub_dogodek;
+    public void setClubDoggone(Klub klubDogodek) {
+        this.klubDogodek = klubDogodek;
     }
 
     public Uporabnik getUporabnikDogodek() {
-        return uporabnik_dogodek;
+        return uporabnikDogodek;
     }
 
-    public void setUporabnikDogodek(Uporabnik uporabnik_dogodek) {
-        this.uporabnik_dogodek = uporabnik_dogodek;
+    public void setUporabnikDogodek(Uporabnik uporabnikDogodek) {
+        this.uporabnikDogodek = uporabnikDogodek;
     }
 
     public boolean isOdobren() {

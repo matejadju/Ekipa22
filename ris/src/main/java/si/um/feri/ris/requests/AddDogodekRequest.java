@@ -1,83 +1,32 @@
 package si.um.feri.ris.requests;
 
-import java.time.LocalDateTime;
-
 public class AddDogodekRequest {
 
-    private String naziv;
-    private LocalDateTime datum;
-    private String opis;
-    private int cenaVstopnice;
-    private int steviloVstopnica;
-    private int steviloMiz;
-    private boolean odobren;
+    private DogodekDetails details;
 
     private int klubDogodek;
+    private int steviloMiz;
     private int uporabnik;
-
 
     public AddDogodekRequest() {
     }
 
-    public AddDogodekRequest(String naziv, LocalDateTime datum, String opis, int cenaVstopnice, int steviloVstopnica, boolean odobren, int klubDogodek, int steviloMiz, int uporabnik) {
-        this.naziv = naziv;
-        this.datum = datum;
-        this.opis = opis;
-        this.cenaVstopnice = cenaVstopnice;
-        this.steviloVstopnica = steviloVstopnica;
-        this.odobren = odobren;
+    public AddDogodekRequest(DogodekDetails details,
+                             int klubDogodek,
+                             int steviloMiz,
+                             int uporabnik) {
+        this.details = details;
         this.klubDogodek = klubDogodek;
         this.steviloMiz = steviloMiz;
         this.uporabnik = uporabnik;
-
     }
 
-    public String getNaziv() {
-        return naziv;
+    public DogodekDetails getDetails() {
+        return details;
     }
 
-    public void setNaziv(String naziv) {
-        this.naziv = naziv;
-    }
-
-    public LocalDateTime getDatum() {
-        return datum;
-    }
-
-    public void setDatum(LocalDateTime datum) {
-        this.datum = datum;
-    }
-
-    public String getOpis() {
-        return opis;
-    }
-
-    public void setOpis(String opis) {
-        this.opis = opis;
-    }
-
-    public int getCenaVstopnice() {
-        return cenaVstopnice;
-    }
-
-    public void setCenaVstopnice(int cenaVstopnice) {
-        this.cenaVstopnice = cenaVstopnice;
-    }
-
-    public int getSteviloVstopnica() {
-        return steviloVstopnica;
-    }
-
-    public void setSteviloVstopnic(int steviloVstopnica) {
-        this.steviloVstopnica = steviloVstopnica;
-    }
-
-    public boolean isOdobren() {
-        return odobren;
-    }
-
-    public void setOdobren(boolean odobren) {
-        this.odobren = odobren;
+    public void setDetails(DogodekDetails details) {
+        this.details = details;
     }
 
     public int getKlubDogodek() {

@@ -34,11 +34,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ris`.`tip_kluba`
+-- Table `ris`.`tipKluba`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `ris`.`tip_kluba` ;
+DROP TABLE IF EXISTS `ris`.`tipKluba` ;
 
-CREATE TABLE IF NOT EXISTS `ris`.`tip_kluba` (
+CREATE TABLE IF NOT EXISTS `ris`.`tipKluba` (
   `idtip_kluba` INT NOT NULL AUTO_INCREMENT,
   `naziv` VARCHAR(45) NOT NULL,
   `opis` VARCHAR(45) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `ris`.`klub` (
   `naziv` VARCHAR(45) NOT NULL,
   `adresa` VARCHAR(45) NOT NULL,
   `telefon` INT NOT NULL,
-  `PIB` INT NOT NULL,
+  `pib` INT NOT NULL,
   `status` TINYINT NOT NULL,
   `uporabnik_iduporabnik` INT NULL,
   `tip_kluba_idtip_kluba` INT NOT NULL,

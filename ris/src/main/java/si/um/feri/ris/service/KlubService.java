@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import si.um.feri.ris.models.Klub;
-import si.um.feri.ris.models.Tip_kluba;
+import si.um.feri.ris.models.TipKluba;
 import si.um.feri.ris.repository.KlubRepository;
 
 import java.io.ByteArrayOutputStream;
@@ -38,9 +38,9 @@ public class KlubService {
     }
 
     public Klub spremiKlub(Klub klub) {
-        Tip_kluba tip = new Tip_kluba();
+        TipKluba tip = new TipKluba();
         tip.setIdTipKluba(1L);
-        klub.setTip_kluba(tip);
+        klub.setTipKluba(tip);
         return klubRepository.save(klub);
     }
 
@@ -79,7 +79,6 @@ public class KlubService {
         pdfStream.writeTo(fileOutputStream);
         fileOutputStream.close();
 
-        System.out.println("PDF sačuvan na: " + filePath);
     }
 
     private ByteArrayOutputStream generatePdfForKlub(Klub klub) throws DocumentException {
@@ -94,7 +93,7 @@ public class KlubService {
         document.add(new Paragraph("Name: " + klub.getNaziv()));
         document.add(new Paragraph("Location: " + klub.getAdresa()));
         document.add(new Paragraph("Phone Number: " + klub.getTelefon()));
-        document.add(new Paragraph("PIB: " + klub.getPIB()));
+        document.add(new Paragraph("PIB: " + klub.getPib()));
 
         document.close();
         return outputStream;

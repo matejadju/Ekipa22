@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Collection;
 
 @Entity
-public class Tip_mize {
+public class TipMize {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -59,7 +59,7 @@ public class Tip_mize {
 
     @Override
     public String toString() {
-        return "Tip_mize{" +
+        return "TipMize{" +
                 "idTipMize=" + id +
                 ", naziv='" + naziv + '\'' +
                 '}';

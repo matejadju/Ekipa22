@@ -17,7 +17,7 @@ public class Klub {
     private String naziv;
     private String adresa;
     private int telefon;
-    private int PIB;
+    private int pib;
     private boolean status;
 
 
@@ -26,7 +26,7 @@ public class Klub {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties("klubi")
    @JsonIgnore
-    Tip_kluba tip_kluba;
+    TipKluba tipKluba;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = true)
     @JoinColumn(name = "uporabnik_iduporabnik")
@@ -72,12 +72,12 @@ public class Klub {
         this.telefon = telefon;
     }
 
-    public int getPIB() {
-        return PIB;
+    public int getPib() {
+        return pib;
     }
 
-    public void setPIB(int PIB) {
-        this.PIB = PIB;
+    public void setPib(int pib) {
+        this.pib = pib;
     }
 
     public boolean isStatus() {
@@ -88,12 +88,12 @@ public class Klub {
         this.status = status;
     }
 
-    public Tip_kluba getTip_kluba() {
-        return tip_kluba;
+    public TipKluba getTipKluba() {
+        return tipKluba;
     }
 
-    public void setTip_kluba(Tip_kluba tip_kluba) {
-        this.tip_kluba = tip_kluba;
+    public void setTipKluba(TipKluba tipKluba) {
+        this.tipKluba = tipKluba;
     }
 
     public Uporabnik getUporabnik() {
@@ -111,7 +111,7 @@ public class Klub {
                 ", naziv='" + naziv + '\'' +
                 ", adresa='" + adresa + '\'' +
                 ", telefon=" + telefon +
-                ", PIB=" + PIB +
+                ", pib=" + pib +
                 ", status=" + status +
                 '}';
     }
