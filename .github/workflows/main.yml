@@ -46,3 +46,4 @@ jobs:
             -Dsonar.projectKey=matejadju_Ekipa22
             -Dsonar.sources=ris/src/main/java
             -Dsonar.java.binaries=ris/target/classes
+            -Dsonar.coverage.exclusions=**/*
