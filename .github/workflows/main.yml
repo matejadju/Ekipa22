@@ -44,5 +44,5 @@ jobs:
           args: >
             -Dsonar.organization=matejadju
             -Dsonar.projectKey=matejadju_Ekipa22
-            -Dsonar.sources=src/main/java
+            -Dsonar.sources=ris/src/main/java
             -Dsonar.java.binaries=target/classes
