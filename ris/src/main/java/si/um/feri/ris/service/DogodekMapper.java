@@ -4,6 +4,7 @@ import si.um.feri.ris.models.Dogodek;
 import si.um.feri.ris.models.Klub;
 import si.um.feri.ris.models.Uporabnik;
 import si.um.feri.ris.requests.AddDogodekRequest;
+import si.um.feri.ris.requests.DogodekDetails;
 
 public final class DogodekMapper {
 
@@ -13,15 +14,18 @@ public final class DogodekMapper {
             Uporabnik uporabnik
     ) {
         Dogodek d = new Dogodek();
-        d.setDatum(request.getDatum());
-        d.setNaziv(request.getNaziv());
-        d.setOpis(request.getOpis());
-        d.setCenaVstopnice(request.getCenaVstopnice());
-        d.setSteviloVstopnica(request.getSteviloVstopnica());
-        d.setSteviloMiz(request.getSteviloMiz());
-        d.setOdobren(false);
 
-        d.setClubDoggone(klub);
+        DogodekDetails details = request.getDetails();
+
+        d.setDatum(details.getDatum());
+        d.setNaziv(details.getNaziv());
+        d.setOpis(details.getOpis());
+        d.setCenaVstopnice(details.getCenaVstopnice());
+        d.setSteviloVstopnica(details.getSteviloVstopnica());
+        d.setSteviloMiz(request.getSteviloMiz());
+        d.setOdobren(details.isOdobren());
+
+        d.setKlubDogodek(klub);
         d.setUporabnikDogodek(uporabnik);
 
         return d;

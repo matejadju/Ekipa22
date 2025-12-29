@@ -117,7 +117,7 @@ public class Dogodek {
         return klubDogodek;
     }
 
-    public void setClubDoggone(Klub klubDogodek) {
+    public void setKlubDogodek(Klub klubDogodek) {
         this.klubDogodek = klubDogodek;
     }
 
